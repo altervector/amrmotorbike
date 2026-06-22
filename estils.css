@@ -1,0 +1,580 @@
+/* ============================================================
+   ESTILS.CSS — Taller Adri
+   Paleta: negre industrial + taronja motor + gris acer
+   ============================================================ */
+
+/* ─── FONT ────────────────────────────────────────────────── */
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('https://avsets.pages.dev/fonts/Comfortaa-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ─── VARIABLES ───────────────────────────────────────────── */
+:root {
+    --negre:         #0f0f0f;
+    --negre-suau:    #1a1a1a;
+    --negre-card:    #1e1e1e;
+    --taronja:       #f97316;
+    --taronja-fosc:  #c2560f;
+    --gris:          #a0a0a0;
+    --gris-clar:     #d4d4d4;
+    --blanc:         #ffffff;
+    --blanc-transp:  rgba(255,255,255,0.12);
+
+    --font-titol:    'Comfortaa', sans-serif;
+    --font-cos:      'Segoe UI', Roboto, sans-serif;
+
+    --radi:          6px;
+    --amplada-max:   100%;
+}
+
+/* ─── RESET ───────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Fons que llisca darrere — textura fosca */
+    background-image: url("https://avsets.pages.dev/images/agora/background-agora.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    /* Overlay fosc per sobre la imatge de fons */
+    background-color: #0f0f0f;
+    min-height: 100%;
+}
+
+body {
+    font-family: var(--font-cos);
+    background-color: transparent;
+    color: var(--blanc);
+    max-width: var(--amplada-max);
+    margin: 0 auto;
+}
+
+img   { max-width: 100%; display: block; }
+a     { color: var(--taronja); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ─── NAVBAR ──────────────────────────────────────────────── */
+.navbar {
+    background-color: transparent;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(15,15,15,0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(249,115,22,0.25);
+}
+
+.navbar-logo img {
+    height: 48px;
+    width: auto;
+}
+
+.navbar-hamburguesa {
+    background: none;
+    border: none;
+    color: var(--blanc);
+    font-size: 26px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+}
+
+.navbar-menu {
+    display: none;
+    list-style: none;
+    gap: 28px;
+}
+
+.navbar-menu.obert {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    background: rgba(15,15,15,0.97);
+    border-top: 2px solid var(--taronja);
+    padding: 24px 20px;
+    gap: 20px;
+    z-index: 99;
+    align-items: flex-start;
+}
+
+.navbar-menu a {
+    color: var(--gris-clar);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.navbar-menu a:hover {
+    color: var(--taronja);
+    text-decoration: none;
+}
+
+/* ─── HERO ────────────────────────────────────────────────── */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* text a l'esquerra */
+    text-align: left;
+}
+
+.hero-imatge {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Overlay gradient d'esquerra a dreta — fosc a l'esquerra on hi ha el text */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.85) 0%,
+        rgba(0,0,0,0.5)  50%,
+        rgba(0,0,0,0.2)  100%
+    );
+    z-index: 1;
+}
+
+.hero-contingut {
+    position: relative;
+    z-index: 2;
+    padding: 0 24px;
+    max-width: 480px;
+    margin-top: 60px; /* compensa la navbar */
+}
+
+/* Eyebrow — etiqueta petita sobre el títol */
+.hero-eyebrow {
+    display: inline-block;
+    background: var(--taronja);
+    color: var(--blanc);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    margin-bottom: 16px;
+}
+
+.hero-titol {
+    font-family: var(--font-titol);
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    color: var(--blanc);
+    margin-bottom: 14px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+
+.hero-slogan {
+    font-size: 1rem;
+    color: var(--gris);
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.hero-botons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hero-boto-principal {
+    display: inline-block;
+    background: var(--taronja);
+    color: var(--blanc);
+    padding: 14px 28px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: var(--radi);
+    transition: background 0.2s;
+    text-align: center;
+}
+
+.hero-boto-principal:hover {
+    background: var(--taronja-fosc);
+    text-decoration: none;
+}
+
+.hero-boto-secundari {
+    display: inline-block;
+    color: var(--gris-clar);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 13px 28px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: var(--radi);
+    transition: border-color 0.2s, color 0.2s;
+    text-align: center;
+}
+
+.hero-boto-secundari:hover {
+    border-color: var(--taronja);
+    color: var(--taronja);
+    text-decoration: none;
+}
+
+/* ─── FRANJA STATS (sota el hero) ────────────────────────── */
+.stats-franja {
+    background: rgba(249,115,22,0.1);
+    border-top: 1px solid rgba(249,115,22,0.3);
+    border-bottom: 1px solid rgba(249,115,22,0.3);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background-color: rgba(249,115,22,0.2); /* color del separador */
+}
+
+.stat-item {
+    background: var(--negre-suau);
+    padding: 24px 16px;
+    text-align: center;
+}
+
+.stat-numero {
+    font-family: var(--font-titol);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--taronja);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: var(--gris);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+/* ─── SECCIONS GENÈRIQUES ─────────────────────────────────── */
+.seccio {
+    padding: 56px 24px;
+    scroll-margin-top: 70px;
+}
+
+.seccio-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--taronja);
+    margin-bottom: 10px;
+}
+
+.seccio-titol {
+    font-family: var(--font-titol);
+    font-size: 1.7rem;
+    color: var(--blanc);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.seccio-text {
+    font-size: 15px;
+    color: var(--gris);
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+/* ─── QUI SOM ─────────────────────────────────────────────── */
+#qui-som {
+    background: var(--negre-suau);
+}
+
+/* ─── SERVEIS ─────────────────────────────────────────────── */
+#serveis {
+    background: var(--negre);
+}
+
+.serveis-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.servei-card {
+    background: var(--negre-card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-left: 3px solid var(--taronja);
+    padding: 20px 18px;
+    border-radius: var(--radi);
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.servei-card:hover {
+    background: rgba(249,115,22,0.07);
+    border-left-color: var(--taronja-fosc);
+}
+
+.servei-ico {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.servei-titol {
+    font-family: var(--font-titol);
+    font-size: 0.95rem;
+    color: var(--blanc);
+    margin-bottom: 8px;
+}
+
+.servei-desc {
+    font-size: 13px;
+    color: var(--gris);
+    line-height: 1.6;
+}
+
+/* ─── PER QUÈ NOSALTRES ───────────────────────────────────── */
+#perque {
+    background: var(--negre-suau);
+}
+
+.perque-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.perque-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.perque-ico {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.perque-titol {
+    font-family: var(--font-titol);
+    font-size: 1rem;
+    color: var(--blanc);
+    margin-bottom: 6px;
+}
+
+.perque-desc {
+    font-size: 13px;
+    color: var(--gris);
+    line-height: 1.6;
+}
+
+/* ─── CONTACTE ────────────────────────────────────────────── */
+#contacte {
+    background: var(--negre);
+}
+
+.contacte-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.contacte-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.contacte-ico {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    color: var(--taronja);
+    margin-top: 2px;
+}
+
+.contacte-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--taronja);
+    margin-bottom: 4px;
+}
+
+.contacte-valor {
+    font-size: 15px;
+    color: var(--blanc);
+    line-height: 1.6;
+}
+
+.contacte-valor a {
+    color: var(--blanc);
+}
+
+.contacte-valor a:hover {
+    color: var(--taronja);
+}
+
+/* Botó WhatsApp flotant */
+.boto-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #25d366;
+    color: var(--blanc);
+    padding: 14px 24px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 32px;
+    width: fit-content;
+    transition: background 0.2s;
+}
+
+.boto-whatsapp:hover {
+    background: #1ebe5d;
+    text-decoration: none;
+    color: var(--blanc);
+}
+
+/* ─── SEPARADOR ───────────────────────────────────────────── */
+.separador {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    margin: 0;
+}
+
+/* ─── FOOTER ──────────────────────────────────────────────── */
+.footer {
+    background: #080808;
+    border-top: 2px solid var(--taronja);
+    color: var(--gris);
+    padding: 40px 24px 24px;
+    font-size: 13px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.footer-nom {
+    font-family: var(--font-titol);
+    font-size: 1.2rem;
+    color: var(--blanc);
+    margin-bottom: 6px;
+}
+
+.footer-slogan {
+    font-size: 12px;
+    color: var(--gris);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+
+.footer-xarxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.footer-xarxes a {
+    color: var(--gris);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.footer-xarxes a:hover {
+    color: var(--taronja);
+    text-decoration: none;
+}
+
+.footer-poweredby {
+    margin-top: 24px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 16px;
+}
+
+.footer-poweredby a {
+    color: var(--taronja);
+}
+
+/* ─── SPINNER (per si fa falta) ───────────────────────────── */
+@keyframes gir {
+    to { transform: rotate(360deg); }
+}
+
+/* ── TABLET ── */
+@media (min-width: 768px) {
+    .seccio { padding: 64px 40px; }
+
+    .serveis-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-franja {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ── PC ── */
+@media (min-width: 1024px) {
+    .navbar { padding: 16px 48px; }
+
+    .navbar-logo img { height: 56px; }
+
+    .navbar-menu {
+        display: flex;
+        gap: 36px;
+        list-style: none;
+    }
+
+    .navbar-hamburguesa { display: none; }
+
+    .hero-contingut { padding: 0 48px; }
+
+    .hero-titol { font-size: 5rem; }
+
+    .hero-botons { flex-direction: row; }
+
+    .seccio { padding: 80px 48px; max-width: 1100px; margin: 0 auto; }
+
+    .serveis-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .perque-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .contacte-grid { grid-template-columns: repeat(2, 1fr); }
+}
