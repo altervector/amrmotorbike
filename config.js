@@ -28,8 +28,8 @@ const CONFIG = {
 
     // 3. IMATGES (placeholders fins que hi hagi fotos reals)
     
-    HERO_BG:        "images/agora/hero-agora.png",  // ← canviar per foto taller/moto
-    BACKGROUND:     "images/agora/background-agora.jpg", // ← canviar per textura/fons
+    HERO_BG:        "images/talleradri/hero-talleradri.jpg",  // ← canviar per foto taller/moto
+    BACKGROUND:     "images/talleradri/background-talleradri.jpg", // ← canviar per textura/fons
 
     // 4. TEXTOS
     ANYS_EXPERIENCIA: "15",
