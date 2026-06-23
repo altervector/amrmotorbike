@@ -7,17 +7,20 @@ const CONFIG = {
 
     // 1. NEGOCI
     NOM:            "Taller Adri",
+    LOGO:           "logo/logoAGtrans.png",
     SLOGAN:         "Especialistes en motos. Terrassa.",
     TELEFON:        "93 000 00 00",
     MOBIL:          "600 000 000",
     EMAIL:          "info@talleradri.com",
     ADRECA:         "Carrer de la Mecànica, 42, 08220 Terrassa, Barcelona",
-    WHATSAPP:       "https://wa.me/34600000000",
     INSTAGRAM:      "https://www.instagram.com/talleradri",
     FACEBOOK:       "https://www.facebook.com/talleradri",
+    EMAIL_SUPORT:   "suport@altervector.com",
 
     // 2. RUTES
+    REPO_URL:       "https://altervector.github.io/TallerAdri/",
     BASE_URL:       "./",
+    BASE_WORKER:    "",
     URL_OFICIAL:    "",
     ASSETS:         "https://avsets.pages.dev/",
     URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=Taller+Adri+Terrassa",
@@ -54,4 +57,4 @@ const CONFIG = {
     ],
 
     // 6. SEGURETAT
-    SITIOS_SEGUROS: ["talleradri.com", "pages.dev", "altervector.github.io", "localhost", "127.0.0.1"],
+    SITIOS_SEGUROS: ["altervector.com", "pages.dev", "altervector.github.io", "localhost", "127.0.0.1"],
