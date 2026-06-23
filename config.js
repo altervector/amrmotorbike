@@ -54,5 +54,4 @@ const CONFIG = {
     ],
 
     // 6. SEGURETAT
-    SITIOS_SEGUROS: ["talleradri.com", "pages.dev", "localhost", "127.0.0.1"],
-};
+    SITIOS_SEGUROS: ["talleradri.com", "pages.dev", "altervector.github.io", "localhost", "127.0.0.1"],
