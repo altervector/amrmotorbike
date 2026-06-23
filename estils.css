@@ -312,7 +312,7 @@ a:hover { text-decoration: underline; }
 
 /* ─── QUI SOM ─────────────────────────────────────────────── */
 #qui-som {
-    background: var(--negre-suau);
+    background: none; /*var(--negre-suau);*/        /*xxx*/
 }
 
 /* ─── SERVEIS ─────────────────────────────────────────────── */
