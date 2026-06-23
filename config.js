@@ -18,7 +18,7 @@ const CONFIG = {
 
     // 2. RUTES
     BASE_URL:       "./",
-    URL_OFICIAL:    "https://talleradri.com",
+    URL_OFICIAL:    "",
     ASSETS:         "https://avsets.pages.dev/",
     URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=Taller+Adri+Terrassa",
     URL_RESSENYES:  "https://www.google.com/maps/search/?api=1&query=Taller+Adri+Terrassa",
