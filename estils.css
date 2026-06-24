@@ -551,7 +551,7 @@ a:hover { text-decoration: underline; }
     .seccio { padding: 64px 40px; }
 
     .serveis-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .stats-franja {
