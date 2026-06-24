@@ -26,10 +26,10 @@ const CONFIG = {
     URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=Taller+Adri+Terrassa",
     URL_RESSENYES:  "https://www.google.com/maps/search/?api=1&query=Taller+Adri+Terrassa",
 
-    // 3. IMATGES (placeholders fins que hi hagi fotos reals)
-    
-    BLOC_HERO:       "images/adrimotors/hero-adrimotors.jpg", 
+    // 3. IMATGES 
     BACKGROUND:      "", // ← canviar en el css .html{}
+    BLOC_HERO:       "images/adrimotors/hero-adrimotors.jpg", 
+    
     BLOC1:           "",
     BLOC2:           "",
     BLOC3:           "",
