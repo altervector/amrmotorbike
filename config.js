@@ -50,7 +50,22 @@ const CONFIG = {
     QUI_DESC:           "Al Taller Adri som especialistes en manteniment, reparació i restauració de motocicletes. Més de 15 anys a Terrassa cuidant la teva moto amb la mateixa passió amb la qual tu la condueixes. Treballem amb totes les marques i models, des de scooters fins a motos de gran cilindrada.",
     //+hero boto pri
 
-    
+    // 5. SERVEIS (graella)
+    QUE_FEM:            "El que fem",
+    QUE_FEM_SRV:        "Els nostres serveis",
+
+    SERVEIS: [
+        { ico: "🔧", titol: "Manteniment general",    desc: "Canvi d'oli i filtre, revisió de nivells, neteja de carburador i preparació per a ITV." },
+        { ico: "🛑", titol: "Frens",                  desc: "Canvi de pastilles i sabates, rectificació de discs i purga completa del sistema." },
+        { ico: "⛓️", titol: "Transmissió i cadena",   desc: "Ajust i lubricació de cadena, canvi del kit d'arrossegament i revisió de la caixa de canvis." },
+        { ico: "⚡", titol: "Sistema elèctric",       desc: "Revisió i canvi de bateria, diagnòstic amb escàner ECU i reparació de llums i connexions." },
+        { ico: "🏍️", titol: "Suspensió i direcció",   desc: "Servei de suspensió davantera, ajust de direcció i revisió de rodaments i amortidors." },
+        { ico: "💨", titol: "Sistema d'escapament",   desc: "Revisió de fugues, reparació i instal·lació d'escapaments esportius o personalitzats." },
+        { ico: "🔘", titol: "Pneumàtics",             desc: "Canvi de llantes, equilibrat, alineació i reparació de punxades." },
+        { ico: "⚙️", titol: "Motor",                  desc: "Afinació general, reparació de cilindre, pistó, vàlvules i ajust de distribució." },
+        { ico: "🎨", titol: "Personalització",        desc: "Instal·lació d'accessoris, canvis estètics amb vinils i carenats, i modificacions." },
+    ],
+
 
 
 
@@ -65,20 +80,9 @@ const CONFIG = {
     
 
 
-    RESERVES:        "Fes la teva Reserva",
 
-    // 5. SERVEIS (graella)
-    SERVEIS: [
-        { ico: "🔧", titol: "Manteniment general",    desc: "Canvi d'oli i filtre, revisió de nivells, neteja de carburador i preparació per a ITV." },
-        { ico: "🛑", titol: "Frens",                  desc: "Canvi de pastilles i sabates, rectificació de discs i purga completa del sistema." },
-        { ico: "⛓️", titol: "Transmissió i cadena",   desc: "Ajust i lubricació de cadena, canvi del kit d'arrossegament i revisió de la caixa de canvis." },
-        { ico: "⚡", titol: "Sistema elèctric",       desc: "Revisió i canvi de bateria, diagnòstic amb escàner ECU i reparació de llums i connexions." },
-        { ico: "🏍️", titol: "Suspensió i direcció",   desc: "Servei de suspensió davantera, ajust de direcció i revisió de rodaments i amortidors." },
-        { ico: "💨", titol: "Sistema d'escapament",   desc: "Revisió de fugues, reparació i instal·lació d'escapaments esportius o personalitzats." },
-        { ico: "🔘", titol: "Pneumàtics",             desc: "Canvi de llantes, equilibrat, alineació i reparació de punxades." },
-        { ico: "⚙️", titol: "Motor",                  desc: "Afinació general, reparació de cilindre, pistó, vàlvules i ajust de distribució." },
-        { ico: "🎨", titol: "Personalització",        desc: "Instal·lació d'accessoris, canvis estètics amb vinils i carenats, i modificacions." },
-    ],
+
+
 
     // 6. SEGURETAT
     SITIOS_SEGUROS: ["altervector.com", "pages.dev", "altervector.github.io", "localhost", "127.0.0.1"],

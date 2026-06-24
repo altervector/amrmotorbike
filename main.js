@@ -138,8 +138,8 @@
 
                 <!-- SERVEIS -->
                 <section class="seccio" id="serveis">
-                    <p class="seccio-eyebrow">El que fem</p>
-                    <h2 class="seccio-titol">Els nostres serveis</h2>
+                    <p class="seccio-eyebrow">${CONFIG.QUE_FEM}</p>
+                    <h2 class="seccio-titol">${CONFIG.QUE_FEM_SRV}</h2>
                     <div class="serveis-grid">
                         ${targetesServeis}
                     </div>
