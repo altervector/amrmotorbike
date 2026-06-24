@@ -149,28 +149,28 @@
 
                 <!-- PER QUÈ NOSALTRES -->
                 <section class="seccio" id="perque">
-                    <p class="seccio-eyebrow">Per què Adri Motors</p>
-                    <h2 class="seccio-titol">El taller que la teva moto mereix</h2>
+                    <p class="seccio-eyebrow">${CONFIG.PXQ}</p>
+                    <h2 class="seccio-titol">${CONFIG.PXQ_DESC}</h2>
                     <div class="perque-grid">
                         <div class="perque-item">
                             <div class="perque-ico">⚡</div>
                             <div>
-                                <div class="perque-titol">Diagnòstic ràpid</div>
-                                <div class="perque-desc">Detectem el problema en el mateix dia i t'informem abans de tocar res.</div>
+                                <div class="perque-titol">${CONFIG.PXQ_BLOC1_TIT}}</div>
+                                <div class="perque-desc">${CONFIG.PXQ_BLOC1_DESC}</div>
                             </div>
                         </div>
                         <div class="perque-item">
                             <div class="perque-ico">🔩</div>
                             <div>
-                                <div class="perque-titol">Recanvis de qualitat</div>
-                                <div class="perque-desc">Treballem amb peces originals o equivalents homologades, mai peces dubtoses.</div>
+                                <div class="perque-titol">${CONFIG.PXQ_BLOC2_TIT}}</div>
+                                <div class="perque-desc">${CONFIG.PXQ_BLOC2_DESC}</div>
                             </div>
                         </div>
                         <div class="perque-item">
                             <div class="perque-ico">🏍️</div>
                             <div>
-                                <div class="perque-titol">Moto de cortesia</div>
-                                <div class="perque-desc">Si la reparació s'allarga, et deixem moto per seguir rodant sense interrupcions.</div>
+                                <div class="perque-titol">${CONFIG.PXQ_BLOC3_TIT}}</div>
+                                <div class="perque-desc">${CONFIG.PXQ_BLOC3_DESC}</div>
                             </div>
                         </div>
                     </div>

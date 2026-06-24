@@ -66,6 +66,18 @@ const CONFIG = {
         { ico: "🎨", titol: "Personalització",        desc: "Instal·lació d'accessoris, canvis estètics amb vinils i carenats, i modificacions." },
     ],
 
+    // 5.5 PERQUE
+    PXQ:        "Per què Adri Motors",
+    PXQ_DESC:   "El taller que la teva moto mereix",
+
+    PXQ_BLOC1_TIT:          "Diagnòstic ràpid",
+    PXQ_BLOC1_DESC:         "Detectem el problema en el mateix dia i t'informem abans de tocar res.",
+    PXQ_BLOC2_TIT:          "Recanvis de qualitat",
+    PXQ_BLOC2_DESC:         "Treballem amb peces originals o equivalents homologades, mai peces dubtoses.",
+    PXQ_BLOC3_TIT:          "Moto de cortesia",
+    PXQ_BLOC3_DESC:         "Si la reparació s'allarga, et deixem moto per seguir rodant sense interrupcions.",
+
+
 
 
 
