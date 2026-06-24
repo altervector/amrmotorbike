@@ -126,7 +126,7 @@
                 <!-- QUI SOM -->
                 <section class="seccio" id="qui-som">
                     <p class="seccio-eyebrow">${CONFIG.QUI_SOM}</p>
-                    <h2 class="seccio-titol">${CONFIG.QUI_SOM_TIT}<br>des de ${CONFIG.ANYS_EXPERIENCIA} anys</h2>
+                    <h2 class="seccio-titol">${CONFIG.QUI_SOM_TIT}</h2>
                     <p class="seccio-text">${CONFIG.QUI_DESC}</p>
                     <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal"
                         style="display:inline-block; margin-top: 8px;">

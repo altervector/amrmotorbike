@@ -46,7 +46,7 @@ const CONFIG = {
     ESTRELLES:        "5",
 
     QUI_SOM:         "Qui som...",
-    QUI_SOM_TIT:     "Passió per les motos des de ${CONFIG.ANYS_EXPERIENCIA} anys",
+    QUI_SOM_TIT:     "Passió per les motos des de fa 15 anys",
     QUI_DESC:        "Al Taller Adri som especialistes en manteniment, reparació i restauració de motocicletes. Més de 15 anys a Terrassa cuidant la teva moto amb la mateixa passió amb la qual tu la condueixes. Treballem amb totes les marques i models, des de scooters fins a motos de gran cilindrada.",
 
     HORA_1: "Dilluns a dijous: 09:00 – 13:00 | 15:00 – 19:00",
