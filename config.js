@@ -7,7 +7,7 @@ const CONFIG = {
 
     // 1. NEGOCI
     NOM:            "Taller Adri",
-    LOGO:           "logo/logoAGtrans.png",
+    LOGO:           "logo/logoAM.jpg",
     SLOGAN:         "Especialistes en motos. Terrassa.",
     TELEFON:        "93 000 00 00",
     MOBIL:          "600 000 000",

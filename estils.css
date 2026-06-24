@@ -5,8 +5,8 @@
 
 /* ─── FONT ────────────────────────────────────────────────── */
 @font-face {
-    font-family: 'Comfortaa';
-    src: url('https://avsets.pages.dev/fonts/Comfortaa-Bold.ttf') format('truetype');
+    font-family: 'airstrikechrome';
+    src: url('https://avsets.pages.dev/fonts/airstrikechrome.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -23,7 +23,7 @@
     --blanc:         #ffffff;
     --blanc-transp:  rgba(255,255,255,0.12);
 
-    --font-titol:    'Comfortaa', sans-serif;
+    --font-titol:    'airstrikechrome', sans-serif;
     --font-cos:      'Segoe UI', Roboto, sans-serif;
 
     --radi:          6px;
