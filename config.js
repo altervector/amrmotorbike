@@ -11,14 +11,14 @@ const CONFIG = {
     SLOGAN:         "Especialistes en motos. Terrassa.",
     TELEFON:        "93 000 00 00",
     MOBIL:          "600 000 000",
-    EMAIL:          "info@talleradri.com",
+    EMAIL:          "info@adrimotors.com",
     ADRECA:         "Carrer de la Mecànica, 42, 08220 Terrassa, Barcelona",
-    INSTAGRAM:      "https://www.instagram.com/talleradri",
-    FACEBOOK:       "https://www.facebook.com/talleradri",
+    INSTAGRAM:      "https://www.instagram.com/adrimotors",
+    FACEBOOK:       "https://www.facebook.com/adrimotors",
     EMAIL_SUPORT:   "suport@altervector.com",
 
     // 2. RUTES
-    REPO_URL:       "https://altervector.github.io/TallerAdri/",
+    REPO_URL:       "https://altervector.github.io/adrimotors/",
     BASE_URL:       "./",
     BASE_WORKER:    "",
     URL_OFICIAL:    "",
@@ -28,7 +28,7 @@ const CONFIG = {
 
     // 3. IMATGES (placeholders fins que hi hagi fotos reals)
     
-    HERO_BG:        "images/talleradri/hero-talleradri.jpg",  // ← canviar per foto taller/moto
+    HERO_BG:        "images/adrimotors/hero-adrimotors.jpg", 
     BACKGROUND:     "", // ← canviar en el css .html
 
     // 4. TEXTOS
@@ -49,7 +49,7 @@ const CONFIG = {
         { ico: "🛑", titol: "Frens",                  desc: "Canvi de pastilles i sabates, rectificació de discs i purga completa del sistema." },
         { ico: "⛓️", titol: "Transmissió i cadena",   desc: "Ajust i lubricació de cadena, canvi del kit d'arrossegament i revisió de la caixa de canvis." },
         { ico: "⚡", titol: "Sistema elèctric",       desc: "Revisió i canvi de bateria, diagnòstic amb escàner ECU i reparació de llums i connexions." },
-        { ico: "🏍️", titol: "Suspensió i direcció",  desc: "Servei de suspensió davantera, ajust de direcció i revisió de rodaments i amortidors." },
+        { ico: "🏍️", titol: "Suspensió i direcció",   desc: "Servei de suspensió davantera, ajust de direcció i revisió de rodaments i amortidors." },
         { ico: "💨", titol: "Sistema d'escapament",   desc: "Revisió de fugues, reparació i instal·lació d'escapaments esportius o personalitzats." },
         { ico: "🔘", titol: "Pneumàtics",             desc: "Canvi de llantes, equilibrat, alineació i reparació de punxades." },
         { ico: "⚙️", titol: "Motor",                  desc: "Afinació general, reparació de cilindre, pistó, vàlvules i ajust de distribució." },

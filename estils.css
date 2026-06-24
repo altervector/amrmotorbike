@@ -1,5 +1,5 @@
 /* ============================================================
-   ESTILS.CSS — Taller Adri
+   ESTILS.CSS — Adri Motors
    Paleta: negre industrial + taronja motor + gris acer
    ============================================================ */
 
@@ -48,7 +48,7 @@
 
 html {
     /* Fons que llisca darrere — textura fosca */
-    background-image: url("https://avsets.pages.dev/images/talleradri/background-talleradri.jpg");
+    background-image: url("https://avsets.pages.dev/images/adrimotors/background-adrimotors.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;

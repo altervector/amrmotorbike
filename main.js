@@ -1,5 +1,5 @@
 /* ============================================================
-   MAIN.JS — Taller Adri
+   MAIN.JS —  Adri Motors
    Construeix tota la pàgina a partir de CONFIG
    ============================================================ */
 
@@ -149,7 +149,7 @@
 
                 <!-- PER QUÈ NOSALTRES -->
                 <section class="seccio" id="perque">
-                    <p class="seccio-eyebrow">Per què Taller Adri</p>
+                    <p class="seccio-eyebrow">Per què Adri Motors</p>
                     <h2 class="seccio-titol">El taller que la teva moto mereix</h2>
                     <div class="perque-grid">
                         <div class="perque-item">
