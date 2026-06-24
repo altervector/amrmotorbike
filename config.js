@@ -66,7 +66,7 @@ const CONFIG = {
         { ico: "🎨", titol: "Personalització",        desc: "Instal·lació d'accessoris, canvis estètics amb vinils i carenats, i modificacions." },
     ],
 
-    // 5.5 PERQUE
+    // 6. PERQUE
     PXQ:        "Per què Adri Motors",
     PXQ_DESC:   "El taller que la teva moto mereix",
 
@@ -77,9 +77,10 @@ const CONFIG = {
     PXQ_BLOC3_TIT:          "Moto de cortesia",
     PXQ_BLOC3_DESC:         "Si la reparació s'allarga, et deixem moto per seguir rodant sense interrupcions.",
 
+    // 7. ON SOM
 
-
-
+    ON_SOM:            "On som...",
+    ON_SOM_TIT:        "Vine a veure'ns",
 
     HORA_1:         "Dilluns a dijous: 09:00 – 13:00 | 15:00 – 19:00",
     HORA_2:         "Divendres: 09:00 – 13:00 | 15:00 – 18:00",
