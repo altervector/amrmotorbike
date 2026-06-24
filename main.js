@@ -61,7 +61,7 @@
             hero.innerHTML = `
                 <section class="hero">
                     <img class="hero-imatge"
-                        src="${CONFIG.ASSETS}${CONFIG.HERO_BG}"
+                        src="${CONFIG.ASSETS}${CONFIG.BLOC_HERO}"
                         alt="${CONFIG.NOM}">
                     <div class="hero-overlay"></div>
                     <div class="hero-contingut">
@@ -70,10 +70,10 @@
                         <p class="hero-slogan">${CONFIG.SLOGAN}</p>
                         <div class="hero-botons">
                             <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal">
-                                📞 Truca'ns
+                                ${CONFIG.HERO_BOTO_PRI}
                             </a>
                             <a href="#serveis" class="hero-boto-secundari">
-                                Els nostres serveis
+                                ${CONFIG.HERO_BOTO_SEC}
                             </a>
                         </div>
                     </div>
