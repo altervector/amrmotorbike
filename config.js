@@ -87,16 +87,6 @@ const CONFIG = {
     HORA_3:         "Dissabte i diumenge: Tancat",
 
 
-
-  
-
-    
-
-
-
-
-
-
     // 6. SEGURETAT
     SITIOS_SEGUROS: ["altervector.com", "pages.dev", "altervector.github.io", "localhost", "127.0.0.1"],
 };
