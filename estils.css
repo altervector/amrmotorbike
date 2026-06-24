@@ -11,8 +11,8 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'airstrikebullet';
-    src: url('https://avsets.pages.dev/fonts/airstrikebold3d.ttf') format('truetype');
+    font-family: 'airstrike';
+    src: url('https://avsets.pages.dev/fonts/airstrike.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -30,7 +30,7 @@
     --blanc-transp:  rgba(255,255,255,0.12);
 
     --font-titol:    'airstrikechrome', sans-serif;
-    --font-titol2:    'airstrikebullet', sans-serif;
+    --font-titol2:    'airstrike', sans-serif;
     --font-cos:      'Segoe UI', Roboto, sans-serif;
 
     --radi:          6px;
