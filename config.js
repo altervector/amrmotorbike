@@ -37,46 +37,33 @@ const CONFIG = {
     QR:              "qr/qr-adrimotors.png",
 
     // 4. TEXTOS
-    HERO_BOTO_PRI:        "📞 Truca'ns",
-    HERO_BOTO_SEC:        "Els nostres serveis",
+    HERO_BOTO_PRI:      "📞 Truca'ns",
+    HERO_BOTO_SEC:      "Els nostres serveis",
 
-    ANYS_EXPERIENCIA: "15",
-    MOTOS_REPARADES:  "2.000",
-    CLIENTS:          "1.200",
-    ESTRELLES:        "5",
+    ANYS_EXPERIENCIA:   "15",
+    MOTOS_REPARADES:    "2.000",
+    CLIENTS:            "1.200",
+    ESTRELLES:          "5",
 
-    QUI_SOM:         "Qui som...",
-    QUI_SOM_TIT:     "Passió per les motos des de fa 15 anys",
-    QUI_DESC:        "Al Taller Adri som especialistes en manteniment, reparació i restauració de motocicletes. Més de 15 anys a Terrassa cuidant la teva moto amb la mateixa passió amb la qual tu la condueixes. Treballem amb totes les marques i models, des de scooters fins a motos de gran cilindrada.",
-
-    HORA_1: "Dilluns a dijous: 09:00 – 13:00 | 15:00 – 19:00",
-    HORA_2: "Divendres: 09:00 – 13:00 | 15:00 – 18:00",
-    HORA_3: "Dissabte i diumenge: Tancat",
-
-
-
-        // 2.3 RUTES Textos
-    
-    SECCIO_TITOL:    "Els nostres Menús",
-
-    BLOC1_TITOL:     "Menú Diari",
-    BLOC1_DESC:      "De dilluns a divendres al migdia. Primer, segon, postre i beguda.",
-
-    BLOC2_TITOL:     "Menú Cap de Setmana",
-    BLOC2_DESC:      "Dissabte i diumenge. Una selecció especial per gaudir en família.",
-
-    BLOC3_TITOL:     "Menú Grups",
-    BLOC3_DESC:      "Per a celebracions i esdeveniments. Per a un mínim de 10 persones i amb reserva concertada.",
-
-    BLOC4_TITOL:     "",
-    BLOC4_DESC:      "",
+    QUI_SOM:            "Qui som...",
+    QUI_SOM_TIT:        "Passió per les motos des de fa 15 anys",
+    QUI_DESC:           "Al Taller Adri som especialistes en manteniment, reparació i restauració de motocicletes. Més de 15 anys a Terrassa cuidant la teva moto amb la mateixa passió amb la qual tu la condueixes. Treballem amb totes les marques i models, des de scooters fins a motos de gran cilindrada.",
+    //+hero boto pri
 
     
-    QUI_DESC:        "El nostre local està dedicat als serveis de restauració. Oferim cuina mediterrània i espanyola, incloent esmorzars, dinars, sopars i tapes, amb opcions per menjar al local, a la terrassa o per emportar. Us brindem un menjar de qualitat, ambient acollidor i servei amable.",
 
-    HORA_1:          "Dilluns a dijous: 08:00 – 23:00h",
-    HORA_2:          "Divendres i dissabte: 08:00 – 24:00h",
-    HORA_3:          "Diumenge: 09:00 - 23:00h",
+
+
+    HORA_1:         "Dilluns a dijous: 09:00 – 13:00 | 15:00 – 19:00",
+    HORA_2:         "Divendres: 09:00 – 13:00 | 15:00 – 18:00",
+    HORA_3:         "Dissabte i diumenge: Tancat",
+
+
+
+  
+
+    
+
 
     RESERVES:        "Fes la teva Reserva",
 
