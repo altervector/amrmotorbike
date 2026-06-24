@@ -70,10 +70,10 @@
                         <p class="hero-slogan">${CONFIG.SLOGAN}</p>
                         <div class="hero-botons">
                             <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal">
-                                ${CONFIG.HERO_BOTO_PRI}
+                                "${CONFIG.HERO_BOTO_PRI}"
                             </a>
                             <a href="#serveis" class="hero-boto-secundari">
-                                ${CONFIG.HERO_BOTO_SEC}
+                               " ${CONFIG.HERO_BOTO_SEC}"
                             </a>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
                     <p class="seccio-text">${CONFIG.QUI_DESC}</p>
                     <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal"
                         style="display:inline-block; margin-top: 8px;">
-                        📞 Truca'ns ara
+                        📞 Truca'ns ara mateix
                     </a>
                 </section>
 
