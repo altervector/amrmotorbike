@@ -45,7 +45,9 @@ const CONFIG = {
     CLIENTS:          "1.200",
     ESTRELLES:        "5",
 
-    QUI_DESC: "Al Taller Adri som especialistes en manteniment, reparació i restauració de motocicletes. Més de 15 anys a Terrassa cuidant la teva moto amb la mateixa passió amb la qual tu la condueixes. Treballem amb totes les marques i models, des de scooters fins a motos de gran cilindrada.",
+    QUI_SOM:         "Qui som...",
+    QUI_SOM_TIT:     "Passió per les motos des de ${CONFIG.ANYS_EXPERIENCIA} anys",
+    QUI_DESC:        "Al Taller Adri som especialistes en manteniment, reparació i restauració de motocicletes. Més de 15 anys a Terrassa cuidant la teva moto amb la mateixa passió amb la qual tu la condueixes. Treballem amb totes les marques i models, des de scooters fins a motos de gran cilindrada.",
 
     HORA_1: "Dilluns a dijous: 09:00 – 13:00 | 15:00 – 19:00",
     HORA_2: "Divendres: 09:00 – 13:00 | 15:00 – 18:00",
@@ -69,7 +71,7 @@ const CONFIG = {
     BLOC4_TITOL:     "",
     BLOC4_DESC:      "",
 
-    QUI_SOM:         "Qui som...",
+    
     QUI_DESC:        "El nostre local està dedicat als serveis de restauració. Oferim cuina mediterrània i espanyola, incloent esmorzars, dinars, sopars i tapes, amb opcions per menjar al local, a la terrassa o per emportar. Us brindem un menjar de qualitat, ambient acollidor i servei amable.",
 
     HORA_1:          "Dilluns a dijous: 08:00 – 23:00h",
