@@ -239,7 +239,13 @@
                     <p class="footer-nom">${CONFIG.NOM}</p>
                     <p class="footer-slogan">${CONFIG.SLOGAN}</p>
                     <div class="footer-xarxes">
-                        <a href="${CONFIG.INSTAGRAM}" target="_blank">Instagram</a>
+                        <a href="${CONFIG.INSTAGRAM}" target="_blank"></a>
+
+                        <a href="${CONFIG.INSTAGRAM}" target="_blank">
+                            <img src="${CONFIG.ASSETS}icon/Icoinsta.png" alt="Instagram" class="icona-app"> Instagram
+                        </a>
+
+
                         <a href="${CONFIG.FACEBOOK}" target="_blank">Facebook</a>
                         <a href="mailto:${CONFIG.EMAIL}">Email</a>
                     </div>
