@@ -155,21 +155,21 @@
                         <div class="perque-item">
                             <div class="perque-ico">⚡</div>
                             <div>
-                                <div class="perque-titol">${CONFIG.PXQ_BLOC1_TIT}}</div>
+                                <div class="perque-titol">${CONFIG.PXQ_BLOC1_TIT}</div>
                                 <div class="perque-desc">${CONFIG.PXQ_BLOC1_DESC}</div>
                             </div>
                         </div>
                         <div class="perque-item">
                             <div class="perque-ico">🔩</div>
                             <div>
-                                <div class="perque-titol">${CONFIG.PXQ_BLOC2_TIT}}</div>
+                                <div class="perque-titol">${CONFIG.PXQ_BLOC2_TIT}</div>
                                 <div class="perque-desc">${CONFIG.PXQ_BLOC2_DESC}</div>
                             </div>
                         </div>
                         <div class="perque-item">
                             <div class="perque-ico">🏍️</div>
                             <div>
-                                <div class="perque-titol">${CONFIG.PXQ_BLOC3_TIT}}</div>
+                                <div class="perque-titol">${CONFIG.PXQ_BLOC3_TIT}</div>
                                 <div class="perque-desc">${CONFIG.PXQ_BLOC3_DESC}</div>
                             </div>
                         </div>
