@@ -13,10 +13,10 @@ const CONFIG = {
     TELEFON:        "93 000 00 00",
     MOBIL:          "600 000 000",
     WHATSAPP:       "https://wa.me/34600000000",
-    EMAIL:          "adrimotors@altervector.com",
+    EMAIL:          "armmotorbike@altervector.com",
     ADRECA:         "Carrer de la Mecànica, 42, 08220 Terrassa, Barcelona",
     INSTAGRAM:      "https://www.instagram.com/adri__motors",
-    FACEBOOK:       "https://www.facebook.com/adrimotors",
+    FACEBOOK:       "",
     EMAIL_SUPORT:   "suport@altervector.com",
 
     // 2. RUTES
@@ -30,7 +30,7 @@ const CONFIG = {
 
     // 3. IMATGES 
     BACKGROUND:      "", // ← canviar en el css .html{}
-    BLOC_HERO:       "images/adrimotors/hero-adrimotors.jpg", 
+    BLOC_HERO:       "images/armmotorbike/hero-armmotorbike.jpg", 
     
     BLOC1:           "",
     BLOC2:           "",
