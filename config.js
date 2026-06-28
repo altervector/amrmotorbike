@@ -9,7 +9,7 @@ const CONFIG = {
     NOM:            "Adri Motors",
     LOGO:           "logo/logoAMtrans.png",
                                         LOGO_T:         "logo/logoAMRtrans.png",
-    SLOGAN:         "",
+    SLOGAN:         "Especialistes en motos. Sabadell.",
     TELEFON:        "93 000 00 00",
     MOBIL:          "600 000 000",
     WHATSAPP:       "https://wa.me/34600000000",
