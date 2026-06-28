@@ -36,7 +36,7 @@ const CONFIG = {
     BLOC2:           "",
     BLOC3:           "",
     BLOC4:           "",
-    QR:              "qr/qr-adrimotors.png",
+    QR:              "qr/qr-armmotorbike.png",
 
     // 4. TEXTOS
     HERO_BOTO_PRI:      "📞 Truca'ns",
