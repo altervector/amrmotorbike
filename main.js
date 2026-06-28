@@ -67,7 +67,7 @@
                     <div class="hero-overlay"></div>
                     <div class="hero-contingut">
                         <span class="hero-eyebrow">Taller de Motocicletes</span>
-                            <img src="${CONFIG.ASSETS}${CONFIG.LOGO}" alt="${CONFIG.NOM}">
+                            <img src="${CONFIG.ASSETS}${CONFIG.LOGO_T}" alt="${CONFIG.NOM}">
                         <div class="hero-botons">
                             <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal">
                                 ${CONFIG.HERO_BOTO_PRI}
