@@ -13,7 +13,7 @@
             navbar.innerHTML = `
                 <nav class="navbar">
                     <div class="navbar-logo">
-                        <img src="${CONFIG.ASSETS}${CONFIG.LOGO}" alt="${CONFIG.NOM}">
+                        <img src="${CONFIG.ASSETS}${CONFIG.LOGO_T}" alt="${CONFIG.NOM}">
                     </div>
                     <button class="navbar-hamburguesa">☰</button>
                     <ul class="navbar-menu">
