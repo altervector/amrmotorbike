@@ -1,5 +1,5 @@
 /* ============================================================
-   MAIN.JS —  Adri Motors
+   MAIN.JS —  AMR MotorBike
    Construeix tota la pàgina a partir de CONFIG
    ============================================================ */
 

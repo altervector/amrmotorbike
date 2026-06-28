@@ -6,7 +6,7 @@
 const CONFIG = {
 
     // 1. NEGOCI
-    NOM:            "Adri Motors",
+    NOM:            "AMR MotorBike",
     LOGO:           "logo/logoAMR.png",
     LOGO_T:         "logo/logoAMRtrans.png",
     SLOGAN:         "Especialistes en motos. Sabadell.",
@@ -49,7 +49,7 @@ const CONFIG = {
 
     QUI_SOM:            "Qui som...",
     QUI_SOM_TIT:        "Passió per les motos des de fa 15 anys",
-    QUI_DESC:           "Al Taller Adri som especialistes en manteniment, reparació i restauració de motocicletes. Més de 15 anys a Terrassa cuidant la teva moto amb la mateixa passió amb la qual tu la condueixes. Treballem amb totes les marques i models, des de scooters fins a motos de gran cilindrada.",
+    QUI_DESC:           "Al Taller AMR MotorBike som especialistes en manteniment, reparació i restauració de motocicletes. Més de 15 anys a Terrassa cuidant la teva moto amb la mateixa passió amb la qual tu la condueixes. Treballem amb totes les marques i models, des de scooters fins a motos de gran cilindrada.",
     //+hero boto pri
 
     // 5. SERVEIS (graella)
@@ -69,7 +69,7 @@ const CONFIG = {
     ],
 
     // 6. PERQUE
-    PXQ:        "Per què Adri Motors",
+    PXQ:        "Per què AMR MotorBike ?",
     PXQ_DESC:   "El taller que la teva moto mereix",
 
     PXQ_BLOC1_TIT:          "Diagnòstic ràpid",
