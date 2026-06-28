@@ -15,7 +15,7 @@ const CONFIG = {
     WHATSAPP:       "https://wa.me/34600000000",
     EMAIL:          "armmotorbike@altervector.com",
     ADRECA:         "Carrer de la Mecànica, 42, 08220 Terrassa, Barcelona",
-    INSTAGRAM:      "https://www.instagram.com/adri__motors",
+    INSTAGRAM:      "https://www.instagram.com/armmotorbike",
     FACEBOOK:       "",
     EMAIL_SUPORT:   "suport@altervector.com",
 
