@@ -68,7 +68,8 @@
                     <div class="hero-overlay"></div>
                     <div class="hero-contingut">
                         
-                            <img src="${CONFIG.ASSETS}${CONFIG.LOGO_T}" alt="${CONFIG.NOM}">
+                                                       <img class="hero-pic" src="${CONFIG.ASSETS}${CONFIG.LOGO_T}" alt="${CONFIG.NOM}">    
+
                         <div class="hero-botons">
                             <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal">
                                 ${CONFIG.HERO_BOTO_PRI}

@@ -8,8 +8,8 @@ const CONFIG = {
     // 1. NEGOCI
     NOM:            "Adri Motors",
     LOGO:           "logo/logoAMtrans.png",
-    LOGO_T:         "logo/logoAMRtrans.png",
-    SLOGAN:         "Especialistes en motos. Terrassa.",
+                                        LOGO_T:         "logo/logoAMRtrans.png",
+    SLOGAN:         "",
     TELEFON:        "93 000 00 00",
     MOBIL:          "600 000 000",
     WHATSAPP:       "https://wa.me/34600000000",

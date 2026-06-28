@@ -192,23 +192,27 @@ a:hover { text-decoration: underline; }
     margin-bottom: 16px;
 }
 
-.hero-titol {
-    font-family: var(--font-titol);
-    font-size: 3.2rem;
-    font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: 1px;
-    color: var(--blanc);
-    margin-bottom: 14px;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
-}
+                    .hero-titol {
+                        font-family: var(--font-titol);
+                        font-size: 3.2rem;
+                        font-weight: 800;
+                        line-height: 1.05;
+                        letter-spacing: 1px;
+                        color: var(--blanc);
+                        margin-bottom: 14px;
+                        text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+                    }
 
-.hero-slogan {
-    font-size: 1rem;
-    color: var(--gris);
-    margin-bottom: 32px;
-    line-height: 1.5;
-}
+                    .hero-slogan {
+                        font-size: 1rem;
+                        color: var(--gris);
+                        margin-bottom: 32px;
+                        line-height: 1.5;
+                    }
+
+                                                .hero-pic {
+                                                margin-bottom: 32px;
+                                                }
 
 .hero-botons {
     display: flex;
