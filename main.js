@@ -67,9 +67,12 @@
                         alt="${CONFIG.NOM}">
                     <div class="hero-overlay"></div>
                     <div class="hero-contingut">
-                        
+                        <div class="card">                        
                                                        <img class="hero-pic" src="${CONFIG.ASSETS}${CONFIG.LOGO_T}" alt="${CONFIG.NOM}">    
-
+                        </div>
+                        <div class="">                        
+                                                       <img class="hero-pic" src="${CONFIG.ASSETS}${CONFIG.LOGO_T}" alt="${CONFIG.NOM}">    
+                        </div>                        
                         <div class="hero-botons">
                             <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal">
                                 ${CONFIG.HERO_BOTO_PRI}
@@ -79,6 +82,7 @@
                             </a>
                         </div>
                     </div>
+                    
                 </section>
             `;
         }
