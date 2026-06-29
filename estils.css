@@ -85,8 +85,8 @@ a:hover { text-decoration: underline; }
 
 .navbar.scrolled {
     background-color: rgba(15, 15, 15, 0.556);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(249,115,22,0.25);
 }
 
@@ -216,6 +216,7 @@ a:hover { text-decoration: underline; }
                                                 }
 .card {
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.15) 0%,
@@ -355,6 +356,7 @@ a:hover { text-decoration: underline; }
 .servei-card {
 
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.15) 0%,
