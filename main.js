@@ -74,7 +74,7 @@
                                                        <img class="hero-pic" src="${CONFIG.ASSETS}${CONFIG.LOGO_T}" alt="${CONFIG.NOM}">    
                         </div>                        
                         <div class="hero-botons">
-                            <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal">
+                            <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal btn-balla">
                                 ${CONFIG.HERO_BOTO_PRI}
                             </a>
                             <a href="#serveis" class="hero-boto-secundari">
@@ -134,7 +134,7 @@
                     <p class="seccio-eyebrow">${CONFIG.QUI_SOM}</p>
                     <h2 class="seccio-titol">${CONFIG.QUI_SOM_TIT}</h2>
                     <p class="seccio-text">${CONFIG.QUI_DESC}</p>
-                    <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal"
+                    <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal btn-balla"
                         style="display:inline-block; margin-top: 8px;">
                         ${CONFIG.HERO_BOTO_PRI}
                     </a>
@@ -229,7 +229,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="${CONFIG.WHATSAPP}" target="_blank" class="boto-whatsapp">
+                    <a href="${CONFIG.WHATSAPP}" target="_blank" class="boto-whatsapp btn-balla">
                         💬 Escriu-nos per WhatsApp
                     </a>
                 </section>
