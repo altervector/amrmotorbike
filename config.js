@@ -14,7 +14,7 @@ const CONFIG = {
     MOBIL:          "600 000 000",
     WHATSAPP:       "https://wa.me/34600000000",
     EMAIL:          "amrmotorbike@altervector.com",
-    ADRECA:         "Carrer de la Mecànica, 42, 08220 Terrassa, Barcelona",
+    ADRECA:         "Carrer de la Mecànica, 42, 08220 Sabadell, Barcelona",
     INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
     FACEBOOK:       "",
     EMAIL_SUPORT:   "suport@altervector.com",
@@ -25,8 +25,8 @@ const CONFIG = {
     BASE_WORKER:    "",
     URL_OFICIAL:    "",
     ASSETS:         "https://avsets.pages.dev/",
-    URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=Taller+Adri+Terrassa",
-    URL_RESSENYES:  "https://www.google.com/maps/search/?api=1&query=Taller+Adri+Terrassa",
+    URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=Taller+AMR+Sabadell",
+    URL_RESSENYES:  "https://www.google.com/maps/search/?api=1&query=Taller+AMR+Sabadell",
 
     // 3. IMATGES 
     BACKGROUND:      "", // ← canviar en el css .html{}
@@ -49,7 +49,7 @@ const CONFIG = {
 
     QUI_SOM:            "Qui som...",
     QUI_SOM_TIT:        "Passió per les motos des de fa 15 anys",
-    QUI_DESC:           "Al Taller AMR MotorBike som especialistes en manteniment, reparació i restauració de motocicletes. Més de 15 anys a Terrassa cuidant la teva moto amb la mateixa passió amb la qual tu la condueixes. Treballem amb totes les marques i models, des de scooters fins a motos de gran cilindrada.",
+    QUI_DESC:           "Al Taller AMR MotorBike som especialistes en manteniment, reparació i restauració de motocicletes. Més de 15 anys a Sabadell cuidant la teva moto amb la mateixa passió amb la qual tu la condueixes. Treballem amb totes les marques i models, des de scooters fins a motos de gran cilindrada.",
     //+hero boto pri
 
     // 5. SERVEIS (graella)
