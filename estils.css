@@ -173,6 +173,7 @@ a:hover { text-decoration: underline; }
 }
 
 .hero-contingut {
+    perspective: 700px;
     position: relative;
     z-index: 2;
     padding: 0 24px;
@@ -215,17 +216,21 @@ a:hover { text-decoration: underline; }
                                                 
                                                 }    xxx*/
 .card {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.15) 0%,
         rgba(255, 255, 255, 0.05) 100%
     );
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 14px;
-
+    box-shadow: 
+        7px 1px 3px 0px rgba(253, 130, 49, 0.685),
+        11px 9px 28px 0px rgba(102,102,102,0.8);   /* X Y blur ex */
+    transform: rotateX(0deg) rotateY(-30deg);
     margin-bottom: 32px;
+ 
 }
 
 .hero-botons {

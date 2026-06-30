@@ -70,9 +70,7 @@
                         <div class="card">                        
                                                        <img class="hero-pic" src="${CONFIG.ASSETS}${CONFIG.LOGO_T}" alt="${CONFIG.NOM}">    
                         </div>
-                        <div class="">                        
-                                                       <img class="hero-pic" src="${CONFIG.ASSETS}${CONFIG.LOGO_T}" alt="${CONFIG.NOM}">    
-                        </div>                        
+                        
                         <div class="hero-botons">
                             <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal btn-balla">
                                 ${CONFIG.HERO_BOTO_PRI}
