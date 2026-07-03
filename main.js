@@ -19,7 +19,7 @@
                     <ul class="navbar-menu">
                         <li><a href="#qui-som">Nosaltres</a></li>
                         <li><a href="#serveis">Serveis</a></li>
-                        <li><a href="#perque">Per què AMR</a></li>
+                        <li><a href="#perque">Per què AMR?</a></li>
                         <li><a href="#contacte">Contacte</a></li>
                     </ul>
                 </nav>
