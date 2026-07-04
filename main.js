@@ -157,21 +157,21 @@
                     <h2 class="seccio-titol">${CONFIG.PXQ_DESC}</h2>
                     <div class="perque-grid">
                         <div class="perque-item">
-                            <div class="perque-ico">⚡</div>
+                            <div class="perque-ico">${CONFIG.PXQ_BLOC1_emo}</div>
                             <div>
                                 <div class="perque-titol">${CONFIG.PXQ_BLOC1_TIT}</div>
                                 <div class="perque-desc">${CONFIG.PXQ_BLOC1_DESC}</div>
                             </div>
                         </div>
                         <div class="perque-item">
-                            <div class="perque-ico">🔩</div>
+                            <div class="perque-ico">${CONFIG.PXQ_BLOC2_emo}</div>
                             <div>
                                 <div class="perque-titol">${CONFIG.PXQ_BLOC2_TIT}</div>
                                 <div class="perque-desc">${CONFIG.PXQ_BLOC2_DESC}</div>
                             </div>
                         </div>
                         <div class="perque-item">
-                            <div class="perque-ico">🏍️</div>
+                            <div class="perque-ico">${CONFIG.PXQ_BLOC3_emo}</div>
                             <div>
                                 <div class="perque-titol">${CONFIG.PXQ_BLOC3_TIT}</div>
                                 <div class="perque-desc">${CONFIG.PXQ_BLOC3_DESC}</div>
@@ -188,7 +188,7 @@
                     <h2 class="seccio-titol">${CONFIG.ON_SOM_TIT}</h2>
                     <div class="contacte-grid">
                         <div class="contacte-item">
-                            <div class="contacte-ico">📍</div>
+                            <div class="contacte-ico">${CONFIG.AD}</div>
                             <div>
                                 <div class="contacte-label">${CONFIG.ADRECALBL}</div>
                                 <div class="contacte-valor">
@@ -197,7 +197,7 @@
                             </div>
                         </div>
                         <div class="contacte-item">
-                            <div class="contacte-ico">📞</div>
+                            <div class="contacte-ico">${CONFIG.TL}</div>
                             <div>
                                 <div class="contacte-label">${CONFIG.TELEFONLBL}</div>
                                 <div class="contacte-valor">
@@ -207,7 +207,7 @@
                             </div>
                         </div>
                         <div class="contacte-item">
-                            <div class="contacte-ico">✉️</div>
+                            <div class="contacte-ico">${CONFIG.EM}</div>
                             <div>
                                 <div class="contacte-label">${CONFIG.EMAILLBL}</div>
                                 <div class="contacte-valor">
@@ -216,7 +216,7 @@
                             </div>
                         </div>
                         <div class="contacte-item">
-                            <div class="contacte-ico">🕐</div>
+                            <div class="contacte-ico">${CONFIG.HR}</div>
                             <div>
                                 <div class="contacte-label">${CONFIG.HORA_0}</div>
                                 <div class="contacte-valor">

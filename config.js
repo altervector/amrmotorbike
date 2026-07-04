@@ -1,6 +1,5 @@
 /* ============================================================
-   CONFIG.JS - Configuració global del projecte
-   Canvia aquí les dades per adaptar-lo al negoci
+   CONFIG.JS
    ============================================================ */
 
 const CONFIG = {
@@ -10,11 +9,11 @@ const CONFIG = {
     LOGO:           "logo/logoAMR.png",
     LOGO_T:         "logo/logoAMRtrans.png",
     SLOGAN:         "Especialistas en motos. Sabadell.",
-    TELEFON:        "93 000 00 00",                                          TELEFONLBL:   "Teléfono",
+    TELEFON:        "93 000 00 00",                                          TELEFONLBL:   "Teléfono", TL: "📞",
     MOBIL:          "600 000 000",
     WHATSAPP:       "https://wa.me/34600000000",                             WHATSAPPLBL:" 💬 Escribenos por WhatsApp",
-    EMAIL:          "amrmotorbike@altervector.com",                          EMAILLBL:"e-Mail",
-    ADRECA:         "Calle de la Mecánica, 42, 08220 Sabadell, Barcelona",   ADRECALBL: "Dirección",
+    EMAIL:          "amrmotorbike@altervector.com",                          EMAILLBL:"e-Mail",        EM: "✉️",
+    ADRECA:         "Calle de la Mecánica, 42, 08220 Sabadell, Barcelona",   ADRECALBL: "Dirección",   AD: "📍",
     INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
     FACEBOOK:       "",
     EMAIL_SUPORT:   "suport@altervector.com",
@@ -32,8 +31,11 @@ const CONFIG = {
     BACKGROUND:      "", // ← canviar en el css .html{}
     BLOC_HERO:       "images/amrmotorbike/hero-amrmotorbike.jpg", 
     QR:              "qr/qr-amrmotorbike.png",
+    //-------------------------------------------------------------------------------------------------------------------------
 
-    // 4. TEXTOS
+
+
+    // 4. TEXTOS---------------------------------------------------------------------------------------------------------------
     NAV_NOS:        "Nosotros",
     NAV_SER:        "Servicios",
     NAV_PXQ:        "Porqué AMR?",
@@ -51,6 +53,9 @@ const CONFIG = {
     QUI_SOM_TIT:        "Pasión por las motos desde hace más de 20 años",
     QUI_DESC:           "En el Taller AMR MotorBike somos especialistas en mantenimiento, reparación y restauración de motocicletas. Más de 20 años en Sabadell cuidando tu moto con la misma pasión con la que la conduces. Trabajamos con todas las marcas y modelos, desde scooters hasta motos de gran cilindrada.",
     //+hero boto pri
+    //-------------------------------------------------------------------------------------------------------------------------
+
+
 
     // 5. SERVEIS (graella)
     QUE_FEM:            "Lo que hacemos",
@@ -67,29 +72,34 @@ const CONFIG = {
         { ico: "⚙️", titol: "Motor",                  desc: "Afinación general, reparación de cilindro, pistón, válvulas y ajuste de distribución." },
         { ico: "🎨", titol: "Personalización",        desc: "Instalación de accesorios, cambios estéticos con vinilos y carenados, y modificaciones." },
     ],
+    //-------------------------------------------------------------------------------------------------------------------------
 
-    // 6. PERQUE
+
+
+    // 6. PERQUE--------------------------------------------------------------------------------------------------------------
     PXQ:        "Porqué AMR MotorBike ?",
     PXQ_DESC:   "El taller que tu moto se merece",
 
-    PXQ_BLOC1_TIT:          "Diagnóstico rápido",
+    PXQ_BLOC1_TIT:          "Diagnóstico rápido",                    PXQ_BLOC1_emo:"⚡",
     PXQ_BLOC1_DESC:         "Detectamos el problema en el mismo día y te informamos antes de tocar nada.",
-    PXQ_BLOC2_TIT:          "Recanvios de calidad",
+
+    PXQ_BLOC2_TIT:          "Recanvios de calidad",                  PXQ_BLOC2_emo:"🔩",
     PXQ_BLOC2_DESC:         "Trabajamos con piezas originales o equivalentes homologadas, nunca piezas dudosas.",
-    PXQ_BLOC3_TIT:          "Moto de cortesía",
+
+    PXQ_BLOC3_TIT:          "Moto de cortesía",                      PXQ_BLOC3_emo:"🏍️",
     PXQ_BLOC3_DESC:         "Si la reparación se alarga, te dejamos moto para seguir rodando sin interrupciones.",
+    //-------------------------------------------------------------------------------------------------------------------------
 
-    // 7. ON SOM
 
+    // 7. ON SOM-----------------------------------------------------------------------------------------------------------   
     ON_SOM:            "Donde estamos...",
     ON_SOM_TIT:        "Ven a vernos",
-
     
-    HORA_0:         "Horario",
+    HORA_0:         "Horario",   HR: "🕐",
     HORA_1:         "Lunes a Jueves: 09:00 – 13:00 | 15:00 – 19:00",
     HORA_2:         "Viernes: 09:00 – 13:00 | 15:00 – 18:00",
     HORA_3:         "Sábado y Domingo: Cerrado",
-
+    //-------------------------------------------------------------------------------------------------------------------------
 
     // 6. SEGURETAT
     SITIOS_SEGUROS: ["altervector.com", "pages.dev", "altervector.github.io", "localhost", "127.0.0.1"],
