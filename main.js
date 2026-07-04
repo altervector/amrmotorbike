@@ -17,10 +17,10 @@
                     </div>
                     <button class="navbar-hamburguesa">☰</button>
                     <ul class="navbar-menu">
-                        <li><a href="#qui-som">Nosotros</a></li>
-                        <li><a href="#serveis">Servicios</a></li>
-                        <li><a href="#perque">Porqué AMR?</a></li>
-                        <li><a href="#contacte">Contacto</a></li>
+                        <li><a href="#qui-som">${CONFIG.NAV_NOS}</a></li>
+                        <li><a href="#serveis">${CONFIG.NAV_SER}</a></li>
+                        <li><a href="#perque">${CONFIG.NAV_PXQ} AMR?</a></li>
+                        <li><a href="#contacte">${CONFIG.NAV_CON}</a></li>
                     </ul>
                 </nav>
             `;
@@ -92,20 +92,20 @@
             stats.innerHTML = `
                 <div class="stats-franja">
                     <div class="stat-item">
-                        <div class="stat-numero">+${CONFIG.ANYS_EXPERIENCIA}</div>
-                        <div class="stat-label">Anys d'experiència</div>
+                        <div class="stat-numero">${CONFIG.ANYS_EXPERIENCIA}</div>
+                        <div class="stat-label">${CONFIG.ANYS_EXPERIENCIA2}</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-numero">+${CONFIG.MOTOS_REPARADES}</div>
-                        <div class="stat-label">Motos reparades</div>
+                        <div class="stat-numero">${CONFIG.MOTOS_REPARADES}</div>
+                        <div class="stat-label">${CONFIG.MOTOS_REPARADES2}</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-numero">+${CONFIG.CLIENTS}</div>
-                        <div class="stat-label">Clients satisfets</div>
+                        <div class="stat-numero">${CONFIG.CLIENTS}</div>
+                        <div class="stat-label">${CONFIG.CLIENTS2}</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-numero">${CONFIG.ESTRELLES}⭐</div>
-                        <div class="stat-label">Valoració Google</div>
+                        <div class="stat-label">${CONFIG.ESTRELLES2}</div>
                     </div>
                 </div>
             `;
@@ -190,7 +190,7 @@
                         <div class="contacte-item">
                             <div class="contacte-ico">📍</div>
                             <div>
-                                <div class="contacte-label">Adreça</div>
+                                <div class="contacte-label">${CONFIG.ADRECALBL}</div>
                                 <div class="contacte-valor">
                                     <a href="${CONFIG.URL_MAPS}" target="_blank">${CONFIG.ADRECA}</a>
                                 </div>
@@ -199,7 +199,7 @@
                         <div class="contacte-item">
                             <div class="contacte-ico">📞</div>
                             <div>
-                                <div class="contacte-label">Telèfon</div>
+                                <div class="contacte-label">${CONFIG.TELEFONLBL}</div>
                                 <div class="contacte-valor">
                                     <a href="tel:${CONFIG.TELEFON}">${CONFIG.TELEFON}</a><br>
                                     <a href="tel:${CONFIG.MOBIL}">${CONFIG.MOBIL}</a>
@@ -209,7 +209,7 @@
                         <div class="contacte-item">
                             <div class="contacte-ico">✉️</div>
                             <div>
-                                <div class="contacte-label">Email</div>
+                                <div class="contacte-label">${CONFIG.EMAILLBL}</div>
                                 <div class="contacte-valor">
                                     <a href="mailto:${CONFIG.EMAIL}">${CONFIG.EMAIL}</a>
                                 </div>
@@ -218,7 +218,7 @@
                         <div class="contacte-item">
                             <div class="contacte-ico">🕐</div>
                             <div>
-                                <div class="contacte-label">Horaris</div>
+                                <div class="contacte-label">${CONFIG.HORA_0}</div>
                                 <div class="contacte-valor">
                                     ${CONFIG.HORA_1}<br>
                                     ${CONFIG.HORA_2}<br>
@@ -228,7 +228,7 @@
                         </div>
                     </div>
                     <a href="${CONFIG.WHATSAPP}" target="_blank" class="boto-whatsapp btn-balla">
-                        💬 Escriu-nos per WhatsApp
+                       ${CONFIG.WHATSAPPLBL}
                     </a>
                 </section>
             `;

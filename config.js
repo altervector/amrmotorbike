@@ -10,11 +10,11 @@ const CONFIG = {
     LOGO:           "logo/logoAMR.png",
     LOGO_T:         "logo/logoAMRtrans.png",
     SLOGAN:         "Especialistas en motos. Sabadell.",
-    TELEFON:        "93 000 00 00",
+    TELEFON:        "93 000 00 00",                                          TELEFONLBL:   "Teléfono",
     MOBIL:          "600 000 000",
-    WHATSAPP:       "https://wa.me/34600000000",
-    EMAIL:          "amrmotorbike@altervector.com",
-    ADRECA:         "Calle de la Mecánica, 42, 08220 Sabadell, Barcelona",
+    WHATSAPP:       "https://wa.me/34600000000",                             WHATSAPPLBL:" 💬 Escribenos por WhatsApp",
+    EMAIL:          "amrmotorbike@altervector.com",                          EMAILLBL:"e-Mail",
+    ADRECA:         "Calle de la Mecánica, 42, 08220 Sabadell, Barcelona",   ADRECALBL: "Dirección",
     INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
     FACEBOOK:       "",
     EMAIL_SUPORT:   "suport@altervector.com",
@@ -31,21 +31,21 @@ const CONFIG = {
     // 3. IMATGES 
     BACKGROUND:      "", // ← canviar en el css .html{}
     BLOC_HERO:       "images/amrmotorbike/hero-amrmotorbike.jpg", 
-    
-    BLOC1:           "",
-    BLOC2:           "",
-    BLOC3:           "",
-    BLOC4:           "",
     QR:              "qr/qr-amrmotorbike.png",
 
     // 4. TEXTOS
+    NAV_NOS:        "Nosotros",
+    NAV_SER:        "Servicios",
+    NAV_PXQ:        "Porqué AMR?",
+    NAV_CON:        "Contacto",
+
     HERO_BOTO_PRI:      "📞 Llámanos",
     HERO_BOTO_SEC:      "Nuestros servicios",
 
-    ANYS_EXPERIENCIA:   "20",
-    MOTOS_REPARADES:    "2.000",
-    CLIENTS:            "1.200",
-    ESTRELLES:          "5",
+    ANYS_EXPERIENCIA:   "+20",    ANYS_EXPERIENCIA2:   "Años de experiéncia",
+    MOTOS_REPARADES:    "+2.000", MOTOS_REPARADES2:    "Motos reparadas",
+    CLIENTS:            "+1.200", CLIENTS2:            "Clientes satisfechos",
+    ESTRELLES:          "5",      ESTRELLES2:          "ValoracióN Google",
 
     QUI_SOM:            "Quiénes somos...",
     QUI_SOM_TIT:        "Pasión por las motos desde hace más de 20 años",
@@ -84,6 +84,8 @@ const CONFIG = {
     ON_SOM:            "Donde estamos...",
     ON_SOM_TIT:        "Ven a vernos",
 
+    
+    HORA_0:         "Horario",
     HORA_1:         "Lunes a Jueves: 09:00 – 13:00 | 15:00 – 19:00",
     HORA_2:         "Viernes: 09:00 – 13:00 | 15:00 – 18:00",
     HORA_3:         "Sábado y Domingo: Cerrado",
