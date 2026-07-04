@@ -17,10 +17,10 @@
                     </div>
                     <button class="navbar-hamburguesa">☰</button>
                     <ul class="navbar-menu">
-                        <li><a href="#qui-som">Nosaltres</a></li>
-                        <li><a href="#serveis">Serveis</a></li>
-                        <li><a href="#perque">Per què AMR?</a></li>
-                        <li><a href="#contacte">Contacte</a></li>
+                        <li><a href="#qui-som">Nosotros</a></li>
+                        <li><a href="#serveis">Servicios</a></li>
+                        <li><a href="#perque">Porqué AMR?</a></li>
+                        <li><a href="#contacte">Contacto</a></li>
                     </ul>
                 </nav>
             `;
