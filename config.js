@@ -9,12 +9,12 @@ const CONFIG = {
     NOM:            "AMR MotorBike",
     LOGO:           "logo/logoAMR.png",
     LOGO_T:         "logo/logoAMRtrans.png",
-    SLOGAN:         "Especialistes en motos. Sabadell.",
+    SLOGAN:         "Especialistas en motos. Sabadell.",
     TELEFON:        "93 000 00 00",
     MOBIL:          "600 000 000",
     WHATSAPP:       "https://wa.me/34600000000",
     EMAIL:          "amrmotorbike@altervector.com",
-    ADRECA:         "Carrer de la Mecànica, 42, 08220 Sabadell, Barcelona",
+    ADRECA:         "Calle de la Mecánica, 42, 08220 Sabadell, Barcelona",
     INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
     FACEBOOK:       "",
     EMAIL_SUPORT:   "suport@altervector.com",
@@ -39,54 +39,54 @@ const CONFIG = {
     QR:              "qr/qr-amrmotorbike.png",
 
     // 4. TEXTOS
-    HERO_BOTO_PRI:      "📞 Truca'ns",
-    HERO_BOTO_SEC:      "Els nostres serveis",
+    HERO_BOTO_PRI:      "📞 Llámanos",
+    HERO_BOTO_SEC:      "Nuestros servicios",
 
-    ANYS_EXPERIENCIA:   "15",
+    ANYS_EXPERIENCIA:   "20",
     MOTOS_REPARADES:    "2.000",
     CLIENTS:            "1.200",
     ESTRELLES:          "5",
 
-    QUI_SOM:            "Qui som...",
-    QUI_SOM_TIT:        "Passió per les motos des de fa 15 anys",
-    QUI_DESC:           "Al Taller AMR MotorBike som especialistes en manteniment, reparació i restauració de motocicletes. Més de 15 anys a Sabadell cuidant la teva moto amb la mateixa passió amb la qual tu la condueixes. Treballem amb totes les marques i models, des de scooters fins a motos de gran cilindrada.",
+    QUI_SOM:            "Quiénes somos...",
+    QUI_SOM_TIT:        "Pasión por las motos desde hace más de 20 años",
+    QUI_DESC:           "En el Taller AMR MotorBike somos especialistas en mantenimiento, reparación y restauración de motocicletas. Más de 20 años en Sabadell cuidando tu moto con la misma pasión con la que la conduces. Trabajamos con todas las marcas y modelos, desde scooters hasta motos de gran cilindrada.",
     //+hero boto pri
 
     // 5. SERVEIS (graella)
-    QUE_FEM:            "El que fem",
-    QUE_FEM_SRV:        "Els nostres serveis",
+    QUE_FEM:            "Lo que hacemos",
+    QUE_FEM_SRV:        "Nuestros servicios",
 
     SERVEIS: [
-        { ico: "🔧", titol: "Manteniment general",    desc: "Canvi d'oli i filtre, revisió de nivells, neteja de carburador i preparació per a ITV." },
-        { ico: "🛑", titol: "Frens",                  desc: "Canvi de pastilles i sabates, rectificació de discs i purga completa del sistema." },
-        { ico: "⛓️", titol: "Transmissió i cadena",   desc: "Ajust i lubricació de cadena, canvi del kit d'arrossegament i revisió de la caixa de canvis." },
-        { ico: "⚡", titol: "Sistema elèctric",       desc: "Revisió i canvi de bateria, diagnòstic amb escàner ECU i reparació de llums i connexions." },
-        { ico: "🏍️", titol: "Suspensió i direcció",   desc: "Servei de suspensió davantera, ajust de direcció i revisió de rodaments i amortidors." },
-        { ico: "💨", titol: "Sistema d'escapament",   desc: "Revisió de fugues, reparació i instal·lació d'escapaments esportius o personalitzats." },
-        { ico: "🔘", titol: "Pneumàtics",             desc: "Canvi de llantes, equilibrat, alineació i reparació de punxades." },
-        { ico: "⚙️", titol: "Motor",                  desc: "Afinació general, reparació de cilindre, pistó, vàlvules i ajust de distribució." },
-        { ico: "🎨", titol: "Personalització",        desc: "Instal·lació d'accessoris, canvis estètics amb vinils i carenats, i modificacions." },
+        { ico: "🔧", titol: "Mantenimiento general",    desc: "Cambio de aceite y filtro, revisión de niveles, limpieza de carburador y preparación para ITV." },
+        { ico: "🛑", titol: "Frenos",                  desc: "Cambio de pastillas y zapatas, rectificación de discos y purga completa del sistema." },
+        { ico: "⛓️", titol: "Transmisión i cadena",   desc: "Ajuste y lubricación de cadena, cambio del kit de arrastre y revisión de la caja de cambios." },
+        { ico: "⚡", titol: "Sistema eléctrico",       desc: "Revisión y cambio de batería, diagnóstico con escáner ECU y reparación de luces y conexiones." },
+        { ico: "🏍️", titol: "Suspensión i dirección",   desc: "Servicio de suspensión delantera, ajuste de dirección y revisión de rodamientos y amortiguadores." },
+        { ico: "💨", titol: "Sistema de escape",   desc: "Revisión de fugas, reparación e instalación de escapes deportivos o personalizados." },
+        { ico: "🔘", titol: "Pneumáticos",             desc: "Cambio de llantas, equilibrado, alineación y reparación de pinchazos." },
+        { ico: "⚙️", titol: "Motor",                  desc: "Afinación general, reparación de cilindro, pistón, válvulas y ajuste de distribución." },
+        { ico: "🎨", titol: "Personalización",        desc: "Instalación de accesorios, cambios estéticos con vinilos y carenados, y modificaciones." },
     ],
 
     // 6. PERQUE
-    PXQ:        "Per què AMR MotorBike ?",
-    PXQ_DESC:   "El taller que la teva moto mereix",
+    PXQ:        "Porqué AMR MotorBike ?",
+    PXQ_DESC:   "El taller que tu moto se merece",
 
-    PXQ_BLOC1_TIT:          "Diagnòstic ràpid",
-    PXQ_BLOC1_DESC:         "Detectem el problema en el mateix dia i t'informem abans de tocar res.",
-    PXQ_BLOC2_TIT:          "Recanvis de qualitat",
-    PXQ_BLOC2_DESC:         "Treballem amb peces originals o equivalents homologades, mai peces dubtoses.",
-    PXQ_BLOC3_TIT:          "Moto de cortesia",
-    PXQ_BLOC3_DESC:         "Si la reparació s'allarga, et deixem moto per seguir rodant sense interrupcions.",
+    PXQ_BLOC1_TIT:          "Diagnóstico rápido",
+    PXQ_BLOC1_DESC:         "Detectamos el problema en el mismo día y te informamos antes de tocar nada.",
+    PXQ_BLOC2_TIT:          "Recanvios de calidad",
+    PXQ_BLOC2_DESC:         "Trabajamos con piezas originales o equivalentes homologadas, nunca piezas dudosas.",
+    PXQ_BLOC3_TIT:          "Moto de cortesía",
+    PXQ_BLOC3_DESC:         "Si la reparación se alarga, te dejamos moto para seguir rodando sin interrupciones.",
 
     // 7. ON SOM
 
-    ON_SOM:            "On som...",
-    ON_SOM_TIT:        "Vine a veure'ns",
+    ON_SOM:            "Donde estamos...",
+    ON_SOM_TIT:        "Ven a vernos",
 
-    HORA_1:         "Dilluns a dijous: 09:00 – 13:00 | 15:00 – 19:00",
-    HORA_2:         "Divendres: 09:00 – 13:00 | 15:00 – 18:00",
-    HORA_3:         "Dissabte i diumenge: Tancat",
+    HORA_1:         "Lunes a Jueves: 09:00 – 13:00 | 15:00 – 19:00",
+    HORA_2:         "Viernes: 09:00 – 13:00 | 15:00 – 18:00",
+    HORA_3:         "Sábado y Domingo: Cerrado",
 
 
     // 6. SEGURETAT
