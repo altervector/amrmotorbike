@@ -36,6 +36,7 @@ const CONFIG = {
 
 
     // 4. TEXTOS---------------------------------------------------------------------------------------------------------------
+    NAV_INI:        "Inicio",
     NAV_NOS:        "Nosotros",
     NAV_SER:        "Servicios",
     NAV_PXQ:        "Porqué AMR?",

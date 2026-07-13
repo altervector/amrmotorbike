@@ -17,6 +17,7 @@
                     </div>
                     <button class="navbar-hamburguesa">☰</button>
                     <ul class="navbar-menu">
+                        <li><a href="#hero">${CONFIG.NAV_INI}</a></li>
                         <li><a href="#qui-som">${CONFIG.NAV_NOS}</a></li>
                         <li><a href="#serveis">${CONFIG.NAV_SER}</a></li>
                         <li><a href="#perque">${CONFIG.NAV_PXQ}</a></li>
