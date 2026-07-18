@@ -273,6 +273,9 @@
                     <p class="footer-poweredby">
                         Powered by <a href="https://www.altervector.com" target="_blank">AlterVector</a>
                     </p>
+                        <!-- #visites s'omple via Worker (BLOC 6) -->
+                        <span id="visites"></span>
+
                 </footer>
             `;
         }
@@ -285,6 +288,17 @@
         });
 
         document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+                fetch(`${CONFIG.BASE_WORKER}/visites`)
+                .then(r => r.json())       // converteix resposta a objecte JS
+                .then(data => {
+                const el = document.getElementById('visites');
+                if (el && data.visites) {
+                    el.textContent = `${data.visites} visites`;
+                }
+                })
+                .catch(() => {}); // Si el Worker no respon → no passa res, el span queda buit
+
 
     }; // fi inicialitzar
 

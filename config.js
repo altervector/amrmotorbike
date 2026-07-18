@@ -17,7 +17,7 @@ const CONFIG = {
     // 2. RUTES
     REPO_URL:       "https://altervector.github.io/amrmotorbike/",
     BASE_URL:       "./",
-    BASE_WORKER:    "",
+    BASE_WORKER:    "https://amrmotorbike.altervector.workers.dev",
     URL_OFICIAL:    "",
     ASSETS:         "https://avsets.pages.dev/",
     URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=Taller+AMR+Sabadell",
