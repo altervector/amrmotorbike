@@ -1,6 +1,7 @@
 const CONFIG = {
 
     // 1. NEGOCI
+    COOK:           "cookies_amr",
     NOM:            "AMR MotorBike",
     LOGO:           "logo/logoAMR.png",
     LOGO_T:         "logo/logoAMRtrans.png",

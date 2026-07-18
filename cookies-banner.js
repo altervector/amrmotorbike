@@ -1,7 +1,7 @@
 /* ============================================================
-   COOKIES-BANNER.JS — Grúas Esmar
+   COOKIES-BANNER.JS
    Web Component: <cookies-banner></cookies-banner>
-   Depèn de: config.js (per l'enllaç a cookies.html)
+   Depèn de: config.js (per l'enllaç a cookies.html i CONFIG.COOK)
 
    QUÈ FA AQUEST FITXER:
    Mostra el banner de cookies centrat en pantalla si l'usuari
@@ -9,14 +9,17 @@
    i Rebutjar tenen el mateix pes visual — obligatori legalment.
    Un cop tries, es guarda a localStorage i no torna a sortir.
 
-   CLAU: 'ge_cookies' → 'acceptat' | 'rebutjat'
+   CLAU: CONFIG.COOK (definida a cada projecte) → 'acceptat' | 'rebutjat'
+   Cada projecte té la seva pròpia clau per evitar que es
+   trepitgin entre si quan comparteixen el mateix origen
+   (mateix domini .github.io o mateix localhost).
    ============================================================ */
 
 class CookiesBanner extends HTMLElement {
     connectedCallback() {
 
         // Si ja hi ha una elecció guardada → no pintem res
-        const eleccio = localStorage.getItem('ge_cookies');
+        const eleccio = localStorage.getItem(CONFIG.COOK);
         if (eleccio) return;
 
         this.innerHTML = `
@@ -103,12 +106,12 @@ class CookiesBanner extends HTMLElement {
         // Guarda l'elecció i elimina el banner del DOM
         // remove() en lloc de display:none → neteja del tot
         this.querySelector('#cb-acceptar').addEventListener('click', () => {
-            localStorage.setItem('ge_cookies', 'acceptat');
+            localStorage.setItem(CONFIG.COOK, 'acceptat');
             this.remove();
         });
 
         this.querySelector('#cb-rebutjar').addEventListener('click', () => {
-            localStorage.setItem('ge_cookies', 'rebutjat');
+            localStorage.setItem(CONFIG.COOK, 'rebutjat');
             this.remove();
         });
     }
