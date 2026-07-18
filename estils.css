@@ -29,6 +29,7 @@
     --gris-clar:     #d4d4d4;
     --blanc:         #ffffff;
     --blanc-transp:  rgba(255,255,255,0.12);
+    --vermell:        #e53012;
 
     --font-titol:    'airstrikechrome', sans-serif;
     --font-titol2:    'airstrike', sans-serif;
@@ -574,7 +575,31 @@ a:hover { text-decoration: underline; }
     width: 55px;
     margin: 20px auto 20px auto;
 }
+.footer-legal {
+    background: rgba(255,255,255,0.06);
+    padding: 14px 20px;
+    margin: 20px -24px 0 -24px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
 
+.footer-legal a {
+    color: #ccc;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.footer-legal a:hover {
+    color: var(--vermell);
+    text-decoration: none;
+}
+.legal{
+     margin: 110px auto;
+     padding: 20px;
+      max-width: 600px; /* aquí és on li falta */
+     
+}
 .footer-poweredby {
     margin-top: 24px;
     font-size: 10px;

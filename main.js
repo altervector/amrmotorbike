@@ -270,6 +270,11 @@
                     <p style="font-size:13px; color: var(--gris);">
                         <a href="${CONFIG.URL_MAPS}" target="_blank">${CONFIG.ADRECA}</a>
                     </p>
+                <div class="footer-legal">
+                    <a href="aviso-legal.html">Aviso Legal</a>
+                    <a href="privacitat.html">Política de privacidad</a>
+                    <a href="cookies.html">Uso de Cookies</a>
+                </div>
                     <p class="footer-poweredby">
                         Powered by <a href="https://www.altervector.com" target="_blank">AlterVector</a>
                     </p>
