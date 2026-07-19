@@ -10,7 +10,7 @@ const CONFIG = {
     MOBIL:          "600 000 000",
     WHATSAPP:       "https://wa.me/34600000000",                             WHATSAPPLBL:" 💬 Escribenos por WhatsApp",
     EMAIL:          "amrmotorbike@altervector.com",                          EMAILLBL:"e-Mail",        EM: "✉️",
-    ADRECA:         "Calle de la Mecánica, 42, 08220 Sabadell, Barcelona",   ADRECALBL: "Dirección",   AD: "📍",
+    ADRECA:         "Calle de Vila Cinca, 97, 08208 Sabadell, Barcelona",   ADRECALBL: "Dirección",   AD: "📍",
     INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
     FACEBOOK:       "",
     EMAIL_SUPORT:   "suport@altervector.com",
@@ -21,8 +21,8 @@ const CONFIG = {
     BASE_WORKER:    "https://amrmotorbike.altervector.workers.dev",
     URL_OFICIAL:    "",
     ASSETS:         "https://avsets.pages.dev/",
-    URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=Taller+AMR+Sabadell",
-    URL_RESSENYES:  "https://www.google.com/maps/search/?api=1&query=Taller+AMR+Sabadell",
+    URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=Carrer+de+Vila+Cinca+97+Sabadell",
+    URL_RESSENYES:  "https://www.google.com/maps/search/?api=1&query=Carrer+de+Vila+Cinca+97+Sabadell",
 
     // 3. IMATGES 
     BACKGROUND:      "", // ← canviar en el css .html{}
