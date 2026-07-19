@@ -4,7 +4,7 @@ const CONFIG = {
     COOK:           "cookies_amr",
     NOM:            "AMR MotorBike",
     LOGO:           "logo/logoAMR.png",
-    LOGO_T:         "logo/logoAMRtrans.png",
+    LOGO_T:         "logo/logo-nouAMR.png",
     SLOGAN:         "Especialistas en motos. Sabadell.",
     TELEFON:        "93 000 00 00",                                          TELEFONLBL:   "Teléfono", TL: "📞",
     MOBIL:          "600 000 000",

@@ -213,9 +213,9 @@ a:hover { text-decoration: underline; }
                         line-height: 1.5;
                     }
 
-                                            /*    .hero-pic {
-                                                
-                                                }    xxx*/
+                                                .hero-pic {
+                                                 border-radius: 14px;
+                                                }    
 .card {
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
