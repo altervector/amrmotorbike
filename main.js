@@ -62,7 +62,7 @@
         const hero = document.getElementById('hero');
         if (hero) {
             hero.innerHTML = `
-                <section class="hero">
+                <section class="hero" id="hero">
                     <img class="hero-imatge"
                         src="${CONFIG.ASSETS}${CONFIG.BLOC_HERO}"
                         alt="${CONFIG.NOM}">
