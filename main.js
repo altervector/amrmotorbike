@@ -27,6 +27,26 @@
             `;
         }
 
+                /* ── 1. NAVBAR 2.0─────────────────────────────────────── */
+        const navbar2 = document.getElementById('navbar2');
+        if (navbar2) {
+            navbar2.innerHTML = `
+                <nav class="navbar">
+                    <div class="navbar-logo">
+                        <img src="${CONFIG.ASSETS}${CONFIG.LOGO_T}" alt="${CONFIG.NOM}">
+                    </div>
+                    <button class="navbar-hamburguesa">☰</button>
+                    <ul class="navbar-menu">
+                        <li><a href="index.html#inici">${CONFIG.NAV_INI}</a></li>
+
+                    </ul>
+                </nav>
+            `;
+        }
+
+
+
+
         const btnHamburguesa = document.querySelector('.navbar-hamburguesa');
         const menu = document.querySelector('.navbar-menu');
 
