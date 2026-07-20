@@ -17,7 +17,7 @@
                     </div>
                     <button class="navbar-hamburguesa">☰</button>
                     <ul class="navbar-menu">
-                        <li><a href="index.html#hero">${CONFIG.NAV_INI}</a></li>
+                        <li><a href="index.html#inici">${CONFIG.NAV_INI}</a></li>
                         <li><a href="index.html#qui-som">${CONFIG.NAV_NOS}</a></li>
                         <li><a href="index.html#serveis">${CONFIG.NAV_SER}</a></li>
                         <li><a href="index.html#perque">${CONFIG.NAV_PXQ}</a></li>
@@ -62,7 +62,7 @@
         const hero = document.getElementById('hero');
         if (hero) {
             hero.innerHTML = `
-                <section class="hero" id="hero">
+                <section class="hero" id="inici">
                     <img class="hero-imatge"
                         src="${CONFIG.ASSETS}${CONFIG.BLOC_HERO}"
                         alt="${CONFIG.NOM}">
