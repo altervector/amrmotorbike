@@ -19,7 +19,7 @@ const CONFIG = {
     REPO_URL:       "https://altervector.github.io/amrmotorbike/",
     BASE_URL:       "./",
     BASE_WORKER:    "https://amrmotorbike.altervector.workers.dev",
-    URL_OFICIAL:    "https://amrmotorbike.altervector.com",
+    URL_OFICIAL:    "https://www.amrmotorbike.com",
     ASSETS:         "https://avsets.pages.dev/",
     URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=Carrer+de+Vila+Cinca+97+Sabadell",
     URL_RESSENYES:  "https://www.google.com/maps/search/?api=1&query=Carrer+de+Vila+Cinca+97+Sabadell",
