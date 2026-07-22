@@ -222,8 +222,9 @@
                             <div>
                                 <div class="contacte-label">${CONFIG.TELEFONLBL}</div>
                                 <div class="contacte-valor">
-                                    <a href="tel:${CONFIG.TELEFON}">${CONFIG.TELEFON}</a><br>
-                                    <a href="tel:${CONFIG.MOBIL}">${CONFIG.MOBIL}</a>
+                                    <a href="tel:${CONFIG.MOBIL}">${CONFIG.MOBIL}</a><br>
+                                    <a href="tel:${CONFIG.TELEFON}">${CONFIG.TELEFON}</a>
+                                    
                                 </div>
                             </div>
                         </div>
