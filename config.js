@@ -100,5 +100,5 @@ const CONFIG = {
     //-------------------------------------------------------------------------------------------------------------------------
 
     // 6. SEGURETAT
-    SITIOS_SEGUROS: ["altervector.com", "pages.dev", "altervector.github.io", "amrmotorbike.com", "localhost", "127.0.0.1"],
+    SITIOS_SEGUROS: ["altervector.com", "pages.dev", "altervector.github.io", "amrmotorbike.es","amrmotorbike.com", "localhost", "127.0.0.1"],
 };
