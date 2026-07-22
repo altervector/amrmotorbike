@@ -9,7 +9,7 @@ const CONFIG = {
     TELEFON:        "93 000 00 00",                                          TELEFONLBL:   "Teléfono", TL: "📞",
     MOBIL:          "600 000 000",
     WHATSAPP:       "https://wa.me/34600000000",                             WHATSAPPLBL:" 💬 Escribenos por WhatsApp",
-    EMAIL:          "amrmotorbike@altervector.com",                          EMAILLBL:"e-Mail",        EM: "✉️",
+    EMAIL:          "info@amrmotorbike.com",                          EMAILLBL:"e-Mail",        EM: "✉️",
     ADRECA:         "Calle de Vila Cinca, 97, 08208 Sabadell, Barcelona",   ADRECALBL: "Dirección",   AD: "📍",
     INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
     FACEBOOK:       "",
