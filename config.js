@@ -6,7 +6,7 @@ const CONFIG = {
     LOGO:           "logo/logoAMR.png",
     LOGO_T:         "logo/logo-nouAMR.png",
     SLOGAN:         "Especialistas en motos. Sabadell.",
-    TELEFON:        "93 000 00 00",                                          TELEFONLBL:   "Teléfono", TL: "📞",
+    TELEFON:        "",                                          TELEFONLBL:   "Teléfono", TL: "📞",
     MOBIL:          "669669877",
     WHATSAPP:       "https://wa.me/34669669877",                             WHATSAPPLBL:" 💬 Escribenos por WhatsApp",
     EMAIL:          "info@amrmotorbike.com",                          EMAILLBL:"e-Mail",        EM: "✉️",
