@@ -10,7 +10,7 @@ const CONFIG = {
     MOBIL:          "669669877",
     WHATSAPP:       "https://wa.me/34669669877",                             WHATSAPPLBL:" 💬 Escribenos por WhatsApp",
     EMAIL:          "info@amrmotorbike.com",                          EMAILLBL:"e-Mail",        EM: "✉️",
-    ADRECA:         "Calle de Vila Cinca, 97, 08208 Sabadell, Barcelona",   ADRECALBL: "Dirección",   AD: "📍",
+    ADRECA:         "C/ Vila Cinca, 97, 08208 Sabadell, Barcelona",   ADRECALBL: "Dirección",   AD: "📍",
     INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
     FACEBOOK:       "",
     EMAIL_SUPORT:   "suport@altervector.com",
