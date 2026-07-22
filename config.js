@@ -7,8 +7,8 @@ const CONFIG = {
     LOGO_T:         "logo/logo-nouAMR.png",
     SLOGAN:         "Especialistas en motos. Sabadell.",
     TELEFON:        "93 000 00 00",                                          TELEFONLBL:   "Teléfono", TL: "📞",
-    MOBIL:          "600 000 000",
-    WHATSAPP:       "https://wa.me/34600000000",                             WHATSAPPLBL:" 💬 Escribenos por WhatsApp",
+    MOBIL:          "669669877",
+    WHATSAPP:       "https://wa.me/34669669877",                             WHATSAPPLBL:" 💬 Escribenos por WhatsApp",
     EMAIL:          "info@amrmotorbike.com",                          EMAILLBL:"e-Mail",        EM: "✉️",
     ADRECA:         "Calle de Vila Cinca, 97, 08208 Sabadell, Barcelona",   ADRECALBL: "Dirección",   AD: "📍",
     INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
@@ -94,8 +94,8 @@ const CONFIG = {
     ON_SOM_TIT:        "Ven a vernos",
     
     HORA_0:         "Horario",   HR: "🕐",
-    HORA_1:         "Lunes a Jueves: 09:00 – 13:00 | 15:00 – 19:00",
-    HORA_2:         "Viernes: 09:00 – 13:00 | 15:00 – 18:00",
+    HORA_1:         "Lunes a Jueves: 8:30 – 13:00 | 15:00 – 18:00",
+    HORA_2:         "Viernes: 08:30 – 16:00",
     HORA_3:         "Sábado y Domingo: Cerrado",
     //-------------------------------------------------------------------------------------------------------------------------
 
