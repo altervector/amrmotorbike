@@ -213,7 +213,7 @@
                             <div>
                                 <div class="contacte-label">${CONFIG.ADRECALBL}</div>
                                 <div class="contacte-valor">
-                                    <a href="${CONFIG.URL_MAPS}" target="_blank">${CONFIG.ADRECA}</a>
+                                    <a href="${CONFIG.URL_MAPS}" target="_blank">${CONFIG.ADRECA} (Maps)</a>
                                 </div>
                             </div>
                         </div>
@@ -276,7 +276,7 @@
 
 
                         <a href="${CONFIG.URL_RESSENYES}" target="_blank">
-                                <img src="${CONFIG.ASSETS}icon/google.png" alt="Google" class="icona-app">Google
+                                <img src="${CONFIG.ASSETS}icon/google.png" alt="Google" class="icona-app">Google (Reseñas)
                         </a>
 
 
