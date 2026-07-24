@@ -21,7 +21,7 @@ const CONFIG = {
     BASE_WORKER:    "https://amrmotorbike.altervector.workers.dev",
     URL_OFICIAL:    "https://www.amrmotorbike.com",
     ASSETS:         "https://avsets.pages.dev/",
-    URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=Carrer+de+Vila+Cinca+97+Sabadell",
+    URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=AMR+MotorBike&query_place_id=ChIJD7yoLgCVpBIRwGk2PRTlhQA",
     URL_RESSENYES:  "https://g.page/r/CcBpNj0U5YUAEBM/review",
 
     // 3. IMATGES 
