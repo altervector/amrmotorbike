@@ -275,7 +275,7 @@
                         
 
 
-                        <a href="${CONFIG.URL_RESSENYES}}" target="_blank">
+                        <a href="${CONFIG.URL_RESSENYES}" target="_blank">
                                 <img src="${CONFIG.ASSETS}icon/google.png" alt="Google" class="icona-app">Google
                         </a>
 
