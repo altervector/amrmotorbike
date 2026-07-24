@@ -22,7 +22,7 @@ const CONFIG = {
     URL_OFICIAL:    "https://www.amrmotorbike.com",
     ASSETS:         "https://avsets.pages.dev/",
     URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=Carrer+de+Vila+Cinca+97+Sabadell",
-    URL_RESSENYES:  "https://www.google.com/maps/search/?api=1&query=Carrer+de+Vila+Cinca+97+Sabadell",
+    URL_RESSENYES:  "https://g.page/r/CcBpNj0U5YUAEBM/review",
 
     // 3. IMATGES 
     BACKGROUND:      "", // ← canviar en el css .html{}
