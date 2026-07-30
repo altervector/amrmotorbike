@@ -252,6 +252,8 @@
                     <a href="${CONFIG.WHATSAPP}" target="_blank" class="boto-whatsapp btn-balla">
                        ${CONFIG.WHATSAPPLBL}
                     </a>
+                                    <a href="form-contacte.html" class="boto-whatsapp">Formulario de Contacto</a>
+
                 </section>
             `;
         }

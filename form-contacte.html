@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ca">
+    
+<head>
+    <title>Contacto | AMR MotorBike</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="Contacta con AMR MotorBike en Sabadell. Envíanos tu consulta o tu CV.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="https://avsets.pages.dev/logo/logoAMR.png">
+    <link rel="apple-touch-icon" href="https://avsets.pages.dev/logo/logoAMR.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Contacto | AMR MotorBike">
+    <meta property="og:description" content="Contacta con nosotros en Sabadell.">
+    <meta property="og:image" content="https://avsets.pages.dev/logo/logoAMR.png">
+    <meta property="og:type" content="website">
+
+    <meta charset="UTF-8">
+
+    <style>
+        body { opacity: 0; transition: opacity 0.5s ease-in; }
+    </style>
+
+    <script src="config.js"></script>
+    <script>
+        window.MODULS = ["cookies-banner.js", "form-contacte.js", "main.js"];
+    </script>
+    <script src="loader.js"></script>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <section class="seccio" id="contacte-form">
+        <p class="seccio-eyebrow">Contacto</p>
+        <h2 class="seccio-titol">Escríbenos</h2>
+        <p class="seccio-text">Cuéntanos qué necesitas o adjúntanos tu CV si quieres unirte al equipo.</p>
+        <form-contacte></form-contacte>
+    </section>
+
+    <div id="footer"></div>
+
+    <cookies-banner></cookies-banner>
+
+    <script>
+window.onerror = function(msg, src, line) {
+    document.body.innerHTML += '<div style="background:red;color:white;padding:20px;font-size:14px;position:fixed;bottom:0;left:0;right:0;z-index:99999">' + msg + ' — línia ' + line + '</div>';
+};
+</script>
+</body>
+</html>
