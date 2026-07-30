@@ -535,14 +535,14 @@ a:hover { text-decoration: underline; }
 .fc-file-label {
     display: inline-block;
     padding: 12px;
-    border: 1px dashed var(--taronja);
+    border: 3px dashed var(--taronja);
     border-radius: var(--radi);
     font-size: 13px;
     color: var(--taronja);
     cursor: pointer;
     text-align: center;
 }
-.fc-file-label:hover { background: rgba(249,115,22,0.08); }
+.fc-file-label:hover { background: rgba(249 116 22 / 0.08); }
 
 
 
