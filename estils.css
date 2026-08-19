@@ -91,7 +91,11 @@ a:hover { text-decoration: underline; }
     white-space: nowrap;
     transform: rotate(0deg);
 }
-.marquee-track{ display:inline-flex; animation: desplaca 54s linear infinite; }
+.marquee-track {
+    display: inline-flex;
+    gap: 55px; /* Substitueix el padding horitzontal dels span per un espaiat net */
+    animation: desplaca 54s linear infinite;
+}
 .marquee span{
     display: inline-flex;
     align-items: center;
@@ -99,7 +103,7 @@ a:hover { text-decoration: underline; }
     font-family: var(--font-display);
     font-style: italic;
     font-size: 1.6rem;
-    padding: 0 30px;
+    /*padding: 0 30px;*/
     color: var(--ink-soft);
 }
 .marquee span img {
