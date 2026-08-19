@@ -35,6 +35,13 @@
     --font-titol2:    'airstrike', sans-serif;
     --font-cos:      'Segoe UI', Roboto, sans-serif;
 
+            --fonsmarquee: #FFFFFF;
+            --line:        #8F692C;
+            --line2:       #A47832;
+            --font-display:    'Fraunces', serif;
+            --ink-soft:    #98A6FF;
+            --accent:      #C07B13;
+
     --radi:          6px;
     --amplada-max:   100%;
     
@@ -70,6 +77,39 @@ body {
 img   { max-width: 100%; display: block; }
 a     { color: var(--taronja); text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+/* ============================================================
+   4. MARQUEE ITÀLIC — franja de capacitats
+   ============================================================ */
+.marquee{
+        margin: 0px 0;
+        background: var(--onsmarquee);
+    border-top: 3px solid var(--negre);
+    border-bottom: 3px solid var(--negre);
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transform: rotate(0deg);
+}
+.marquee-track{ display:inline-flex; animation: desplaca 54s linear infinite; }
+.marquee span{
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.6rem;
+    padding: 0 30px;
+    color: var(--ink-soft);
+}
+.marquee span img {
+    height: 90px;        /* alçada fixa — ajusta al gust */
+    width: auto;         /* l'amplada s'ajusta sola, mantenint proporció */
+    display: block;
+    /*vertical-align: middle;*/
+}
+.marquee span:nth-child(odd){ color: var(--accent); }
+@keyframes desplaca{ from{transform:translateX(0);} to{transform:translateX(-250%);} }
 
 /* ─── NAVBAR ──────────────────────────────────────────────── */
 .navbar {
