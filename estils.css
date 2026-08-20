@@ -94,7 +94,7 @@ a:hover { text-decoration: underline; }
 .marquee-track {
     display: inline-flex;
     gap: 55px; /* Substitueix el padding horitzontal dels span per un espaiat net */
-    animation: desplaca 54s linear infinite;
+    animation: desplaca 24s linear infinite;
 }
 /*.marquee span{
     display: inline-flex;
@@ -131,7 +131,7 @@ a:hover { text-decoration: underline; }
 }
 
 .marquee span:nth-child(odd){ color: var(--accent); }
-@keyframes desplaca{ from{transform:translateX(0);} to{transform:translateX(-250%);} }
+@keyframes desplaca{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
 
 /* ─── NAVBAR ──────────────────────────────────────────────── */
 .navbar {
