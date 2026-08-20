@@ -117,6 +117,7 @@ a:hover { text-decoration: underline; }
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+   min-width: 0;
     width: 160px;      /* amplada FIXA del "quadrat" — ajusta al gust */
     height: 90px;       /* alçada FIXA, igual que tenies */
     padding: 0 30px;
