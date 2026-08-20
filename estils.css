@@ -82,8 +82,8 @@ a:hover { text-decoration: underline; }
    4. MARQUEE ITÀLIC — franja de capacitats
    ============================================================ */
 .marquee{
-        margin: 0px 0;
-        background: var(--onsmarquee);
+        margin: 5px 0;
+        background: var(--fonsmarquee);
     border-top: 3px solid var(--negre);
     border-bottom: 3px solid var(--negre);
     padding: 10px 0;
@@ -93,7 +93,7 @@ a:hover { text-decoration: underline; }
 }
 .marquee-track {
     display: inline-flex;
-    gap: 55px; /* Substitueix el padding horitzontal dels span per un espaiat net */
+    /* gap: 55px; Substitueix el padding horitzontal dels span per un espaiat net */
     animation: desplaca 24s linear infinite;
 }
 /*.marquee span{
