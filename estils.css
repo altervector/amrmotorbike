@@ -103,14 +103,14 @@ a:hover { text-decoration: underline; }
     font-family: var(--font-display);
     font-style: italic;
     font-size: 1.6rem;
-    /*padding: 0 30px;*/
+    padding: 0 30px;
     color: var(--ink-soft);
-}*/
-/*.marquee span img {
-    height: 90px;        /* alçada fixa — ajusta al gust */
-    width: auto;         /* l'amplada s'ajusta sola, mantenint proporció */
+}
+.marquee span img {
+    height: 90px;        alçada fixa — ajusta al gust 
+    width: auto;          l'amplada s'ajusta sola, mantenint proporció 
     display: block;
-    /*vertical-align: middle;*/
+    vertical-align: middle;
 }*/
 .marquee span {
     display: inline-flex;
