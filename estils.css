@@ -96,7 +96,7 @@ a:hover { text-decoration: underline; }
     gap: 55px; /* Substitueix el padding horitzontal dels span per un espaiat net */
     animation: desplaca 54s linear infinite;
 }
-.marquee span{
+/*.marquee span{
     display: inline-flex;
     align-items: center;
     flex-shrink: 0;
@@ -105,13 +105,31 @@ a:hover { text-decoration: underline; }
     font-size: 1.6rem;
     /*padding: 0 30px;*/
     color: var(--ink-soft);
-}
-.marquee span img {
+}*/
+/*.marquee span img {
     height: 90px;        /* alçada fixa — ajusta al gust */
     width: auto;         /* l'amplada s'ajusta sola, mantenint proporció */
     display: block;
     /*vertical-align: middle;*/
+}*/
+.marquee span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 160px;      /* amplada FIXA del "quadrat" — ajusta al gust */
+    height: 90px;       /* alçada FIXA, igual que tenies */
+    padding: 0 30px;
 }
+
+.marquee span img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;  /* la imatge s'adapta DINS la caixa sense deformar-se */
+}
+
 .marquee span:nth-child(odd){ color: var(--accent); }
 @keyframes desplaca{ from{transform:translateX(0);} to{transform:translateX(-250%);} }
 
