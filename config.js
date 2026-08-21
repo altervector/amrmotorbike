@@ -13,7 +13,7 @@ const CONFIG = {
     ADRECA:         "C/ Vila Cinca, 97, 08208 Sabadell, Barcelona",   ADRECALBL: "Dirección",   AD: "📍",
     INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
     FACEBOOK:       "",
-    EMAIL_SUPORT:   "suport@altervector.com",
+    EMAIL_SUPORT:   "info@alterwebstudio.com",
 
     // 2. RUTES
     REPO_URL:       "https://altervector.github.io/amrmotorbike/",

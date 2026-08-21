@@ -321,7 +321,7 @@
                     <a href="cookies.html">Uso de Cookies</a>
                 </div>
                     <p class="footer-poweredby">
-                        Powered by <a href="https://www.altervector.com" target="_blank">AlterVector</a>
+                        Powered by <a href="https://www.alterwebstudio.com" target="_blank">AlterWeb Studio</a>
                     </p>
                         <!-- #visites s'omple via Worker (BLOC 6) -->
                         <span id="visites"></span>
