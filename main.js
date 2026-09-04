@@ -349,6 +349,24 @@
                 })
                 .catch(() => {}); // Si el Worker no respon → no passa res, el span queda buit
 
+var barraFixa = document.createElement('div');
+barraFixa.className = 'barra-fixa-mobil';
+
+var botoTrucar = document.createElement('a');
+botoTrucar.href = 'tel:' + CONFIG.TELEFON;
+botoTrucar.className = 'boto-fix trucar';
+botoTrucar.textContent = 'Llamar';
+
+var botoWhats = document.createElement('a');
+botoWhats.href = CONFIG.WHATSAPP;
+botoWhats.target = '_blank';
+botoWhats.rel = 'noopener';
+botoWhats.className = 'boto-fix whatsapp';
+botoWhats.textContent = 'WhatsApp';
+
+barraFixa.appendChild(botoTrucar);
+barraFixa.appendChild(botoWhats);
+document.body.appendChild(barraFixa);
 
     }; // fi inicialitzar
 

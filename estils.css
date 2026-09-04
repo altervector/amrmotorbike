@@ -772,3 +772,31 @@ a:hover { text-decoration: underline; }
 
     .contacte-grid { grid-template-columns: repeat(2, 1fr); }
 }
+.barra-fixa-mobil { display: none; }
+
+@media (max-width: 768px) {
+  .barra-fixa-mobil {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: #0f0f0f;
+    border-top: 1px solid var(--taronja);
+    padding: 8px 12px;
+    gap: 10px;
+  }
+  .barra-fixa-mobil .boto-fix {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    border-radius: var(--radi);
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  .barra-fixa-mobil .boto-fix.trucar { background: var(--taronja); }
+  .barra-fixa-mobil .boto-fix.whatsapp { background: #25D366; }
+  body { padding-bottom: 70px; }
+}
