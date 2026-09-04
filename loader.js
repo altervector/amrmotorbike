@@ -36,12 +36,18 @@
     });
 
     // 4. TREURE EL VEL
-    if (document.readyState === 'complete') {
+    const mostrarPagina = () => {
         document.body.style.opacity = "1";
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', mostrarPagina);
     } else {
-        window.addEventListener('load', () => {
-            document.body.style.opacity = "1";
-        });
+        mostrarPagina();
     }
+
+    // Fallback: si algo falla, mostrar a los 2 segundos igual
+    setTimeout(mostrarPagina, 2000);
+
 
 })();
