@@ -807,6 +807,39 @@ a:hover { text-decoration: underline; }
   .barra-fixa-mobil .boto-fix.whatsapp { background: #25D366; }
   body { padding-bottom: 70px; }
 }
+
+
+
+.barra-fixa-pc { display: none; }
+
+@media (min-width: 1024px) {
+    .barra-fixa-pc {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 200;
+        background: #0f0f0f;
+        border-bottom: 1px solid var(--taronja);
+        padding: 6px 20px;
+        gap: 10px;
+        justify-content: center;
+    }
+    .barra-fixa-pc .boto-fix-pc {
+        padding: 6px 16px;
+        border-radius: var(--radi);
+        font-weight: bold;
+        font-size: 12px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .barra-fixa-pc .boto-fix-pc.trucar { background: var(--taronja); }
+    .barra-fixa-pc .boto-fix-pc.whatsapp { background: #25D366; }
+
+    /* Com que la franja ocupa espai a dalt, cal baixar la navbar */
+    .navbar { top: 32px; }
+}
 .stat-google {
     text-decoration: none;
     color: inherit;

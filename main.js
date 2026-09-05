@@ -370,6 +370,27 @@ barraFixa.appendChild(botoTrucar);
 barraFixa.appendChild(botoWhats);
 document.body.appendChild(barraFixa);
 
+
+
+var barraFixaPC = document.createElement('div');
+barraFixaPC.className = 'barra-fixa-pc';
+
+var botoTrucarPC = document.createElement('a');
+botoTrucarPC.href = 'tel:' + CONFIG.TELEFON;
+botoTrucarPC.className = 'boto-fix-pc trucar';
+botoTrucarPC.textContent = 'Llamar';
+
+var botoWhatsPC = document.createElement('a');
+botoWhatsPC.href = CONFIG.WHATSAPP;
+botoWhatsPC.target = '_blank';
+botoWhatsPC.rel = 'noopener';
+botoWhatsPC.className = 'boto-fix-pc whatsapp';
+botoWhatsPC.textContent = 'WhatsApp';
+
+barraFixaPC.appendChild(botoTrucarPC);
+barraFixaPC.appendChild(botoWhatsPC);
+document.body.appendChild(barraFixaPC);
+
     }; // fi inicialitzar
 
     if (document.readyState === "complete" || document.readyState === "interactive") {
