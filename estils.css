@@ -807,3 +807,20 @@ a:hover { text-decoration: underline; }
   .barra-fixa-mobil .boto-fix.whatsapp { background: #25D366; }
   body { padding-bottom: 70px; }
 }
+.stat-google {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radi);
+    transition: background 0.2s, transform 0.2s;
+}
+.stat-google:hover {
+    background: rgba(255,255,255,0.05);
+    transform: translateY(-2px);
+}
+.stat-google .stat-cta {
+    font-size: 0.75rem;
+    color: var(--taronja);
+    margin-top: 4px;
+}

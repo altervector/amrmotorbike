@@ -124,10 +124,13 @@
                         <div class="stat-numero">${CONFIG.CLIENTS}</div>
                         <div class="stat-label">${CONFIG.CLIENTS2}</div>
                     </div>
-                    <div class="stat-item">
+
+                    <a href="${CONFIG.URL_RESSENYES}" target="_blank" rel="noopener" class="stat-item stat-google">
                         <div class="stat-numero">${CONFIG.ESTRELLES}⭐</div>
                         <div class="stat-label">${CONFIG.ESTRELLES2}</div>
-                    </div>
+                     <div class="stat-cta">Ver reseñas</div>
+</a>
+
                 </div>
             `;
         }
