@@ -36,7 +36,7 @@ const CONFIG = {
     NAV_INI:        "Inicio",
     NAV_NOS:        "Nosotros",
     NAV_SER:        "Servicios",
-    NAV_PXQ:        "Por qué AMR?",
+    NAV_PXQ:        "¿Por qué AMR?",
     NAV_CON:        "Contacto",
 
     HERO_BOTO_PRI:      "📞 Llámanos",
