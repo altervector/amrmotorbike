@@ -93,7 +93,7 @@
                         </div>
                     
                         <div class="hero-botons">
-                            <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal btn-balla">
+                            <a href="tel:+34${CONFIG.MOBIL}" class="hero-boto-principal btn-balla">
                                 ${CONFIG.HERO_BOTO_PRI}
                             </a>
                             <a href="#serveis" class="hero-boto-secundari">
@@ -156,7 +156,7 @@
                     <p class="seccio-eyebrow">${CONFIG.QUI_SOM}</p>
                     <h2 class="seccio-titol">${CONFIG.QUI_SOM_TIT}</h2>
                     <p class="seccio-text">${CONFIG.QUI_DESC}</p>
-                    <a href="tel:${CONFIG.TELEFON}" class="hero-boto-principal btn-balla"
+                    <a href="tel:+34${CONFIG.MOBIL}" class="hero-boto-principal btn-balla"
                         style="display:inline-block; margin-top: 8px;">
                         ${CONFIG.HERO_BOTO_PRI}
                     </a>
@@ -247,7 +247,7 @@
                             <div>
                                 <div class="contacte-label">${CONFIG.TELEFONLBL}</div>
                                 <div class="contacte-valor">
-                                    <a href="tel:${CONFIG.TELEFON}">${CONFIG.TELEFON}</a>
+                                    <a href="tel:+34${CONFIG.MOBIL}">${CONFIG.TELEFON}</a>
                                     
                                 </div>
                             </div>
