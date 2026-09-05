@@ -49,7 +49,7 @@ const CONFIG = {
 
     QUI_SOM:            "Quiénes somos...",
     QUI_SOM_TIT:        "Pasión por las motos desde hace más de 20 años",
-    QUI_DESC:           "En el Taller AMR MotorBike somos especialistas en mantenimiento, reparación y restauración de motocicletas. Más de 20 años de experiencia en varias marcas del sector i en Sabadell, cuidando tu moto con la misma pasión con la que la conduces. Trabajamos con todas las marcas y modelos, desde scooters hasta motos de gran cilindrada.",
+    QUI_DESC:           "En el Taller AMR MotorBike somos especialistas en mantenimiento, reparación y restauración de motocicletas. Más de 20 años de experiencia en varias marcas del sector y en Sabadell, cuidando tu moto con la misma pasión con la que la conduces. Trabajamos con todas las marcas y modelos, desde scooters hasta motos de gran cilindrada.",
     //+hero boto pri
     //-------------------------------------------------------------------------------------------------------------------------
 
@@ -62,9 +62,9 @@ const CONFIG = {
     SERVEIS: [
         { ico: "🔧", titol: "Mantenimiento general",    desc: "Cambio de aceite y filtro, limpieza de sistemas de admisión, ajustes y reglajes." },
         { ico: "🛑", titol: "Frenos",                  desc: "Cambio de pastillas y discos de freno, mordazas, limpiezas circuito y cambio de líquidos." },
-        { ico: "⛓️", titol: "Transmisión i cadena",   desc: "Ajuste y lubricación de cadena, cambio del kit de arrastre y revisión de la caja de velocidades." },
+        { ico: "⛓️", titol: "Transmisión y cadena",   desc: "Ajuste y lubricación de cadena, cambio del kit de arrastre y revisión de la caja de velocidades." },
         { ico: "⚡", titol: "Sistema eléctrico",       desc: "Revisión y cambio de batería, diagnóstico con escáner ECU y reparación de luces y conexiones." },
-        { ico: "🏍️", titol: "Suspensión i dirección",   desc: "Servicio de suspensión delantera, ajuste de dirección y revisión de rodamientos y amortiguadores." },
+        { ico: "🏍️", titol: "Suspensión y dirección",   desc: "Servicio de suspensión delantera, ajuste de dirección y revisión de rodamientos y amortiguadores." },
         { ico: "💨", titol: "Sistema de escape",   desc: "Revisión de fugas, reparación e instalación de escapes deportivos o personalizados." },
         { ico: "🔘", titol: "Neumáticos",             desc: "Cambio de llantas, equilibrado, alineación y reparación de pinchazos." },
         { ico: "⚙️", titol: "Motor",                  desc: "Ajuste general, reparaciones de todo tipos, fugas y reglajes, reparación de cilindro, pistón, válvulas y ajuste de distribución." },
