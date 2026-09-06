@@ -27,7 +27,7 @@ const CONFIG = {
 
     // 3. IMATGES 
     BACKGROUND:      "", // ← canviar en el css .html{}
-    BLOC_HERO:       "images/amrmotorbike/hero-amrmotorbike.jpg", 
+    BLOC_HERO:       "images/amrmotorbike/hero-amrmotorbike.webp", 
     QR:              "qr/qr-amrmotorbike.png",
     //-------------------------------------------------------------------------------------------------------------------------
 
