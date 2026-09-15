@@ -10,21 +10,17 @@ const CONFIG = {
     LOGO:           "logo/logoAMR.png",
     LOGO_T:         "logo/logo-nouAMR.png",
     SLOGAN:         "Especialistas en motos. Sabadell.",
-    TELEFON:        "669 66 98 77",
-        TELEFONLABEL:   "Teléfono",
-        TL: "📞",
+    TELEFON:        "669 66 98 77",        TELEFON_LABEL:   "Teléfono",      TELEFON_ICO: "📞",
     MOBIL:          "669669877",
-    WHATSAPP: "https://wa.me/34669669877?text=Hola%20AMR,%20soy%20[Nombre],%20tengo%20una%20[Marca/Modelo]%20y%20necesito%20[Avería%20o%20servicio].",
-        WHATSAPPLABEL:"💬 Escríbenos por WhatsApp",
-    EMAIL:          "info@amrmotorbike.com",
-        EMAILLABEL:"e-Mail",
-        EM: "✉️",
+    WHATSAPP:       "https://wa.me/34669669877?text=Hola%20AMR,%20soy%20[Nombre],%20tengo%20una%20[Marca/Modelo]%20y%20necesito%20[Avería%20o%20servicio].", WHATSAPPLABEL:"💬 Escríbenos por WhatsApp",
+    EMAIL:          "info@amrmotorbike.com",    EMAIL_LABEL:"e-Mail",        EMAIL_ICO: "✉️",
     ADRECA:         "C/ Vila Cinca, 97, 08208 Sabadell, Barcelona",
-       ADRECALABEL: "Dirección",
-       AD: "📍",
+       ADRECA_LABEL: "Dirección",
+       ADRECA_ICO: "📍",
     INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
     FACEBOOK:       "",
     EMAIL_SUPORT:   "info@alterwebstudio.com",
+    //-------------------------------------------------------------------------------------------------------------------------
 
     // 2. RUTES
     REPO_URL:       "https://altervector.github.io/amrmotorbike/",
@@ -40,8 +36,6 @@ const CONFIG = {
     BLOC_HERO:       "images/amrmotorbike/hero-amrmotorbike.webp", 
     QR:              "qr/qr-amrmotorbike.png",
     //-------------------------------------------------------------------------------------------------------------------------
-
-
 
     // 4. TEXTOS---------------------------------------------------------------------------------------------------------------
     NAV_INI:        "Inicio",
@@ -67,7 +61,7 @@ const CONFIG = {
 
 
     // 5. SERVEIS (graella)
-    QUE_FEM:            "Lo que hacemos",
+    QUE_FEMAIL_ICO:            "Lo que hacemos",
     QUE_FEM_SRV:        "Nuestros servicios",
 
     SERVEIS: [

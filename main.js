@@ -236,7 +236,7 @@
                         <div class="contacte-item">
                             <div class="contacte-ico">${CONFIG.AD}</div>
                             <div>
-                                <div class="contacte-label">${CONFIG.ADRECALABEL}</div>
+                                <div class="contacte-label">${CONFIG.ADRECA_LABEL}</div>
                                 <div class="contacte-valor">
                                     <a href="${CONFIG.URL_MAPS}" target="_blank">${CONFIG.ADRECA} (Maps)</a>
                                 </div>
@@ -245,7 +245,7 @@
                         <div class="contacte-item">
                             <div class="contacte-ico">${CONFIG.TL}</div>
                             <div>
-                                <div class="contacte-label">${CONFIG.TELEFONLABEL}</div>
+                                <div class="contacte-label">${CONFIG.TELEFON_LABEL}</div>
                                 <div class="contacte-valor">
                                     <a href="tel:+34${CONFIG.MOBIL}">${CONFIG.TELEFON}</a>
                                     
@@ -255,7 +255,7 @@
                         <div class="contacte-item">
                             <div class="contacte-ico">${CONFIG.EM}</div>
                             <div>
-                                <div class="contacte-label">${CONFIG.EMAILLABEL}</div>
+                                <div class="contacte-label">${CONFIG.EMAIL_LABEL}</div>
                                 <div class="contacte-valor">
                                     <a href="mailto:${CONFIG.EMAIL}">${CONFIG.EMAIL}</a>
                                 </div>
