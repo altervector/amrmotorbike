@@ -234,7 +234,7 @@
                     <h2 class="seccio-titol">${CONFIG.ON_SOM_TIT}</h2>
                     <div class="contacte-grid">
                         <div class="contacte-item">
-                            <div class="contacte-ico">${CONFIG.ARECA_ICO}</div>
+                            <div class="contacte-ico">${CONFIG.ADRECA_ICO}</div>
                             <div>
                                 <div class="contacte-label">${CONFIG.ADRECA_LABEL}</div>
                                 <div class="contacte-valor">
