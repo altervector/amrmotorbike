@@ -44,24 +44,31 @@ const CONFIG = {
     NAV_PXQ:        "¿Por qué AMR?",
     NAV_CON:        "Contacto",
 
+   
+                    //
+   
     HERO_BOTO_PRI:      "📞 Llámanos",
     HERO_BOTO_SEC:      "Nuestros servicios",
 
-    ANYS_EXPERIENCIA:   "+20",    ANYS_EXPERIENCIA2:   "Años de experiencia",
-    MOTOS_REPARADES:    "+2.000", MOTOS_REPARADES2:    "Motos reparadas",
-    CLIENTS:            "+1.200", CLIENTS2:            "Clientes satisfechos",
-    ESTRELLES:          "5",      ESTRELLES2:          "Valoración en Google",
 
     QUI_SOM:            "Quiénes somos...",
     QUI_SOM_TIT:        "Pasión por las motos desde hace más de 20 años",
     QUI_DESC:           "En el Taller AMR MotorBike somos especialistas en mantenimiento, reparación y restauración de motocicletas. Más de 20 años de experiencia en varias marcas del sector y en Sabadell, cuidando tu moto con la misma pasión con la que la conduces. Trabajamos con todas las marcas y modelos, desde scooters hasta motos de gran cilindrada.",
     //+hero boto pri
+
+
+    ANYS_EXPERIENCIA:   "+20",    ANYS_EXPERIENCIA2:   "Años de experiencia",
+    MOTOS_REPARADES:    "+2.000", MOTOS_REPARADES2:    "Motos reparadas",
+    CLIENTS:            "+1.200", CLIENTS2:            "Clientes satisfechos",
+    ESTRELLES:          "5",      ESTRELLES2:          "Valoración en Google",
+ 
     //-------------------------------------------------------------------------------------------------------------------------
 
 
 
+ 
     // 5. SERVEIS (graella)
-    QUE_FEMAIL_ICO:            "Lo que hacemos",
+    QUE_FEM:            "Lo que hacemos",
     QUE_FEM_SRV:        "Nuestros servicios",
 
     SERVEIS: [
