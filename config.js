@@ -71,7 +71,10 @@ const CONFIG = {
     QUE_FEM:            "Lo que hacemos",
     QUE_FEM_SRV:        "Nuestros servicios",
 
-    SERVEIS: [
+     //-------------------------------------------------------------------------------------------------------------------------
+
+    // 6. MAPS SERVEIS-------------------------------------------------------------------------------------------------------------------------
+     SERVEIS: [
         { ico: "🔧", titol: "Mantenimiento general",    desc: "Cambio de aceite y filtro, limpieza de sistemas de admisión, ajustes y reglajes." },
         { ico: "🛑", titol: "Frenos",                   desc: "Cambio de pastillas y discos de freno, mordazas, limpiezas circuito y cambio de líquidos." },
         { ico: "⛓️", titol: "Transmisión y cadena",     desc: "Ajuste y lubricación de cadena, cambio del kit de arrastre y revisión de la caja de velocidades." },
@@ -82,6 +85,10 @@ const CONFIG = {
         { ico: "⚙️", titol: "Motor",                    desc: "Ajuste general, reparaciones de todo tipos, fugas y reglajes, reparación de cilindro, pistón, válvulas y ajuste de distribución." },
         { ico: "🎨", titol: "Personalización",          desc: "Instalación de accesorios." },
     ],
+ 
+ 
+ 
+ 
     //-------------------------------------------------------------------------------------------------------------------------
 
 
@@ -112,5 +119,5 @@ const CONFIG = {
     //-------------------------------------------------------------------------------------------------------------------------
 
     // 6. SEGURETAT
-    SITIOS_SEGUROS: ["alterwebstudio.com", "altervector.com", "pages.dev", "altervector.github.io", "amrmotorbike.es","amrmotorbike.com", "localhost", "127.0.0.1"],
+    SITIOS_SEGUROS: ["alterwebstudio.com", "altervector.com", "pages.dev", "altervector.github.io", "amrmotorbike.es","amrmotorbike.com"],
 };
