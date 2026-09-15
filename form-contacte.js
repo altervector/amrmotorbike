@@ -33,7 +33,7 @@ class FormContacte extends HTMLElement {
 
                 <div style="font-size:11px; color:var(--gris); background:var(--negre-suau); padding:10px 12px; border-radius:var(--radi); border-left:3px solid var(--taronja);">
                     <strong>Responsable:</strong> ${CONFIG.NOM} ·
-                    <strong>FinalidADRECA_ICO:</strong> responder tu consulta o valorar tu candidatura ·
+                    <strong>Finalidad</strong> responder tu consulta o valorar tu candidatura ·
                     <strong>Derechos:</strong> acceso, rectificación y supresión escribiendo a
                     <a href="mailto:${CONFIG.EMAIL}">${CONFIG.EMAIL}</a>
                 </div>
