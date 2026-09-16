@@ -4,23 +4,27 @@
 
 const CONFIG = {
 
-    // 1. NEGOCI
-    COOK:           "cookies_amr",
-    NOM:            "AMR MotorBike",
-    LOGO:           "logo/logoAMR.png",
-    LOGO_T:         "logo/logo-nouAMR.png",
-    SLOGAN:         "Especialistas en motos. Sabadell.",
-    TELEFON:        "669 66 98 77",        TELEFON_LABEL:   "Teléfono",      TELEFON_ICO: "📞",
-    MOBIL:          "669669877",
-    WHATSAPP:       "https://wa.me/34669669877?text=Hola%20AMR,%20soy%20[Nombre],%20tengo%20una%20[Marca/Modelo]%20y%20necesito%20[Avería%20o%20servicio].", WHATSAPPLABEL:"💬 Escríbenos por WhatsApp",
-    EMAIL:          "info@amrmotorbike.com",    EMAIL_LABEL:"e-Mail",        EMAIL_ICO: "✉️",
-    ADRECA:         "C/ Vila Cinca, 97, 08208 Sabadell, Barcelona",
-       ADRECA_LABEL: "Dirección",
-       ADRECA_ICO: "📍",
-    INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
-    FACEBOOK:       "",
-    EMAIL_SUPORT:   "info@alterwebstudio.com",
-    //-------------------------------------------------------------------------------------------------------------------------
+   // 1. NEGOCI
+   COOK:           "cookies_amr",
+   NOM:            "AMR MotorBike",
+   LOGO:           "logo/logoAMR.png",
+   LOGO_T:         "logo/logo-nouAMR.png",
+   SLOGAN:         "Especialistas en motos. Sabadell.",
+   TELEFON:        "669 66 98 77",        TELEFON_LABEL:   "Teléfono",      TELEFON_ICO: "📞",
+   MOBIL:          "669669877",
+   WHATSAPP:       "https://wa.me/34669669877?text=Hola%20AMR,%20soy%20[Nombre],%20tengo%20una%20[Marca/Modelo]%20y%20necesito%20[Avería%20o%20servicio].", WHATSAPPLABEL:"💬 Escríbenos por WhatsApp",
+   EMAIL:          "info@amrmotorbike.com",    EMAIL_LABEL:"e-Mail",        EMAIL_ICO: "✉️",
+   ADRECA:         "C/ Vila Cinca, 97, 08208 Sabadell, Barcelona",
+      ADRECA_LABEL: "Dirección",
+      ADRECA_ICO: "📍",
+   HORA_0:         "Horario",   HR: "🕐",
+   HORA_1:         "Lunes a Jueves: 8:30 – 13:00 | 15:00 – 18:00",
+   HORA_2:         "Viernes: 08:30 – 16:00",
+   HORA_3:         "Sábado y Domingo: Cerrado",
+   INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
+   FACEBOOK:       "",
+   EMAIL_SUPORT:   "info@alterwebstudio.com",
+   //-------------------------------------------------------------------------------------------------------------------------
 
     // 2. RUTES
     REPO_URL:       "https://altervector.github.io/amrmotorbike/",
@@ -38,18 +42,23 @@ const CONFIG = {
     //-------------------------------------------------------------------------------------------------------------------------
 
     // 4. TEXTOS---------------------------------------------------------------------------------------------------------------
-    NAV_INI:        "Inicio",
-    NAV_NOS:        "Nosotros",
-    NAV_SER:        "Servicios",
-    NAV_PXQ:        "¿Por qué AMR?",
-    NAV_CON:        "Contacto",
+    NAV_INICI:          "Inicio",
+    NAV_NOSALTRES:      "Nosotros",
+    NAV_SERVEIS:        "Servicios",
+    NAV_PXQ:            "¿Por qué AMR?",
+    NAV_CONTACTE:       "Contacto",
 
    
                     //
    
+    HERO_EYEBROW:       "",
     HERO_BOTO_PRI:      "📞 Llámanos",
     HERO_BOTO_SEC:      "Nuestros servicios",
 
+
+
+    //-------------------------------------------------------------------------------------------------------------------------
+    
 
     QUI_SOM:            "Quiénes somos...",
     QUI_SOM_TIT:        "Pasión por las motos desde hace más de 20 años",
@@ -112,10 +121,6 @@ const CONFIG = {
     ON_SOM:            "Dónde estamos...",
     ON_SOM_TIT:        "Ven a vernos",
     
-    HORA_0:         "Horario",   HR: "🕐",
-    HORA_1:         "Lunes a Jueves: 8:30 – 13:00 | 15:00 – 18:00",
-    HORA_2:         "Viernes: 08:30 – 16:00",
-    HORA_3:         "Sábado y Domingo: Cerrado",
     //-------------------------------------------------------------------------------------------------------------------------
 
     // 6. SEGURETAT

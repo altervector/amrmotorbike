@@ -17,11 +17,11 @@
                     </div>
                     <button class="navbar-hamburguesa">☰</button>
                     <ul class="navbar-menu">
-                        <li><a href="#inici">${CONFIG.NAV_INI}</a></li>
-                        <li><a href="#qui-som">${CONFIG.NAV_NOS}</a></li>
-                        <li><a href="#serveis">${CONFIG.NAV_SER}</a></li>
+                        <li><a href="#inici">${CONFIG.NAV_INICI}</a></li>
+                        <li><a href="#qui-som">${CONFIG.NAV_NOSALTRES}</a></li>
+                        <li><a href="#serveis">${CONFIG.NAV_SERVEIS}</a></li>
                         <li><a href="#perque">${CONFIG.NAV_PXQ}</a></li>
-                        <li><a href="#contacte">${CONFIG.NAV_CON}</a></li>
+                        <li><a href="#contacte">${CONFIG.NAV_CONTACTE}</a></li>
                     </ul>
                 </nav>
             `;
@@ -37,7 +37,7 @@
                     </div>
                     <button class="navbar-hamburguesa">☰</button>
                     <ul class="navbar-menu">
-                        <li><a href="index.html#inici">${CONFIG.NAV_INI}</a></li>
+                        <li><a href="index.html#inici">${CONFIG.NAV_INICI}</a></li>
 
                     </ul>
                 </nav>
