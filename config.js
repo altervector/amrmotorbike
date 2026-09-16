@@ -1,128 +1,128 @@
 /* ============================================================
-   CONFIG.JS - AMR MotorBike (pàgina principal)
-   ============================================================ */
+CONFIG.JS - AMR MotorBike (pàgina principal)
+============================================================ */
 
 const CONFIG = {
 
-   // 1. NEGOCI
-   COOK:           "cookies_amr",
-   NOM:            "AMR MotorBike",
-   LOGO:           "logo/logoAMR.png",
-   LOGO_T:         "logo/logo-nouAMR.png",
-   SLOGAN:         "Especialistas en motos. Sabadell.",
-   TELEFON:        "669 66 98 77",        TELEFON_LABEL:   "Teléfono",      TELEFON_ICO: "📞",
-   MOBIL:          "669669877",
-   WHATSAPP:       "https://wa.me/34669669877?text=Hola%20AMR,%20soy%20[Nombre],%20tengo%20una%20[Marca/Modelo]%20y%20necesito%20[Avería%20o%20servicio].", WHATSAPPLABEL:"💬 Escríbenos por WhatsApp",
-   EMAIL:          "info@amrmotorbike.com",    EMAIL_LABEL:"e-Mail",        EMAIL_ICO: "✉️",
-   ADRECA:         "C/ Vila Cinca, 97, 08208 Sabadell, Barcelona",
-      ADRECA_LABEL: "Dirección",
-      ADRECA_ICO: "📍",
-   HORA_0:         "Horario",   HR: "🕐",
-   HORA_1:         "Lunes a Jueves: 8:30 – 13:00 | 15:00 – 18:00",
-   HORA_2:         "Viernes: 08:30 – 16:00",
-   HORA_3:         "Sábado y Domingo: Cerrado",
-   INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
-   FACEBOOK:       "",
-   EMAIL_SUPORT:   "info@alterwebstudio.com",
-   //-------------------------------------------------------------------------------------------------------------------------
+// 1. NEGOCI
+COOK:           "cookies_amr",
+NOM:            "AMR MotorBike",
+LOGO:           "logo/logoAMR.png",
+LOGO_T:         "logo/logo-nouAMR.png",
+SLOGAN:         "Especialistas en motos. Sabadell.",
+TELEFON:        "669 66 98 77",        TELEFON_LABEL:   "Teléfono",      TELEFON_ICO: "📞",
+MOBIL:          "669669877",
+WHATSAPP:       "https://wa.me/34669669877?text=Hola%20AMR,%20soy%20[Nombre],%20tengo%20una%20[Marca/Modelo]%20y%20necesito%20[Avería%20o%20servicio].", WHATSAPPLABEL:"💬 Escríbenos por WhatsApp",
+EMAIL:          "info@amrmotorbike.com",    EMAIL_LABEL:"e-Mail",        EMAIL_ICO: "✉️",
+ADRECA:         "C/ Vila Cinca, 97, 08208 Sabadell, Barcelona",
+ADRECA_LABEL:   "Dirección",
+ADRECA_ICO:     "📍",
+HORA_0:         "Horario",   HR: "🕐",
+HORA_1:         "Lunes a Jueves: 8:30 – 13:00 | 15:00 – 18:00",
+HORA_2:         "Viernes: 08:30 – 16:00",
+HORA_3:         "Sábado y Domingo: Cerrado",
+INSTAGRAM:      "https://www.instagram.com/amrmotorbike",
+FACEBOOK:       "",
+EMAIL_SUPORT:   "info@alterwebstudio.com",
+//-------------------------------------------------------------------------------------------------------------------------
 
-    // 2. RUTES
-    REPO_URL:       "https://altervector.github.io/amrmotorbike/",
-    BASE_URL:       "./",
-    BASE_WORKER:    "https://amrmotorbike.altervector.workers.dev",
-    URL_OFICIAL:    "https://www.amrmotorbike.com",
-    ASSETS:         "https://avsets.pages.dev/",
-    URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=AMR+MotorBike&query_place_id=ChIJD7yoLgCVpBIRwGk2PRTlhQA",
-    URL_RESSENYES:  "https://g.page/r/CcBpNj0U5YUAEBM/review",
+// 2. RUTES
+REPO_URL:       "https://altervector.github.io/amrmotorbike/",
+BASE_URL:       "./",
+BASE_WORKER:    "https://amrmotorbike.altervector.workers.dev",
+URL_OFICIAL:    "https://www.amrmotorbike.com",
+ASSETS:         "https://avsets.pages.dev/",
+URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=AMR+MotorBike&query_place_id=ChIJD7yoLgCVpBIRwGk2PRTlhQA",
+URL_RESSENYES:  "https://g.page/r/CcBpNj0U5YUAEBM/review",
 
-    // 3. IMATGES 
-    BACKGROUND:      "", // ← canviar en el css .html{}
-    BLOC_HERO:       "images/amrmotorbike/hero-amrmotorbike.webp", 
-    QR:              "qr/qr-amrmotorbike.png",
-    //-------------------------------------------------------------------------------------------------------------------------
+// 3. IMATGES 
+BACKGROUND:      "", // ← canviar en el css .html{}
+BLOC_HERO:       "images/amrmotorbike/hero-amrmotorbike.webp", 
+QR:              "qr/qr-amrmotorbike.png",
+//-------------------------------------------------------------------------------------------------------------------------
 
-    // 4. TEXTOS---------------------------------------------------------------------------------------------------------------
-    NAV_INICI:          "Inicio",
-    NAV_NOSALTRES:      "Nosotros",
-    NAV_SERVEIS:        "Servicios",
-    NAV_PXQ:            "¿Por qué AMR?",
-    NAV_CONTACTE:       "Contacto",
-
-   
-                    //
-   
-    HERO_EYEBROW:       "",
-    HERO_BOTO_PRI:      "📞 Llámanos",
-    HERO_BOTO_SEC:      "Nuestros servicios",
+// 4. TEXTOS---------------------------------------------------------------------------------------------------------------
+NAV_INICI:          "Inicio",
+NAV_NOSALTRES:      "Nosotros",
+NAV_SERVEIS:        "Servicios",
+NAV_PXQ:            "¿Por qué AMR?",
+NAV_CONTACTE:       "Contacto",
 
 
+         //
 
-    //-------------------------------------------------------------------------------------------------------------------------
-    
-
-    QUI_SOM:            "Quiénes somos...",
-    QUI_SOM_TIT:        "Pasión por las motos desde hace más de 20 años",
-    QUI_DESC:           "En el Taller AMR MotorBike somos especialistas en mantenimiento, reparación y restauración de motocicletas. Más de 20 años de experiencia en varias marcas del sector y en Sabadell, cuidando tu moto con la misma pasión con la que la conduces. Trabajamos con todas las marcas y modelos, desde scooters hasta motos de gran cilindrada.",
-    //+hero boto pri
-
-
-    ANYS_EXPERIENCIA:   "+20",    ANYS_EXPERIENCIA2:   "Años de experiencia",
-    MOTOS_REPARADES:    "+2.000", MOTOS_REPARADES2:    "Motos reparadas",
-    CLIENTS:            "+1.200", CLIENTS2:            "Clientes satisfechos",
-    ESTRELLES:          "5",      ESTRELLES2:          "Valoración en Google",
- 
-    //-------------------------------------------------------------------------------------------------------------------------
+HERO_EYEBROW:       "",
+HERO_BOTO_PRI:      "📞 Llámanos",
+HERO_BOTO_SEC:      "Nuestros servicios",
 
 
 
- 
-    // 5. SERVEIS (graella)
-    QUE_FEM:            "Lo que hacemos",
-    QUE_FEM_SRV:        "Nuestros servicios",
+//-------------------------------------------------------------------------------------------------------------------------
 
-     //-------------------------------------------------------------------------------------------------------------------------
 
-    // 6. MAPS SERVEIS-------------------------------------------------------------------------------------------------------------------------
-     SERVEIS: [
-        { ico: "🔧", titol: "Mantenimiento general",    desc: "Cambio de aceite y filtro, limpieza de sistemas de admisión, ajustes y reglajes." },
-        { ico: "🛑", titol: "Frenos",                   desc: "Cambio de pastillas y discos de freno, mordazas, limpiezas circuito y cambio de líquidos." },
-        { ico: "⛓️", titol: "Transmisión y cadena",     desc: "Ajuste y lubricación de cadena, cambio del kit de arrastre y revisión de la caja de velocidades." },
-        { ico: "⚡", titol: "Sistema eléctrico",        desc: "Revisión y cambio de batería, diagnóstico con escáner ECU y reparación de luces y conexiones." },
-        { ico: "🏍️", titol: "Suspensión y dirección",   desc: "Servicio de suspensión delantera, ajuste de dirección y revisión de rodamientos y amortiguadores." },
-        { ico: "💨", titol: "Sistema de escape",        desc: "Revisión de fugas, reparación e instalación de escapes deportivos o personalizados." },
-        { ico: "🔘", titol: "Neumáticos",               desc: "Cambio de llantas, equilibrado, alineación y reparación de pinchazos." },
-        { ico: "⚙️", titol: "Motor",                    desc: "Ajuste general, reparaciones de todo tipos, fugas y reglajes, reparación de cilindro, pistón, válvulas y ajuste de distribución." },
-        { ico: "🎨", titol: "Personalización",          desc: "Instalación de accesorios." },
-    ],
- 
- 
- 
- 
-    //-------------------------------------------------------------------------------------------------------------------------
+QUI_SOM:            "Quiénes somos...",
+QUI_SOM_TIT:        "Pasión por las motos desde hace más de 20 años",
+QUI_DESC:           "En el Taller AMR MotorBike somos especialistas en mantenimiento, reparación y restauración de motocicletas. Más de 20 años de experiencia en varias marcas del sector y en Sabadell, cuidando tu moto con la misma pasión con la que la conduces. Trabajamos con todas las marcas y modelos, desde scooters hasta motos de gran cilindrada.",
+//+hero boto pri
+
+
+ANYS_EXPERIENCIA:   "+20",    ANYS_EXPERIENCIA2:   "Años de experiencia",
+MOTOS_REPARADES:    "+2.000", MOTOS_REPARADES2:    "Motos reparadas",
+CLIENTS:            "+1.200", CLIENTS2:            "Clientes satisfechos",
+ESTRELLES:          "5",      ESTRELLES2:          "Valoración en Google",
+
+//-------------------------------------------------------------------------------------------------------------------------
 
 
 
-    // 6. PERQUE--------------------------------------------------------------------------------------------------------------
-    PXQ:        "¿ Por qué AMR MotorBike ?",
-    PXQ_DESC:   "El taller que tu moto se merece",
 
-    PXQ_BLOC1_TIT:          "Diagnóstico rápido",                    PXQ_BLOC1_emo:"⚡",
-    PXQ_BLOC1_DESC:         "Detectamos el problema en el mismo día y te informamos antes de tocar nada.",
+// 5. SERVEIS (graella)
+QUE_FEM:            "Lo que hacemos",
+QUE_FEM_SRV:        "Nuestros servicios",
 
-    PXQ_BLOC2_TIT:          "Recambios de calidad",                  PXQ_BLOC2_emo:"🔩",
-    PXQ_BLOC2_DESC:         "Trabajamos con piezas originales o equivalentes homologadas, nunca piezas dudosas.",
+//-------------------------------------------------------------------------------------------------------------------------
 
-    PXQ_BLOC3_TIT:          "Moto de cortesía",                      PXQ_BLOC3_emo:"🏍️",
-    PXQ_BLOC3_DESC:         "Si la reparación se alarga, te dejamos una moto para seguir rodando sin interrupciones.",
-    //-------------------------------------------------------------------------------------------------------------------------
+// 6. MAPS SERVEIS-------------------------------------------------------------------------------------------------------------------------
+SERVEIS: [
+{ ico: "🔧", titol: "Mantenimiento general",    desc: "Cambio de aceite y filtro, limpieza de sistemas de admisión, ajustes y reglajes." },
+{ ico: "🛑", titol: "Frenos",                   desc: "Cambio de pastillas y discos de freno, mordazas, limpiezas circuito y cambio de líquidos." },
+{ ico: "⛓️", titol: "Transmisión y cadena",     desc: "Ajuste y lubricación de cadena, cambio del kit de arrastre y revisión de la caja de velocidades." },
+{ ico: "⚡", titol: "Sistema eléctrico",        desc: "Revisión y cambio de batería, diagnóstico con escáner ECU y reparación de luces y conexiones." },
+{ ico: "🏍️", titol: "Suspensión y dirección",   desc: "Servicio de suspensión delantera, ajuste de dirección y revisión de rodamientos y amortiguadores." },
+{ ico: "💨", titol: "Sistema de escape",        desc: "Revisión de fugas, reparación e instalación de escapes deportivos o personalizados." },
+{ ico: "🔘", titol: "Neumáticos",               desc: "Cambio de llantas, equilibrado, alineación y reparación de pinchazos." },
+{ ico: "⚙️", titol: "Motor",                    desc: "Ajuste general, reparaciones de todo tipos, fugas y reglajes, reparación de cilindro, pistón, válvulas y ajuste de distribución." },
+{ ico: "🎨", titol: "Personalización",          desc: "Instalación de accesorios." },
+],
 
 
-    // 7. ON SOM-----------------------------------------------------------------------------------------------------------   
-    ON_SOM:            "Dónde estamos...",
-    ON_SOM_TIT:        "Ven a vernos",
-    
-    //-------------------------------------------------------------------------------------------------------------------------
 
-    // 6. SEGURETAT
-    SITIOS_SEGUROS: ["alterwebstudio.com", "altervector.com", "pages.dev", "altervector.github.io", "amrmotorbike.es","amrmotorbike.com"],
+
+//-------------------------------------------------------------------------------------------------------------------------
+
+
+
+// 6. PERQUE--------------------------------------------------------------------------------------------------------------
+PXQ:        "¿ Por qué AMR MotorBike ?",
+PXQ_DESC:   "El taller que tu moto se merece",
+
+PXQ_BLOC1_TIT:          "Diagnóstico rápido",                    PXQ_BLOC1_emo:"⚡",
+PXQ_BLOC1_DESC:         "Detectamos el problema en el mismo día y te informamos antes de tocar nada.",
+
+PXQ_BLOC2_TIT:          "Recambios de calidad",                  PXQ_BLOC2_emo:"🔩",
+PXQ_BLOC2_DESC:         "Trabajamos con piezas originales o equivalentes homologadas, nunca piezas dudosas.",
+
+PXQ_BLOC3_TIT:          "Moto de cortesía",                      PXQ_BLOC3_emo:"🏍️",
+PXQ_BLOC3_DESC:         "Si la reparación se alarga, te dejamos una moto para seguir rodando sin interrupciones.",
+//-------------------------------------------------------------------------------------------------------------------------
+
+
+// 7. ON SOM-----------------------------------------------------------------------------------------------------------   
+ON_SOM:            "Dónde estamos...",
+ON_SOM_TIT:        "Ven a vernos",
+
+//-------------------------------------------------------------------------------------------------------------------------
+
+// 6. SEGURETAT
+SITIOS_SEGUROS: ["alterwebstudio.com", "altervector.com", "pages.dev", "altervector.github.io", "amrmotorbike.es","amrmotorbike.com"],
 };
