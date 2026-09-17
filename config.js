@@ -124,7 +124,7 @@ ON_SOM_TIT:        "Ven a vernos",
 //-------------------------------------------------------------------------------------------------------------------------
 
 // 6. SEGURETAT
-SITIOS_SEGUROS: ["alterwebstudio.com", "altervector.com", "pages.dev", "altervector.github.io", "amrmotorbike.es","amrmotorbike.com"],
+SITIOS_SEGUROS: ["alterwebstudio.com","pages.dev", "altervector.github.io", "amrmotorbike.es","amrmotorbike.com"],
     SITIOS_SEGUROS: ["alterwebstudio.com", "pages.dev", "altervector.github.io", "localhost", "127.0.0.1"],
 
 };
