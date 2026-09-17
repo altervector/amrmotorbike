@@ -69,7 +69,7 @@ QUI_DESC:           "En el Taller AMR MotorBike somos especialistas en mantenimi
 ANYS_EXPERIENCIA:   "+20",    ANYS_EXPERIENCIA2:   "Años de experiencia",
 MOTOS_REPARADES:    "+2.000", MOTOS_REPARADES2:    "Motos reparadas",
 CLIENTS:            "+1.200", CLIENTS2:            "Clientes satisfechos",
-ESTRELLES:          "5",      ESTRELLES2:          "Valoración en Google",
+ESTRELLES:          "5 ",      ESTRELLES2:          "Valoración en Google",
 
 //-------------------------------------------------------------------------------------------------------------------------
 
@@ -125,4 +125,6 @@ ON_SOM_TIT:        "Ven a vernos",
 
 // 6. SEGURETAT
 SITIOS_SEGUROS: ["alterwebstudio.com", "altervector.com", "pages.dev", "altervector.github.io", "amrmotorbike.es","amrmotorbike.com"],
+    SITIOS_SEGUROS: ["alterwebstudio.com", "pages.dev", "altervector.github.io", "localhost", "127.0.0.1"],
+
 };

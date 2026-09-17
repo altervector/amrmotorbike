@@ -126,10 +126,10 @@
                     </div>
 
                     <a href="${CONFIG.URL_RESSENYES}" target="_blank" rel="noopener" class="stat-item stat-google">
-                        <div class="stat-numero">${CONFIG.ESTRELLES}⭐</div>
+                        <div class="stat-numero">${CONFIG.ESTRELLES}<p class="stat-numero-star">⭐⭐⭐⭐⭐<p></div>
                         <div class="stat-label">${CONFIG.ESTRELLES2}</div>
                      <div class="stat-cta">Ver reseñas</div>
-</a>
+                    </a>
 
                 </div>
             `;

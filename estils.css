@@ -374,6 +374,10 @@ a:hover { text-decoration: underline; }
     color: var(--taronja);
     line-height: 1;
 }
+.stat-numero-star {
+    font-size: 1rem;
+
+}
 
 .stat-label {
     font-size: 11px;
