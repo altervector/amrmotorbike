@@ -98,15 +98,35 @@ SERVEIS: [
 { ico: "⚙️", titol: "Motor",                    desc: "Ajuste general, reparaciones de todo tipos, fugas y reglajes, reparación de cilindro, pistón, válvulas y ajuste de distribución." },
 { ico: "🎨", titol: "Personalización",          desc: "Instalación de accesorios." },
 ],
-OCASION: [
-{ img: "logo/logoAMR.png", titol: "Suzuki GSR 1000",    desc: "Cambio de aceite y filtro, limpieza de sistemas de admisión, ajustes y reglajes." },
+ZOCASION: [
+{ img: "id0001/1.jpeg", titol: "Suzuki GSR 1000",    desc: "Cambio de aceite y filtro, limpieza de sistemas de admisión, ajustes y reglajes." },
 { img: "logo/logoGEtrans.png", titol: "Honda CB 650 r",                   desc: "Cambio de pastillas y discos de freno, mordazas, limpiezas circuito y cambio de líquidos." },
 { img: "logo/logoAG.png", titol: "BMW GS 1200",     desc: "Ajuste y lubricación de cadena, cambio del kit de arrastre y revisión de la caja de velocidades." },
 { img: "logo/logoAWS.png", titol: "Vespino 49cc",        desc: "Revisión y cambio de batería, diagnóstico con escáner ECU y reparación de luces y conexiones." },
 { ico: "💲", titol: "¿Quieres vender tu moto? <br>   Te la compramos.",  desc: "Te la compramos." },
 ],
 
-
+OCASION: [
+    {
+        id:          "moto-01",                          // per identificar-la (fletxes, modal...)
+        marca:       "Honda",
+        model:       "Forza 750",
+        preu:        9100,
+        cc:          750,
+        kw:          0,
+        any:         2022,
+        km:          6751,
+        descripcio:  "Maletas originales incluidas en el precio.",
+        fotos: [
+            "id0001/1.jpeg",   // [0] = foto principal
+            "id0001/2.jpeg",
+            "id0001/3.jpeg",
+            "id0001/4.jpeg",
+            "id0001/5.jpeg",        ],
+        venuda:      false,   // per si voleu marcar-la com a "venuda" sense esborrar-la
+    },
+    // ...més motos
+],
 
 //-------------------------------------------------------------------------------------------------------------------------
 

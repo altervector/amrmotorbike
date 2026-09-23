@@ -148,11 +148,20 @@
                     <div class="servei-desc">${s.desc}</div>
                 </div>
             `).join('');
-            const targetesOcasion = CONFIG.OCASION.map(s => `
+           /* const targetesOcasion = CONFIG.OCASION.map(s => `
                 <div class="servei-card">
-                    <div class="servei-ico"><img src="${CONFIG.ASSETS}${s.img}" alt="${s.titol}"></div>
+                    <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.img}" alt="${s.titol}"></div>
                     <div class="servei-titol">${s.titol}</div>
                     <div class="servei-desc">${s.desc}</div>
+                </div>
+            `).join('');*/
+            const targetesOcasion = CONFIG.OCASION.map(s => `
+                <div class="servei-card servei-card--oca" data-id="${s.id}">
+                    <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
+                    <div class="servei-titol">${s.marca} ${s.model}</div>
+                    <div class="servei-titol">${s.preu} €</div>
+                    <div class="servei-desc">Matriculada en : ${s.any}</div>
+                    <div class="servei-desc">Kilómetros: ${s.km}</div>
                 </div>
             `).join('');
 
@@ -183,10 +192,10 @@
                 <!-- OCASION -->
                 <section class="seccio" id="ocasion">
                     <!--p class="seccio-eyebrow">${CONFIG.QUE_FEM}</p-->
-                    <!--h2 class="seccio-titol">${CONFIG.QUE_FEM_OCA}</h2>
+                    <h2 class="seccio-titol seccio-titol--oca">${CONFIG.QUE_FEM_OCA}</h2>
                     <div class="serveis-grid">
                         ${targetesOcasion}
-                    </div-->
+                    </div>
                 </section>
 
                 <hr class="separador">
