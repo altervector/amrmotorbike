@@ -136,7 +136,7 @@ OCASION: [
         km:          "o contacta por whatsapp..",
         descripcio:  "",
         fotos: [
-            "id9999/1.jpg",   // [0] = foto principal
+            "id9999/1.webp",   // [0] = foto principal
             "",
             "",
             "",
