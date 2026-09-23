@@ -108,22 +108,40 @@ ZOCASION: [
 
 OCASION: [
     {
-        id:          "moto-01",                          // per identificar-la (fletxes, modal...)
+        id:          "id0001",                          // per identificar-la (fletxes, modal...)
         marca:       "Honda",
         model:       "Forza 750",
-        preu:        9100,
+        preu:        "9100 €",
         cc:          750,
         kw:          0,
-        any:         2022,
-        km:          6751,
+        any:         "Matriculada en : 2022",
+        km:          "Kilómetros: 6751",
         descripcio:  "Maletas originales incluidas en el precio.",
         fotos: [
-            "id0001/1.jpeg",   // [0] = foto principal
-            "id0001/2.jpeg",
-            "id0001/3.jpeg",
-            "id0001/4.jpeg",
-            "id0001/5.jpeg",        ],
+            "id0001/1.webp",   // [0] = foto principal
+            "id0001/2.webp",
+            "id0001/3.webp",
+            "id0001/4.webp",
+            "id0001/5.webp",        ],
         venuda:      false,   // per si voleu marcar-la com a "venuda" sense esborrar-la
+    },
+        {
+        id:          "id9999",                          // per identificar-la (fletxes, modal...)
+        marca:       "¿Quieres vender tu moto...?",
+        model:       "",
+        preu:        "te la compramos.",
+        cc:          "",
+        kw:          "",
+        any:         "Rellena el formulario",
+        km:          "o contacta por whatsapp..",
+        descripcio:  "",
+        fotos: [
+            "id9999/1.jpg",   // [0] = foto principal
+            "",
+            "",
+            "",
+            "",        ],
+        venuda:      true,   // per si voleu marcar-la com a "venuda" sense esborrar-la
     },
     // ...més motos
 ],
