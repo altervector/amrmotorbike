@@ -512,7 +512,7 @@ function carregarDadesModal() {
         if (blocSpecs) blocSpecs.style.display = 'none';
 
         const textWA = encodeURIComponent(`Hola, quiero vender mi moto.`);
-        document.getElementById('modal-btn-wa').href = `https://wa.me/34600000000?text=${textWA}`;
+        document.getElementById('modal-btn-wa').href = `https://wa.me/34669669877?text=${textWA}`;
     } else {
         // Restaurar vista normal per a les motos d'ocasió
         document.getElementById('modal-titol').innerText = `${moto.marca} ${moto.model}`;
