@@ -156,7 +156,7 @@
                     <div class="servei-desc">${s.desc}</div>
                 </div>
             `).join('');*/
-            const targetesOcasion = CONFIG.OCASION.map(s => `
+            /*const targetesOcasion = CONFIG.OCASION.map(s => `
                 <div class="servei-card servei-card--oca" data-id="${s.id}">
                     <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
                     <div class="servei-titol">${s.marca} ${s.model}</div>
@@ -164,7 +164,39 @@
                     <div class="servei-desc">${s.any}</div>
                     <div class="servei-desc">${s.km}</div>
                 </div>
-            `).join('');
+            `).join('');*/
+           /* const targetesOcasion = CONFIG.OCASION.map((s, idx) => `
+                <div class="servei-card servei-card--oca" data-id="${s.id}" onclick="obrirModalMoto(${idx})">
+                    <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
+                    <div class="servei-titol">${s.marca} ${s.model}</div>
+                    <div class="servei-titol servei-titol--plus">${s.preu} €</div>
+                    <div class="servei-desc">Matriculación: ${s.any}</div>
+                    <div class="servei-desc">Kilometros: ${s.km}</div>
+                </div>
+            `).join('');*/
+
+            const targetesOcasion = CONFIG.OCASION.map((s, idx) => {
+                if (s.titol) {
+                    return `
+                        <div class="servei-card servei-card--oca" data-id="${s.id}" onclick="obrirModalMoto(${idx})">
+                            <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.titol}"></div>
+                            <div class="servei-titol">${s.titol}</div>
+                            <div class="servei-titol servei-titol--plus">${s.subtitol}</div>
+                            <div class="servei-desc">${s.textAccio1}</div>
+                            <div class="servei-desc">${s.textAccio2}</div>
+                        </div>
+                    `;
+                }
+                return `
+                    <div class="servei-card servei-card--oca" data-id="${s.id}" onclick="obrirModalMoto(${idx})">
+                        <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
+                        <div class="servei-titol">${s.marca} ${s.model}</div>
+                        <div class="servei-titol servei-titol--plus">${s.preu} €</div>
+                        <div class="servei-desc">Matriculación: ${s.any}</div>
+                        <div class="servei-desc">Kilometros: ${s.km}</div>
+                    </div>
+                `;
+            }).join('');
 
             seccions.innerHTML = `
 
@@ -426,3 +458,103 @@ document.body.appendChild(barraFixaPC);
     }
 
 })();
+
+
+
+// ==========================================
+// FUNCIONS DEL MODAL (AQUÍ FORA)
+// ==========================================
+
+let motoActualIndex = 0;
+
+function obrirModalMoto(index) {
+    motoActualIndex = index;
+    carregarDadesModal();
+    document.getElementById('modal-moto').style.display = 'flex';
+}
+
+function tancarModalMoto() {
+    document.getElementById('modal-moto').style.display = 'none';
+}
+
+function canviarMoto(direccio) {
+    motoActualIndex += direccio;
+    
+    if (motoActualIndex < 0) {
+        motoActualIndex = CONFIG.OCASION.length - 1;
+    } else if (motoActualIndex >= CONFIG.OCASION.length) {
+        motoActualIndex = 0;
+    }
+    
+    carregarDadesModal();
+}
+
+function carregarDadesModal() {
+    const moto = CONFIG.OCASION[motoActualIndex];
+    const containerMiniatures = document.getElementById('modal-miniatures');
+    
+    // Detectem el bloc gris de les dades tècniques (Precio, Cilindrada, etc.)
+    const elPreu = document.getElementById('modal-preu');
+    const blocSpecs = elPreu ? (elPreu.closest('.modal-specs') || elPreu.parentElement.parentElement) : null;
+
+    if (moto.titol) {
+        // 1. Títol + Subtítol justificat a sota
+        document.getElementById('modal-titol').innerHTML = `
+            ${moto.titol}
+            <div style="font-size: 0.85em; color: #ff6600; margin-top: 6px; text-transform: uppercase;">${moto.subtitol}</div>
+        `;
+        
+        // 2. Text d'acció ubicat a la descripció
+        document.getElementById('modal-desc').innerText = `${moto.textAccio1} ${moto.textAccio2}`;
+        
+        // 3. Ocultar la franja de miniatures i el bloc de dades tècniques
+        if (containerMiniatures) containerMiniatures.style.display = 'none';
+        if (blocSpecs) blocSpecs.style.display = 'none';
+
+        const textWA = encodeURIComponent(`Hola, quiero vender mi moto.`);
+        document.getElementById('modal-btn-wa').href = `https://wa.me/34600000000?text=${textWA}`;
+    } else {
+        // Restaurar vista normal per a les motos d'ocasió
+        document.getElementById('modal-titol').innerText = `${moto.marca} ${moto.model}`;
+        document.getElementById('modal-preu').innerText = moto.preu;
+        document.getElementById('modal-cc').innerText = moto.cc;
+        document.getElementById('modal-kw').innerText = moto.kw;
+        document.getElementById('modal-any').innerText = moto.any;
+        document.getElementById('modal-km').innerText = moto.km;
+        document.getElementById('modal-desc').innerText = moto.descripcio;
+
+        // Mostrar miniatures i dades tècniques
+        if (containerMiniatures) containerMiniatures.style.display = '';
+        if (blocSpecs) blocSpecs.style.display = '';
+
+        const textWA = encodeURIComponent(`Hola, estic interessat en la ${moto.marca} ${moto.model} (${moto.preu}€).`);
+        document.getElementById('modal-btn-wa').href = `https://wa.me/34669669877?text=${textWA}`;
+    }
+    
+    // Imatge principal
+    const imgGran = document.getElementById('modal-img-gran');
+    imgGran.src = `${CONFIG.ASSETS_OCA}${moto.fotos[0]}`;
+
+    // Renderitzar miniatures només si NO és la targeta de venda
+    if (containerMiniatures) {
+        containerMiniatures.innerHTML = '';
+        if (!moto.titol) {
+            const fotosValides = moto.fotos.filter(f => f !== '');
+            fotosValides.forEach((fotoPath, idx) => {
+                const img = document.createElement('img');
+                const rutaCompleta = `${CONFIG.ASSETS_OCA}${fotoPath}`;
+                img.src = rutaCompleta;
+                img.alt = `Foto ${idx + 1}`;
+                if (idx === 0) img.classList.add('activa');
+                
+                img.onclick = () => {
+                    imgGran.src = rutaCompleta;
+                    document.querySelectorAll('#modal-miniatures img').forEach(i => i.classList.remove('activa'));
+                    img.classList.add('activa');
+                };
+                
+                containerMiniatures.appendChild(img);
+            });
+        }
+    }
+}

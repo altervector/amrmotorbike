@@ -873,3 +873,176 @@ a:hover { text-decoration: underline; }
     color: var(--taronja);
     margin-top: 4px;
 }
+
+/* ==========================================
+   MODAL FITXA MOTO (OKASION)
+   ========================================== */
+
+/* Fons fosc que cobreix tota la pantalla */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+/* Contenidor principal del modal (75% ample de pantalla) */
+.modal-container {
+    width: 75vw;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #181818;
+    color: var(--blanc, #fff);
+    padding: 24px;
+    border-radius: var(--radi, 12px);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Botó Tancar (X) */
+.modal-btn-tancar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color:var(--taronja);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Fletxes de navegació laterals */
+.modal-fletxa {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+    transition: background 0.2s;
+}
+.modal-fletxa:hover {
+    background: var(--taronja, #ff6600);
+}
+.fletxa-esq { left: 10px; }
+.fletxa-dreta { right: 10px; }
+
+/* Títol */
+.modal-titol {
+    font-family: var(--font-titol2, sans-serif);
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px; /* Reserva l'espai de la X a la dreta */
+    word-break: break-word; /* Evita que el text surti del contenidor */
+}
+
+/* Foto principal */
+.modal-foto-principal img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: var(--radi, 8px);
+}
+
+/* Reixeta de miniatures */
+.modal-miniatures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 8px;
+    margin: 12px 0;
+}
+.modal-miniatures-grid img {
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s, border-color 0.2s;
+    border: 2px solid transparent;
+}
+.modal-miniatures-grid img.activa,
+.modal-miniatures-grid img:hover {
+    opacity: 1;
+    border-color: var(--taronja, #ff6600);
+}
+
+/* Grid per a les dades/especificacions */
+.modal-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: var(--radi, 8px);
+    margin: 15px 0;
+    text-align: center;
+}
+.spec-label {
+    display: block;
+    color: #aaa;
+    font-size: 0.85rem;
+}
+.spec-val {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--taronja, #ff6600);
+}
+
+/* Descripció */
+.modal-descripcio {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Botons d'acció */
+.modal-accions {
+    display: flex;
+    gap: 12px;
+}
+.btn-contacte {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    border-radius: var(--radi, 8px);
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    transition: opacity 0.2s;
+}
+.btn-contacte:hover { opacity: 0.9; }
+.btn-wa { background: #25D366; }
+.btn-tel { background: var(--taronja, #ff6600); }
+/* Imatge principal del modal */
+#modal-img-gran {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background-color: #111111;
+}
+
+/* Imatge de les targetes de la llista */
+.servei-ico img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
