@@ -1073,3 +1073,34 @@ a:hover { text-decoration: underline; }
     aspect-ratio: 16 / 9;
     object-fit: cover;
 }
+/* Contenidor de la imatge gran al modal per poder posicionar el banner a sobre */
+.modal-img-container {
+    position: relative;
+    overflow: hidden; /* Important per retallar el banner diagonal */
+}
+
+/* El banner del modal, copiant l'estil que ja teníem */
+.modal-banner {
+    position: absolute;
+    top: 25px; /* Ajusta segons vulguis que sobresurti */
+    right: -42px; /* Ajusta segons vulguis que sobresurti */
+    width: 170px;
+    transform: rotate(45deg);
+    background: linear-gradient(135deg, #e60000, #b30000); /* Un vermell potent */
+    color: #ffffff;
+    text-align: center;
+    padding: 7px 0; /* Un pèl més ample que a la card */
+    z-index: 5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    font-family: sans-serif; /* O la teva font */
+}
+
+.modal-banner .banner-linia1 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}

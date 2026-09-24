@@ -494,26 +494,41 @@ function carregarDadesModal() {
     const moto = CONFIG.OCASION[motoActualIndex];
     const containerMiniatures = document.getElementById('modal-miniatures');
     
-    // Detectem el bloc gris de les dades tècniques (Precio, Cilindrada, etc.)
+    // Detectem el bloc gris de les dades tècniques
     const elPreu = document.getElementById('modal-preu');
     const blocSpecs = elPreu ? (elPreu.closest('.modal-specs') || elPreu.parentElement.parentElement) : null;
 
+    // --- GESTIÓ DEL BANNER "VENUDA" ---
+    // Busquem el contenidor de la imatge gran
+    const imgContainer = document.getElementById('modal-img-gran').parentElement;
+    
+    // Netejem qualsevol banner anterior
+    const bannerAnterior = imgContainer.querySelector('.modal-banner');
+    if (bannerAnterior) bannerAnterior.remove();
+
+    // Si la moto està venuda i NO és la targeta de contacte general, posem el banner
+    if (moto.venuda && !moto.titol) {
+        const bannerHTML = `
+            <div class="modal-banner">
+                <span class="banner-linia1">VENDIDA</span>
+            </div>
+        `;
+        // Inserim el banner al contenidor de la imatge
+        imgContainer.insertAdjacentHTML('beforeend', bannerHTML);
+    }
+    // ----------------------------------
+
     if (moto.titol) {
-        // 1. Títol + Subtítol justificat a sota
+        // ... (Codi per a la targeta de contacte, sense canvis)
         document.getElementById('modal-titol').innerHTML = `
             ${moto.titol}
             <div style="font-size: 0.85em; color: #ff6600; margin-top: 6px; text-transform: uppercase;">${moto.subtitol}</div>
         `;
-        
-        // 2. Text d'acció ubicat a la descripció
         document.getElementById('modal-desc').innerText = `${moto.textAccio1} ${moto.textAccio2}`;
-        
-        // 3. Ocultar la franja de miniatures i el bloc de dades tècniques
         if (containerMiniatures) containerMiniatures.style.display = 'none';
         if (blocSpecs) blocSpecs.style.display = 'none';
-
         const textWA = encodeURIComponent(`Hola, quiero vender mi moto.`);
-        document.getElementById('modal-btn-wa').href = `https://wa.me/34669669877?text=${textWA}`;
+        document.getElementById('modal-btn-wa').href = `https://wa.me/34600000000?text=${textWA}`;
     } else {
         // Restaurar vista normal per a les motos d'ocasió
         document.getElementById('modal-titol').innerText = `${moto.marca} ${moto.model}`;
@@ -528,15 +543,21 @@ function carregarDadesModal() {
         if (containerMiniatures) containerMiniatures.style.display = '';
         if (blocSpecs) blocSpecs.style.display = '';
 
-        const textWA = encodeURIComponent(`Hola, estic interessat en la ${moto.marca} ${moto.model} (${moto.preu}€).`);
-        document.getElementById('modal-btn-wa').href = `https://wa.me/34669669877?text=${textWA}`;
+        // Opcional: Canviar text WhatsApp si està venuda
+        let textWA;
+        if (moto.venuda) {
+            textWA = encodeURIComponent(`Hola, he visto que la ${moto.marca} ${moto.model} está vendida. ¿Tenéis alguna similar?`);
+        } else {
+            textWA = encodeURIComponent(`Hola, estic interessat en la ${moto.marca} ${moto.model} (${moto.preu}€).`);
+        }
+        document.getElementById('modal-btn-wa').href = `https://wa.me/34600000000?text=${textWA}`;
     }
     
     // Imatge principal
     const imgGran = document.getElementById('modal-img-gran');
     imgGran.src = `${CONFIG.ASSETS_OCA}${moto.fotos[0]}`;
 
-    // Renderitzar miniatures només si NO és la targeta de venda
+    // Renderitzar miniatures... (Resta del codi sense canvis)
     if (containerMiniatures) {
         containerMiniatures.innerHTML = '';
         if (!moto.titol) {
@@ -547,13 +568,11 @@ function carregarDadesModal() {
                 img.src = rutaCompleta;
                 img.alt = `Foto ${idx + 1}`;
                 if (idx === 0) img.classList.add('activa');
-                
                 img.onclick = () => {
                     imgGran.src = rutaCompleta;
                     document.querySelectorAll('#modal-miniatures img').forEach(i => i.classList.remove('activa'));
                     img.classList.add('activa');
                 };
-                
                 containerMiniatures.appendChild(img);
             });
         }
