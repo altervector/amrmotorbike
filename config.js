@@ -112,7 +112,7 @@ OCASION: [
         id:          "id0001",                          // per identificar-la (fletxes, modal...)
         marca:       "Honda",
         model:       "Forza 750",
-        preu:        "9100",
+        preu:        "9100 €",
         cc:          750,
         kw:          0,
         any:         "2022",
@@ -130,7 +130,7 @@ OCASION: [
         id:          "id0002",                          // per identificar-la (fletxes, modal...)
         marca:       "Honda",
         model:       "cb 650 r",
-        preu:        "0",
+        preu:        "",
         cc:          650,
         kw:          95,
         any:         "2025",
@@ -144,6 +144,7 @@ OCASION: [
             "id0002/5.webp",        ],
         venuda:      true,   // per si voleu marcar-la com a "venuda" sense esborrar-la
     },
+    
         {
         id:          "id9999",                         
         titol:       "¿Quieres vender tu moto...?",
