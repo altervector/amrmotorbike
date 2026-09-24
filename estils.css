@@ -480,6 +480,10 @@ a:hover { text-decoration: underline; }
     color: var(--blanc);
     margin-bottom: 8px;
 }
+.plus {
+   font-size: 1rem;
+   color: var(--vermell);
+} 
 
 .servei-desc {
     font-size: 13px;
