@@ -127,6 +127,24 @@ OCASION: [
         venuda:      false,   // per si voleu marcar-la com a "venuda" sense esborrar-la
     },
         {
+        id:          "id0002",                          // per identificar-la (fletxes, modal...)
+        marca:       "Honda",
+        model:       "cb 650 r",
+        preu:        "0",
+        cc:          650,
+        kw:          95,
+        any:         "2025",
+        km:          "15000",
+        descripcio:  "",
+        fotos: [
+            "id0002/1.webp",   // [0] = foto principal
+            "id0002/2.webp",
+            "id0002/3.webp",
+            "id0002/4.webp",
+            "id0002/5.webp",        ],
+        venuda:      true,   // per si voleu marcar-la com a "venuda" sense esborrar-la
+    },
+        {
         id:          "id9999",                         
         titol:       "¿Quieres vender tu moto...?",
         subtitol:    "te la compramos.",

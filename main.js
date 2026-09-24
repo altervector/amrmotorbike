@@ -189,6 +189,7 @@
                 }
                 return `
                     <div class="servei-card servei-card--oca" data-id="${s.id}" onclick="obrirModalMoto(${idx})">
+                        ${s.venuda ? '<div class="servei-card-banner"><span class="banner-linia1">VENDIDA</span></div>' : ''}
                         <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
                         <div class="servei-titol">${s.marca} ${s.model}</div>
                         <div class="servei-titol servei-titol--plus">${s.preu} €</div>
