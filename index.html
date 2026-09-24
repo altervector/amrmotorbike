@@ -100,7 +100,7 @@
      body { opacity: 0; transition: opacity 0.5s ease-in; }
     </style>
 
-    <script src="config.js?v=8.2"></script>
+    <script src="config.js?v=8.3"></script>
 
     <script>
         window.MODULS = ["cookies-banner.js","main.js"];  
@@ -139,9 +139,9 @@ window.onerror = function(msg, src, line) {
         <!-- Botó Tancar -->
         <button class="modal-btn-tancar" onclick="tancarModalMoto()">✕</button>
 
-        <!-- Fletxes de navegació entre motos -->
+        <!-- Fletxes de navegació entre motos 
         <button class="modal-fletxa fletxa-esq" onclick="canviarMoto(-1)">❮</button>
-        <button class="modal-fletxa fletxa-dreta" onclick="canviarMoto(1)">❯</button>
+        <button class="modal-fletxa fletxa-dreta" onclick="canviarMoto(1)">❯</button>-->
 
         <!-- Títol (Marca i Model) -->
         <h2 id="modal-titol" class="modal-titol"></h2>
@@ -155,12 +155,16 @@ window.onerror = function(msg, src, line) {
         <div id="modal-miniatures" class="modal-miniatures-grid"></div>
 
         <!-- Característiques tècniques -->
-        <div class="modal-specs-grid">
-            <div class="spec-item"><span class="spec-label">Precio:</span> <span id="modal-preu" class="spec-val"></span></div>
-            <div class="spec-item"><span class="spec-label">Cilindrada:</span> <span id="modal-cc" class="spec-val"></span> cc</div>
-            <div class="spec-item"><span class="spec-label">Potencia:</span> <span id="modal-kw" class="spec-val"></span> cv/kW</div>
-            <div class="spec-item"><span class="spec-label">Año:</span> <span id="modal-any" class="spec-val"></span></div>
-            <div class="spec-item"><span class="spec-label">Kilometros:</span> <span id="modal-km" class="spec-val"></span> km</div>
+        <div class="modal-specs-wrapper">
+            <button class="modal-fletxa fletxa-esq" onclick="canviarMoto(-1)">❮</button>
+            <div class="modal-specs-grid">
+                <div class="spec-item"><span class="spec-label">Precio:</span> <span id="modal-preu" class="spec-val"></span></div>
+                <div class="spec-item"><span class="spec-label">Cilindrada:</span> <span id="modal-cc" class="spec-val"></span> cc</div>
+                <div class="spec-item"><span class="spec-label">Potencia:</span> <span id="modal-kw" class="spec-val"></span> cv/kW</div>
+                <div class="spec-item"><span class="spec-label">Año:</span> <span id="modal-any" class="spec-val"></span></div>
+                <div class="spec-item"><span class="spec-label">Kilometros:</span> <span id="modal-km" class="spec-val"></span> km</div>
+            </div>
+            <button class="modal-fletxa fletxa-dreta" onclick="canviarMoto(1)">❯</button>
         </div>
 
         <!-- Descripció / Extres -->

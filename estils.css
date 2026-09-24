@@ -1016,6 +1016,8 @@ a:hover { text-decoration: underline; }
 }
 
 /* Grid per a les dades/especificacions */
+.modal-specs-wrapper { position: relative; min-height: 48px; }
+.modal-specs-wrapper .modal-specs-grid { padding-left: 46px; padding-right: 46px; }
 .modal-specs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -1087,7 +1089,7 @@ a:hover { text-decoration: underline; }
 .modal-banner {
     position: absolute;
     top: 25px; /* Ajusta segons vulguis que sobresurti */
-    right: -42px; /* Ajusta segons vulguis que sobresurti */
+    right: -32px; /* Ajusta segons vulguis que sobresurti */
     width: 170px;
     transform: rotate(45deg);
     background: linear-gradient(135deg, #e60000, #b30000); /* Un vermell potent */

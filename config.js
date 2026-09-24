@@ -138,10 +138,10 @@ OCASION: [
         descripcio:  "",
         fotos: [
             "id0002/1.webp",   // [0] = foto principal
-            "id0002/2.webp",
-            "id0002/3.webp",
-            "id0002/4.webp",
-            "id0002/5.webp",        ],
+            "id9999/Default.png",
+            "id9999/Default.png",
+            "id9999/Default.png",
+            "id9999/Default.png",        ],
         venuda:      true,   // per si voleu marcar-la com a "venuda" sense esborrar-la
     },
     
