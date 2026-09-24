@@ -159,7 +159,7 @@
                 <div class="servei-card servei-card--oca" data-id="${s.id}">
                     <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
                     <div class="servei-titol">${s.marca} ${s.model}</div>
-                    <div class="servei-titol">${s.preu}</div>
+                    <div class="servei-títol plus">${s.preu}</div>
                     <div class="servei-desc">${s.any}</div>
                     <div class="servei-desc">${s.km}</div>
                 </div>
