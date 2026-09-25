@@ -220,6 +220,7 @@ a:hover { text-decoration: underline; }
     align-items: center;
     justify-content: flex-start; /* text a l'esquerra */
     text-align: left;
+    border-bottom: 1px solid var(--taronja);
 }
 
 .hero-imatge {

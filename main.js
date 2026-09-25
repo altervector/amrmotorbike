@@ -100,7 +100,10 @@
                             <a href="#serveis" class="hero-boto-secundari">
                                 ${CONFIG.HERO_BOTO_SEC}
                             </a>
-                        </div>
+                            <a href="#ocasion" class="hero-boto-secundari">
+                                ${CONFIG.HERO_BOTO_3}
+                            </a>
+                            </div>
                     </div>
                     
                 </section>
@@ -108,33 +111,33 @@
         }
 
 
-        /* ── 3. STATS ──────────────────────────────────────── */
-        const stats = document.getElementById('stats');
-        if (stats) {
-            stats.innerHTML = `
-                <div class="stats-franja">
-                    <div class="stat-item">
-                        <div class="stat-numero">${CONFIG.ANYS_EXPERIENCIA}</div>
-                        <div class="stat-label">${CONFIG.ANYS_EXPERIENCIA2}</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-numero">${CONFIG.MOTOS_REPARADES}</div>
-                        <div class="stat-label">${CONFIG.MOTOS_REPARADES2}</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-numero">${CONFIG.CLIENTS}</div>
-                        <div class="stat-label">${CONFIG.CLIENTS2}</div>
-                    </div>
+                                                                                /* ── 3. STATS ──────────────────────────────────────── 
+                                                                                const stats = document.getElementById('stats');
+                                                                                if (stats) {
+                                                                                    stats.innerHTML = `
+                                                                                        <div class="stats-franja">
+                                                                                            <div class="stat-item">
+                                                                                                <div class="stat-numero">${CONFIG.ANYS_EXPERIENCIA}</div>
+                                                                                                <div class="stat-label">${CONFIG.ANYS_EXPERIENCIA2}</div>
+                                                                                            </div>
+                                                                                            <div class="stat-item">
+                                                                                                <div class="stat-numero">${CONFIG.MOTOS_REPARADES}</div>
+                                                                                                <div class="stat-label">${CONFIG.MOTOS_REPARADES2}</div>
+                                                                                            </div>
+                                                                                            <div class="stat-item">
+                                                                                                <div class="stat-numero">${CONFIG.CLIENTS}</div>
+                                                                                                <div class="stat-label">${CONFIG.CLIENTS2}</div>
+                                                                                            </div>
 
-                    <a href="${CONFIG.URL_RESSENYES}" target="_blank" rel="noopener" class="stat-item stat-google">
-                        <div class="stat-numero">${CONFIG.ESTRELLES}<p class="stat-numero-star">⭐⭐⭐⭐⭐<p></div>
-                        <div class="stat-label">${CONFIG.ESTRELLES2}</div>
-                     <div class="stat-cta">Ver reseñas</div>
-                    </a>
+                                                                                            <a href="${CONFIG.URL_RESSENYES}" target="_blank" rel="noopener" class="stat-item stat-google">
+                                                                                                <div class="stat-numero">${CONFIG.ESTRELLES}<p class="stat-numero-star">⭐⭐⭐⭐⭐<p></div>
+                                                                                                <div class="stat-label">${CONFIG.ESTRELLES2}</div>
+                                                                                            <div class="stat-cta">Ver reseñas</div>
+                                                                                            </a>
 
-                </div>
-            `;
-        }
+                                                                                        </div>
+                                                                                    `;
+                                                                                }*/
 
 
         /* ── 4. SECCIONS ───────────────────────────────────── */
