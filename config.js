@@ -109,6 +109,62 @@ ZOCASION: [
 ],
 
 OCASION: [
+        // MOTOS ACTIVES (Exemples)
+        { id: "id0001", marca: "Honda", model: "Forza 750", preu: "9100 €", cc: 750, kw: 0,  any: "2022", km: "6751",
+              descripcio: "Maletas originales incluidas en el precio.",
+              fotos: ["id0001/1.webp", "id0001/2.webp", "id0001/3.webp", "id0001/4.webp", "id0001/5.webp"], venuda: false },
+
+
+        { id: "id0002", marca: "Honda", model: "cb 650 r",  preu: "",       cc: 650, kw: 95, any: "2025", km: "15000",
+              descripcio: "",
+              fotos: ["id0002/1.webp","id9999/Default.png","id9999/Default.png","id9999/Default.png","id9999/Default.png"], venuda: true },
+
+        
+        /*{ id: "id0003", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
+        descripcio: "",
+        fotos: ["id0003/1.webp", "id0003/2.webp", "id0003/3.webp", "id0003/4.webp", "id0003/5.webp"], venuda: false },*/
+
+
+        /*{ id: "id0004", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
+        descripcio: "",
+        fotos: ["id0004/1.webp", "id0004/2.webp", "id0004/3.webp", "id0004/4.webp", "id0004/5.webp"], venuda: false },*/
+
+
+        /*{ id: "id0005", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
+        descripcio: "",
+        fotos: ["id0005/1.webp", "id0005/2.webp", "id0005/3.webp", "id0005/4.webp", "id0005/5.webp"], venuda: false },*/
+
+
+        /*{ id: "id0006", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
+        descripcio: "",
+        fotos: ["id0006/1.webp", "id0006/2.webp", "id0006/3.webp", "id0006/4.webp", "id0006/5.webp"], venuda: false },*/
+
+
+        /*{ id: "id0007", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
+        descripcio: "",
+        fotos: ["id0007/1.webp", "id0007/2.webp", "id0007/3.webp", "id0007/4.webp", "id0007/5.webp"], venuda: false },*/
+
+
+        /*{ id: "id0008", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
+        descripcio: "",
+        fotos: ["id0008/1.webp", "id0008/2.webp", "id0008/3.webp", "id0008/4.webp", "id0008/5.webp"], venuda: false },*/
+
+
+        /*{ id: "id0009", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
+        descripcio: "",
+        fotos: ["id0009/1.webp", "id0009/2.webp", "id0009/3.webp", "id0009/4.webp", "id0009/5.webp"], venuda: false },*/
+
+
+        /*{ id: "id0010", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
+        descripcio: "",
+        fotos: ["id0010/1.webp", "id0010/2.webp", "id0010/3.webp", "id0010/4.webp", "id0010/5.webp"], venuda: false },*/
+
+
+        // CARD FIXA AL FINAL
+        { id: "id9999", titol: "¿Quieres vender tu moto...?", subtitol: "te la compramos.",
+             textAccio1: "Llámanos", textAccio2: "o contacta por whatsapp..", fotos: ["id9999/1.webp"] }
+    ],
+/*OCASION: [
     {
         id:          "id0001",                          // per identificar-la (fletxes, modal...)
         marca:       "Honda",
@@ -155,7 +211,7 @@ OCASION: [
         fotos: [ "id9999/1.webp" ],
     },
     // ...més motos
-],
+],*/
 
 //-------------------------------------------------------------------------------------------------------------------------
 
@@ -186,3 +242,9 @@ ON_SOM_TIT:        "Ven a vernos",
 //SITIOS_SEGUROS: ["alterwebstudio.com", "pages.dev", "altervector.github.io", "amrmotorbike.es","amrmotorbike.com"],
 SITIOS_SEGUROS: ["alterwebstudio.com", "pages.dev", "altervector.github.io", "amrmotorbike.es","amrmotorbike.com", "localhost", "127.0.0.1"],
 };
+
+
+
+
+
+
