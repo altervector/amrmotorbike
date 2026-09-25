@@ -100,13 +100,6 @@ SERVEIS: [
 { ico: "⚙️", titol: "Motor",                    desc: "Ajuste general, reparaciones de todo tipos, fugas y reglajes, reparación de cilindro, pistón, válvulas y ajuste de distribución." },
 { ico: "🎨", titol: "Personalización",          desc: "Instalación de accesorios." },
 ],
-ZOCASION: [
-{ img: "id0001/1.jpeg", titol: "Suzuki GSR 1000",    desc: "Cambio de aceite y filtro, limpieza de sistemas de admisión, ajustes y reglajes." },
-{ img: "logo/logoGEtrans.png", titol: "Honda CB 650 r",                   desc: "Cambio de pastillas y discos de freno, mordazas, limpiezas circuito y cambio de líquidos." },
-{ img: "logo/logoAG.png", titol: "BMW GS 1200",     desc: "Ajuste y lubricación de cadena, cambio del kit de arrastre y revisión de la caja de velocidades." },
-{ img: "logo/logoAWS.png", titol: "Vespino 49cc",        desc: "Revisión y cambio de batería, diagnóstico con escáner ECU y reparación de luces y conexiones." },
-{ ico: "💲", titol: "¿Quieres vender tu moto? <br>   Te la compramos.",  desc: "Te la compramos." },
-],
 
 OCASION: [
         // MOTOS ACTIVES (Exemples)
