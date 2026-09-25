@@ -427,7 +427,7 @@ a:hover { text-decoration: underline; }
 
 /* ─── QUI SOM ─────────────────────────────────────────────── */
 #qui-som {
-    /*background: none; /*var(--negre-suau);*/        /*xxx*/
+    background: none; /*var(--negre-suau);*/        /*xxx*/
             /*background: linear-gradient(
         135deg,
         rgba(20 40 114 / 0.45) 0%,
