@@ -57,7 +57,7 @@ NAV_CONTACTE:       "Contacto",
 HERO_EYEBROW:       "",
 HERO_BOTO_PRI:      "📞 Llámanos",
 HERO_BOTO_SEC:      "Nuestros servicios",
-HERO_BOTO_3:      "Motos de Ocasión",
+HERO_BOTO_3:        "Motos de Ocasión",
 
 
 

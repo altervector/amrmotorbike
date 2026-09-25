@@ -206,7 +206,7 @@
 
                 <!-- QUI SOM -->
                 <section class="seccio" id="qui-som">
-                    <p class="seccio-eyebrow">${CONFIG.QUI_SOM}</p>
+                    <!--p class="seccio-eyebrow">${CONFIG.QUI_SOM}</p-->
                     <h2 class="seccio-titol">${CONFIG.QUI_SOM_TIT}</h2>
                     <p class="seccio-text">${CONFIG.QUI_DESC}</p>
                     <a href="tel:+34${CONFIG.MOBIL}" class="hero-boto-principal btn-balla"
