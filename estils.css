@@ -264,9 +264,12 @@ a:hover { text-decoration: underline; }
     perspective: 700px;
     position: relative;
     z-index: 2;
-    padding: 0 24px;
+    padding: 0 50px;
     max-width: 480px;
     margin-top: 60px; /* compensa la navbar */
+                @media (min-width: 768px) {
+                padding: 0 100px;
+                }
 }
 
                     /* Eyebrow — etiqueta petita sobre el títol */
@@ -300,9 +303,7 @@ a:hover { text-decoration: underline; }
                         line-height: 1.5;
                     }
 
-                                                .hero-pic {
-                                                 border-radius: 14px;
-                                                }    
+                                                  
 .card {
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -318,8 +319,11 @@ a:hover { text-decoration: underline; }
         11px 9px 28px 0px rgba(102,102,102,0.8);   /* X Y blur ex */
     transform: rotateX(0deg) rotateY(-30deg);
     margin-bottom: 82px;
- 
 }
+.hero-pic {
+    border-radius: 14px;
+}  
+
 
 .hero-botons {
     display: flex;
@@ -805,7 +809,7 @@ a:hover { text-decoration: underline; }
 
 /* ── TABLET ── */
 @media (min-width: 768px) {
-      .hero-contingut { padding: 0 78px; }
+      
 
     .hero-titol { font-size: 5rem; } 
      .seccio { padding: 64px 40px; }
