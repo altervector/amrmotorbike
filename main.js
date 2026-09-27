@@ -152,31 +152,31 @@
                     <div class="servei-desc">${s.desc}</div>
                 </div>
             `).join('');
-           /* const targetesOcasion = CONFIG.OCASION.map(s => `
-                <div class="servei-card">
-                    <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.img}" alt="${s.titol}"></div>
-                    <div class="servei-titol">${s.titol}</div>
-                    <div class="servei-desc">${s.desc}</div>
-                </div>
-            `).join('');*/
-            /*const targetesOcasion = CONFIG.OCASION.map(s => `
-                <div class="servei-card servei-card--oca" data-id="${s.id}">
-                    <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
-                    <div class="servei-titol">${s.marca} ${s.model}</div>
-                    <div class="servei-titol servei-titol--plus">${s.preu}</div>
-                    <div class="servei-desc">${s.any}</div>
-                    <div class="servei-desc">${s.km}</div>
-                </div>
-            `).join('');*/
-           /* const targetesOcasion = CONFIG.OCASION.map((s, idx) => `
-                <div class="servei-card servei-card--oca" data-id="${s.id}" onclick="obrirModalMoto(${idx})">
-                    <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
-                    <div class="servei-titol">${s.marca} ${s.model}</div>
-                    <div class="servei-titol servei-titol--plus">${s.preu} €</div>
-                    <div class="servei-desc">Matriculación: ${s.any}</div>
-                    <div class="servei-desc">Kilometros: ${s.km}</div>
-                </div>
-            `).join('');*/
+                                                                                /* const targetesOcasion = CONFIG.OCASION.map(s => `
+                                                                                        <div class="servei-card">
+                                                                                            <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.img}" alt="${s.titol}"></div>
+                                                                                            <div class="servei-titol">${s.titol}</div>
+                                                                                            <div class="servei-desc">${s.desc}</div>
+                                                                                        </div>
+                                                                                    `).join('');*/
+                                                                                    /*const targetesOcasion = CONFIG.OCASION.map(s => `
+                                                                                        <div class="servei-card servei-card--oca" data-id="${s.id}">
+                                                                                            <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
+                                                                                            <div class="servei-titol">${s.marca} ${s.model}</div>
+                                                                                            <div class="servei-titol servei-titol--plus">${s.preu}</div>
+                                                                                            <div class="servei-desc">${s.any}</div>
+                                                                                            <div class="servei-desc">${s.km}</div>
+                                                                                        </div>
+                                                                                    `).join('');*/
+                                                                                /* const targetesOcasion = CONFIG.OCASION.map((s, idx) => `
+                                                                                        <div class="servei-card servei-card--oca" data-id="${s.id}" onclick="obrirModalMoto(${idx})">
+                                                                                            <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
+                                                                                            <div class="servei-titol">${s.marca} ${s.model}</div>
+                                                                                            <div class="servei-titol servei-titol--plus">${s.preu} €</div>
+                                                                                            <div class="servei-desc">Matriculación: ${s.any}</div>
+                                                                                            <div class="servei-desc">Kilometros: ${s.km}</div>
+                                                                                        </div>
+                                                                                    `).join('');*/
 
             const targetesOcasion = CONFIG.OCASION.map((s, idx) => {
                 if (s.titol) {
