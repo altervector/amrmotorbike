@@ -35,19 +35,19 @@
     --gris:          #a0a0a0;
     --gris-clar:     #d4d4d4;
     --blanc:         #ffffff;
-    --blanc-transp:  rgba(255,255,255,0.12);
+            /*--blanc-transp:  rgba(255,255,255,0.12);*/
     --vermell:        #e53012;
 
     --font-titol:    'airstrikebullet', sans-serif;
     --font-titol2:    'airstrike', sans-serif;
     --font-cos:      'Segoe UI', Roboto, sans-serif;
 
-            --fonsmarquee: #FFFFFF;
-            --line:        #8F692C;
+    --fonsmarquee: #FFFFFF;
+            /*--line:        #8F692C;
             --line2:       #A47832;
             --font-display:    'Fraunces', serif;
             --ink-soft:    #98A6FF;
-            --accent:      #C07B13;
+            --accent:      #C07B13;*/
 
     --radi:          8px;
     --amplada-max:   100%;
