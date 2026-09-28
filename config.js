@@ -113,7 +113,7 @@ OCASION: [
               fotos: ["id0002/1.webp", "id0002/2.webp", "id0002/3.webp", "id0002/4.webp", "id0002/5.webp"], venuda: false },
 
         
-        { id: "id0003", marca: "Honda", model: "Forza 125", preu: "", cc: 125, kw: 0,  any: "", km: "34508",
+        { id: "id0003", marca: "Honda", model: "Forza 125", preu: "", cc: "125", kw: "0",  any: "", km: "34508",
         descripcio: "",
         fotos: ["id0003/1.webp", "id0003/2.webp", "id0003/3.webp", "id9999/4.webp", "id9999/5.webp"], venuda: true },
 
