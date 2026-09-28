@@ -108,14 +108,14 @@ OCASION: [
               fotos: ["id0001/1.webp", "id0001/2.webp", "id0001/3.webp", "id0001/4.webp", "id0001/5.webp"], venuda: false },
 
 
-        { id: "id0002", marca: "Honda", model: "cb 650 r",  preu: "",       cc: 650, kw: 95, any: "2025", km: "15000",
+        { id: "id0002", marca: "Honda", model: "cb 650 r",  preu: "",       cc: 649, kw: 92, any: "", km: "58583",
               descripcio: "",
-              fotos: ["id0002/1.webp","id9999/Default.png","id9999/Default.png","id9999/Default.png","id9999/Default.png"], venuda: true },
+              fotos: ["id0002/1.webp", "id0002/2.webp", "id0002/3.webp", "id0002/4.webp", "id0002/5.webp"], venuda: false },
 
         
-        /*{ id: "id0003", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
+        { id: "id0003", marca: "Honda", model: "Forza 125", preu: "", cc: 125, kw: 0,  any: "", km: "34508",
         descripcio: "",
-        fotos: ["id0003/1.webp", "id0003/2.webp", "id0003/3.webp", "id0003/4.webp", "id0003/5.webp"], venuda: false },*/
+        fotos: ["id0003/1.webp", "id0003/2.webp", "id0003/3.webp", "id0003/4.webp", "id0003/5.webp"], venuda: true },
 
 
         /*{ id: "id0004", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
@@ -154,7 +154,7 @@ OCASION: [
 
 
         // CARD FIXA AL FINAL
-        { id: "id9999", titol: "¿Quieres vender tu moto...?", subtitol: "te la compramos.",
+        { id: "id9999", titol: "¿Quieres vender tu moto...?", subtitol: "Contáctanos..",
              textAccio1: "Llámanos", textAccio2: "o contacta por whatsapp..", fotos: ["id9999/1.webp"] }
     ],
                                                                                                                 /*OCASION: [
