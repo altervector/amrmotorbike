@@ -155,7 +155,8 @@ OCASION: [
 
         // CARD FIXA AL FINAL
         { id: "id9999", titol: "¿Quieres vender tu moto...?", subtitol: "Contáctanos..",
-             textAccio1: "Llámanos", textAccio2: "o contacta por whatsapp..", fotos: ["id9999/1.webp"] }
+             textAccio1: "Todas nuestras motos se entregan con el mantenimiento al día y garantizadas.",
+              textAccio2: " Llámanos o contacta por whatsapp..", fotos: ["id9999/1.webp"] }
     ],
                                                                                                                 /*OCASION: [
                                                                                                                 {

@@ -186,7 +186,7 @@
                             <div class="servei-titol">${s.titol}</div>
                             <div class="servei-titol servei-titol--plus">${s.subtitol}</div>
                             <div class="servei-desc">${s.textAccio1}</div>
-                            <div class="servei-desc">${s.textAccio2}</div>
+                            <div class="servei-desc"><strong>${s.textAccio2}</strong></div>
                         </div>
                     `;
                 }
@@ -196,8 +196,8 @@
                         <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
                         <div class="servei-titol">${s.marca} ${s.model}</div>
                         <div class="servei-titol servei-titol--plus">${s.preu} </div>
-                        <div class="servei-desc">Matriculación: ${s.any}</div>
-                        <div class="servei-desc">Kilometros: ${s.km}</div>
+                        <div class="servei-desc">Matriculación: <strong>${s.any}</strong></div>
+                        <div class="servei-desc">Kilometros: <strong>${s.km}</strong></div>
                     </div>
                 `;
             }).join('');
