@@ -108,7 +108,7 @@ OCASION: [
               fotos: ["id0001/1.webp", "id0001/2.webp", "id0001/3.webp", "id0001/4.webp", "id0001/5.webp"], venuda: false },
 
 
-        { id: "id0002", marca: "Honda", model: "cb 650 r",  preu: "5100",       cc: 649, kw: 92, any: "2022", km: "58583",
+        { id: "id0002", marca: "Honda", model: "cb 650 r",  preu: "5100 €",       cc: 649, kw: 92, any: "2022", km: "58583",
               descripcio: "",
               fotos: ["id0002/1.webp", "id0002/2.webp", "id0002/3.webp", "id0002/4.webp", "id0002/5.webp"], venuda: false },
 
