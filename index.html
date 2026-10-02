@@ -1,113 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
-    
+
 <head>
+    <!-- ═══ 1. BÀSIC ═══════════════════════════════════════════════ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AMR MotorBike Solutions| Taller de Motos en Sabadell</title>
+    <title>AMR MotorBike Solutions | Taller de Motos en Sabadell</title>
     <meta name="description" content="Especialistas en mantenimiento y reparación de motocicletas en Sabadell. Taller de confianza con más de 15 años de experiencia.">
-
-    <meta name="robots" content="index, follow">
+    <meta name="author" content="AMR MotorBike Solutions">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <link rel="canonical" href="https://www.amrmotorbike.com/">
+    <!-- <link rel="alternate" hreflang="es" href="https://www.amrmotorbike.com/"> -->
 
+    <!-- ═══ 2. ICONES I PWA ════════════════════════════════════════ -->
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" href="https://avsets.pages.dev/logo/logoAMR.png">
     <link rel="apple-touch-icon" href="https://avsets.pages.dev/logo/logoAMR.png">
-
-    <!-- NUEVO: Apple (iPhone/iPad) -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="AMR MotorBike Solutions">
-    <meta name="format-detection" content="telephone=yes">
     <meta name="theme-color" content="#f97316">
 
-    <!-- NUEVO: carga más rápida del CDN de imágenes -->
+    <!-- ═══ 3. APPLE (iPhone/iPad) ═════════════════════════════════ -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AMR MotorBike">
+    <meta name="format-detection" content="telephone=yes">
+
+    <!-- ═══ 4. RENDIMENT (CDN d'imatges) ═══════════════════════════ -->
     <link rel="preconnect" href="https://avsets.pages.dev" crossorigin>
     <link rel="dns-prefetch" href="https://avsets.pages.dev">
 
-    <!-- NUEVO: geo para buscadores locales -->
+    <!-- ═══ 5. SEO LOCAL ═══════════════════════════════════════════ -->
     <meta name="geo.region" content="ES-CT">
     <meta name="geo.placename" content="Sabadell">
+    <!-- <meta name="geo.position" content="LAT;LON"> -->
+    <!-- <meta name="ICBM" content="LAT, LON"> -->
 
-    <meta name="google-site-verification" content="q2IicLnrJ-lwFXzms4WPYWDJVQKaT5Ha7NXTUKfJKG0" />
+    <!-- ═══ 6. VERIFICACIÓ ═════════════════════════════════════════ -->
+    <meta name="google-site-verification" content="q2IicLnrJ-lwFXzms4WPYWDJVQKaT5Ha7NXTUKfJKG0">
 
-    <meta property="og:title" content="AMR MotorBike Solutions| Taller de Motos en Sabadell">
+    <!-- ═══ 7. OPEN GRAPH (WhatsApp, Facebook...) ══════════════════ -->
+    <meta property="og:title" content="AMR MotorBike Solutions | Taller de Motos en Sabadell">
     <meta property="og:description" content="Especialistas en motos en Sabadell. Mantenimiento, reparación y personalización.">
     <meta property="og:image" content="https://avsets.pages.dev/logo/logo-nouAMR.png">
-    <!-- NUEVO: tamaño de la imagen al compartir (WhatsApp lo necesita) -->
     <meta property="og:image:width" content="812">
     <meta property="og:image:height" content="540">
     <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Logo de AMR MotorBike Solutions">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.amrmotorbike.com/">
     <meta property="og:locale" content="es_ES">
-    <!-- NUEVO -->
     <meta property="og:site_name" content="AMR MotorBike Solutions">
 
+    <!-- ═══ 8. TWITTER / X ═════════════════════════════════════════ -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AMR MotorBike Solutions | Taller de Motos En Sabadell">
+    <meta name="twitter:title" content="AMR MotorBike Solutions | Taller de Motos en Sabadell">
     <meta name="twitter:description" content="Especialistas en motos en Sabadell. Mantenimiento, reparación y personalización.">
     <meta name="twitter:image" content="https://avsets.pages.dev/logo/logo-nouAMR.png">
+    <meta name="twitter:image:alt" content="Logo de AMR MotorBike Solutions">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+    <!-- ═══ 9. DADES ESTRUCTURADES (JSON-LD) ═══════════════════════ -->
+    <!-- Pendent: geo (coordenades), hasMenu no aplica -->
+    <script type="application/ld+json">
     {
-      "@type": ["AutoRepair", "LocalBusiness"],
-      "@id": "https://www.amrmotorbike.com/#business",
-      "name": "AMR MotorBike Solutions",
-      "image": "https://avsets.pages.dev/images/amrmotorbike/hero-amrmotorbike.webp",
-      "logo": "https://avsets.pages.dev/logo/logo-nouAMR.png",
-      "telephone": "+34669669877",
-      "email": "info@amrmotorbike.com",
-      "priceRange": "€€",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "C/ Vila Cinca, 97",
-        "addressLocality": "Sabadell",
-        "addressRegion": "Barcelona",
-        "postalCode": "08208",
-        "addressCountry": "ES"
-      },
-      "url": "https://www.amrmotorbike.com",
-      "openingHours": ["Mo-Th 08:30-13:00", "Mo-Th 15:00-18:00", "Fr 08:30-16:00"],
-      "areaServed": ["Sabadell", "Matadepera", "Terrassa", "Barberà del Vallès", "Cerdanyola del Vallès", "Sant Qurze del Vallès"],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "33",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "sameAs": ["https://g.page/r/CcBpNj0U5YUAEBM/review"]
-    },
-    {
-      "@type": "WebSite",
-      "name": "AMR MotorBike Solutions",
-      "url": "https://www.amrmotorbike.com/",
-      "inLanguage": "es",
-      "publisher": { "@id": "https://www.amrmotorbike.com/#business" }
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["AutoRepair", "LocalBusiness"],
+          "@id": "https://www.amrmotorbike.com/#business",
+          "name": "AMR MotorBike Solutions",
+          "image": "https://avsets.pages.dev/images/amrmotorbike/hero-amrmotorbike.webp",
+          "logo": "https://avsets.pages.dev/logo/logo-nouAMR.png",
+          "telephone": "+34669669877",
+          "email": "info@amrmotorbike.com",
+          "priceRange": "€€",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "C/ Vila Cinca, 97",
+            "addressLocality": "Sabadell",
+            "addressRegion": "Barcelona",
+            "postalCode": "08208",
+            "addressCountry": "ES"
+          },
+          "url": "https://www.amrmotorbike.com",
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=AMR+MotorBike&query_place_id=ChIJD7yoLgCVpBIRwGk2PRTlhQA",
+          "openingHours": ["Mo-Th 08:30-13:00", "Mo-Th 15:00-18:00", "Fr 08:30-16:00"],
+          "areaServed": ["Sabadell", "Matadepera", "Terrassa", "Barberà del Vallès", "Cerdanyola del Vallès", "Sant Quirze del Vallès"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "33",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "sameAs": [
+            "https://www.instagram.com/amrmotorbike",
+            "https://g.page/r/CcBpNj0U5YUAEBM/review"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "name": "AMR MotorBike Solutions",
+          "url": "https://www.amrmotorbike.com/",
+          "inLanguage": "es",
+          "publisher": { "@id": "https://www.amrmotorbike.com/#business" }
+        }
+      ]
     }
-  ]
-}
-</script>
-
-
-
-    <style>
-     body { opacity: 0; transition: opacity 0.5s ease-in; }
-    </style>
-
-    <!--script src="config.js?v=8.9"></script-->
-
-    <script>
-        window.MODULS = ["cookies-banner.js","main.js"];  
     </script>
 
+    <!-- ═══ 10. VEL + SCRIPTS ══════════════════════════════════════ -->
+    <style>
+        body { opacity: 0; transition: opacity 0.5s ease-in; }
+    </style>
+
+    <script>
+        window.MODULS = ["cookies-banner.js", "main.js"];
+    </script>
     <script src="loader.js"></script>
 </head>
+
+
 
 
 <body>
