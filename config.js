@@ -5,6 +5,7 @@ CONFIG.JS - AMR MotorBike (pàgina principal)
 const CONFIG = {
 
 // 1. NEGOCI
+
 COOK:           "cookies_amr",
 NOM:            "AMR MotorBike",
 LOGO:           "logo/logoAMR.png",
@@ -36,6 +37,7 @@ ASSETS_OCA:     "https://avsets.pages.dev/images/amrmotorbike/ocasion/",
                                
 URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=AMR+MotorBike&query_place_id=ChIJD7yoLgCVpBIRwGk2PRTlhQA",
 URL_RESSENYES:  "https://g.page/r/CcBpNj0U5YUAEBM/review",
+//-------------------------------------------------------------------------------------------------------------------------
 
 // 3. IMATGES 
 BACKGROUND:      "", // ← canviar en el css .html{}
@@ -58,24 +60,23 @@ HERO_EYEBROW:       "",
 HERO_BOTO_PRI:      "📞 Llámanos",
 HERO_BOTO_SEC:      "Nuestros servicios",
 HERO_BOTO_3:        "Motos de Ocasión",
-
-
-
 //-------------------------------------------------------------------------------------------------------------------------
 
+// QUI SOM ---------------------------------------------------------------------------------------------------------------
 
 QUI_SOM:            "Quiénes somos...",
 QUI_SOM_TIT:        "Pasión por las motos desde hace más de 20 años",
-QUI_DESC:           "En el Taller AMR MotorBike somos especialistas en mantenimiento, reparación y restauración de motocicletas. Más de 20 años de experiencia en varias marcas del sector y en Sabadell, cuidando tu moto con la misma pasión con la que la conduces. Trabajamos con todas las marcas y modelos, desde scooters hasta motos de gran cilindrada.",
-//+hero boto pri
+QUI_SOM_DESC:           "En el Taller AMR MotorBike somos especialistas en mantenimiento, reparación y restauración de motocicletas. Más de 20 años de experiencia en varias marcas del sector y en Sabadell, cuidando tu moto con la misma pasión con la que la conduces. Trabajamos con todas las marcas y modelos, desde scooters hasta motos de gran cilindrada.",
 
+
+                                                //  STATS---------------------------------------------------------------------------------------------------------------
 
                                                     /*ANYS_EXPERIENCIA:   "+20",    ANYS_EXPERIENCIA2:   "Años de experiencia",
                                                     MOTOS_REPARADES:    "+2.000", MOTOS_REPARADES2:    "Motos reparadas",
                                                     CLIENTS:            "+1.200", CLIENTS2:            "Clientes satisfechos",
                                                     ESTRELLES:          "5 ",      ESTRELLES2:          "Valoración en Google",*/
 
-//-------------------------------------------------------------------------------------------------------------------------
+                                                //-------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -158,54 +159,6 @@ OCASION: [
              textAccio1: "Todas nuestras motos se entregan con el mantenimiento al día y garantizadas.",
               textAccio2: " Llámanos o contacta por whatsapp..", fotos: ["id9999/1.webp"] }
     ],
-                                                                                                                /*OCASION: [
-                                                                                                                {
-                                                                                                                    id:          "id0001",                          // per identificar-la (fletxes, modal...)
-                                                                                                                    marca:       "Honda",
-                                                                                                                    model:       "Forza 750",
-                                                                                                                    preu:        "9100 €",
-                                                                                                                    cc:          750,
-                                                                                                                    kw:          0,
-                                                                                                                    any:         "2022",
-                                                                                                                    km:          "6751",
-                                                                                                                    descripcio:  "Maletas originales incluidas en el precio.",
-                                                                                                                    fotos: [
-                                                                                                                        "id0001/1.webp",   // [0] = foto principal
-                                                                                                                        "id0001/2.webp",
-                                                                                                                        "id0001/3.webp",
-                                                                                                                        "id0001/4.webp",
-                                                                                                                        "id0001/5.webp",        ],
-                                                                                                                    venuda:      false,   // per si voleu marcar-la com a "venuda" sense esborrar-la
-                                                                                                                },
-                                                                                                                    {
-                                                                                                                    id:          "id0002",                          // per identificar-la (fletxes, modal...)
-                                                                                                                    marca:       "Honda",
-                                                                                                                    model:       "cb 650 r",
-                                                                                                                    preu:        "",
-                                                                                                                    cc:          650,
-                                                                                                                    kw:          95,
-                                                                                                                    any:         "2025",
-                                                                                                                    km:          "15000",
-                                                                                                                    descripcio:  "",
-                                                                                                                    fotos: [
-                                                                                                                        "id0002/1.webp",   // [0] = foto principal
-                                                                                                                        "id9999/Default.png",
-                                                                                                                        "id9999/Default.png",
-                                                                                                                        "id9999/Default.png",
-                                                                                                                        "id9999/Default.png",        ],
-                                                                                                                    venuda:      true,   // per si voleu marcar-la com a "venuda" sense esborrar-la
-                                                                                                                },
-                                                                                                                
-                                                                                                                    {
-                                                                                                                    id:          "id9999",                         
-                                                                                                                    titol:       "¿Quieres vender tu moto...?",
-                                                                                                                    subtitol:    "te la compramos.",
-                                                                                                                    textAccio1:         "Llámanos",
-                                                                                                                    textAccio2:          "o contacta por whatsapp..",
-                                                                                                                    fotos: [ "id9999/1.webp" ],
-                                                                                                                },
-                                                                                                                // ...més motos
-                                                                                                            ],*/
 
 //-------------------------------------------------------------------------------------------------------------------------
 
