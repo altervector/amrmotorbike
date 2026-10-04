@@ -1,11 +1,13 @@
 /* ============================================================
-CONFIG.JS - AMR MotorBike (pàgina principal)
-============================================================ */
+   CONFIG.JS - AMR MotorBike (pàgina principal)
+   Esquelet comú (mateix ordre a totes les webs):
+   1 Negoci · 2 Rutes · 3 Imatges · 4 Navbar · 5 Hero · 6 Qui som
+   7 Contingut del projecte · 8 On som · 9 Seguretat · 10 Altres
+   ============================================================ */
 
 const CONFIG = {
 
-// 1. NEGOCI
-
+// ═══ 1. NEGOCI ═══════════════════════════════════════════════════════════
 COOK:           "cookies_amr",
 NOM:            "AMR MotorBike",
 LOGO:           "logo/logoAMR.png",
@@ -27,7 +29,7 @@ FACEBOOK:       "",
 EMAIL_SUPORT:   "info@alterwebstudio.com",
 //-------------------------------------------------------------------------------------------------------------------------
 
-// 2. RUTES
+// ═══ 2. RUTES ════════════════════════════════════════════════════════════
 REPO_URL:       "https://altervector.github.io/amrmotorbike/",
 BASE_URL:       "./",
 BASE_WORKER:    "https://amrmotorbike.altervector.workers.dev",
@@ -39,13 +41,13 @@ URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=AMR+MotorBike&q
 URL_RESSENYES:  "https://g.page/r/CcBpNj0U5YUAEBM/review",
 //-------------------------------------------------------------------------------------------------------------------------
 
-// 3. IMATGES 
+// ═══ 3. IMATGES ══════════════════════════════════════════════════════════
 BACKGROUND:      "", // ← canviar en el css .html{}
 BLOC_HERO:       "images/amrmotorbike/hero-amrmotorbike.webp", 
 QR:              "qr/qr-amrmotorbike.png",
 //-------------------------------------------------------------------------------------------------------------------------
 
-// 4. TEXTOS---------------------------------------------------------------------------------------------------------------
+// ═══ 4. NAVBAR ═══════════════════════════════════════════════════════════
 NAV_INICI:          "Inicio",
 NAV_NOSALTRES:      "Nosotros",
 NAV_SERVEIS:        "Servicios",
@@ -56,17 +58,18 @@ NAV_CONTACTE:       "Contacto",
 
          //
 
+// ═══ 5. HERO ═════════════════════════════════════════════════════════════
 HERO_EYEBROW:       "",
+HERO_TITOL:         "",
 HERO_BOTO_PRI:      "📞 Llámanos",
 HERO_BOTO_SEC:      "Nuestros servicios",
 HERO_BOTO_3:        "Motos de Ocasión",
 //-------------------------------------------------------------------------------------------------------------------------
 
-// QUI SOM ---------------------------------------------------------------------------------------------------------------
-
+// ═══ 6. QUI SOM ══════════════════════════════════════════════════════════
 QUI_SOM:            "Quiénes somos...",
 QUI_SOM_TIT:        "Pasión por las motos desde hace más de 20 años",
-QUI_SOM_DESC:           "En el Taller AMR MotorBike somos especialistas en mantenimiento, reparación y restauración de motocicletas. Más de 20 años de experiencia en varias marcas del sector y en Sabadell, cuidando tu moto con la misma pasión con la que la conduces. Trabajamos con todas las marcas y modelos, desde scooters hasta motos de gran cilindrada.",
+QUI_SOM_DESC:       "En el Taller AMR MotorBike somos especialistas en mantenimiento, reparación y restauración de motocicletas. Más de 20 años de experiencia en varias marcas del sector y en Sabadell, cuidando tu moto con la misma pasión con la que la conduces. Trabajamos con todas las marcas y modelos, desde scooters hasta motos de gran cilindrada.",
 
 
                                                 //  STATS---------------------------------------------------------------------------------------------------------------
@@ -79,9 +82,9 @@ QUI_SOM_DESC:           "En el Taller AMR MotorBike somos especialistas en mante
                                                 //-------------------------------------------------------------------------------------------------------------------------
 
 
+// ═══ 7. CONTINGUT DEL PROJECTE (diferent a cada web) ═════════════════════
 
-
-// 5. SERVEIS (graella)
+// ── 7.1 Serveis (graella) ──
 QUE_FEM:            "Lo que hacemos",
 QUE_FEM_SRV:        "Nuestros servicios",
 QUE_FEM_OCA:        "MOTOS DE OCASION",
@@ -89,7 +92,7 @@ QUE_FEM_OCA:        "MOTOS DE OCASION",
 
 //-------------------------------------------------------------------------------------------------------------------------
 
-// 6. MAPS SERVEIS-------------------------------------------------------------------------------------------------------------------------
+// MAPS SERVEIS-------------------------------------------------------------------------------------------------------------------------
 SERVEIS: [
 { ico: "🔧", titol: "Mantenimiento general",    desc: "Cambio de aceite y filtro, limpieza de sistemas de admisión, ajustes y reglajes." },
 { ico: "🛑", titol: "Frenos",                   desc: "Cambio de pastillas y discos de freno, mordazas, limpiezas circuito y cambio de líquidos." },
@@ -102,6 +105,7 @@ SERVEIS: [
 { ico: "🎨", titol: "Personalización",          desc: "Instalación de accesorios." },
 ],
 
+// ── 7.2 Motos d'ocasió ──
 OCASION: [
         // MOTOS ACTIVES (Exemples)
         { id: "id0001", marca: "Honda", model: "Forza 750", preu: "9100 €", cc: 750, kw: 0,  any: "2022", km: "6751",
@@ -159,12 +163,11 @@ OCASION: [
              textAccio1: "Todas nuestras motos se entregan con el mantenimiento al día y garantizadas.",
               textAccio2: " Llámanos o contacta por whatsapp..", fotos: ["id9999/1.webp"] }
     ],
-
-//-------------------------------------------------------------------------------------------------------------------------
-
+ //-------------------------------------------------------------------------------------------------------------------------
 
 
-// 6. PERQUE--------------------------------------------------------------------------------------------------------------
+
+// ── 7.3 Per què nosaltres ──
 PXQ:        "¿ Por qué AMR MotorBike ?",
 PXQ_DESC:   "El taller que tu moto se merece",
 
@@ -179,19 +182,16 @@ PXQ_BLOC3_DESC:         "Si la reparación se alarga, te dejamos una moto para s
 //-------------------------------------------------------------------------------------------------------------------------
 
 
-// 7. ON SOM-----------------------------------------------------------------------------------------------------------   
+// ═══ 8. ON SOM ═══════════════════════════════════════════════════════════
 ON_SOM:            "Dónde estamos...",
 ON_SOM_TIT:        "Ven a vernos",
 
 //-------------------------------------------------------------------------------------------------------------------------
 
-// 6. SEGURETAT
+// ═══ 9. SEGURETAT ════════════════════════════════════════════════════════
 //SITIOS_SEGUROS: ["alterwebstudio.com", "pages.dev", "altervector.github.io", "amrmotorbike.es","amrmotorbike.com"],
 SITIOS_SEGUROS: ["alterwebstudio.com", "pages.dev", "altervector.github.io", "amrmotorbike.es","amrmotorbike.com", "localhost", "127.0.0.1"],
+
+// ═══ 10. ALTRES ══════════════════════════════════════════════════════════
+// (res en aquest projecte)
 };
-
-
-
-
-
-
