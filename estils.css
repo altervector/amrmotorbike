@@ -104,22 +104,22 @@ a:hover { text-decoration: underline; }
     /* gap: 55px; Substitueix el padding horitzontal dels span per un espaiat net */
     animation: desplaca 24s linear infinite;
 }
-/*.marquee span{       Per el marquee de textes
-    display: inline-flex;
-    align-items: center;
-    flex-shrink: 0;
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 1.6rem;
-    padding: 0 30px;
-    color: var(--ink-soft);
-}
-.marquee span img {
-    height: 90px;        alçada fixa — ajusta al gust 
-    width: auto;          l'amplada s'ajusta sola, mantenint proporció 
-    display: block;
-    vertical-align: middle;
-}*/
+                                            /*.marquee span{       Per el marquee de textes
+                                                display: inline-flex;
+                                                align-items: center;
+                                                flex-shrink: 0;
+                                                font-family: var(--font-display);
+                                                font-style: italic;
+                                                font-size: 1.6rem;
+                                                padding: 0 30px;
+                                                color: var(--ink-soft);
+                                            }
+                                            .marquee span img {
+                                                height: 90px;        alçada fixa — ajusta al gust 
+                                                width: auto;          l'amplada s'ajusta sola, mantenint proporció 
+                                                display: block;
+                                                vertical-align: middle;
+                                            }*/
 .marquee span {
    box-sizing: border-box;
     display: inline-flex;
