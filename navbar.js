@@ -44,6 +44,12 @@ class NavbarComu extends HTMLElement {
         logo.addEventListener('touchstart', iniciarPress, { passive: false });
         logo.addEventListener('touchend',   aturarPress);
         logo.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
+        });        
+        
     }
 }
 
@@ -89,8 +95,15 @@ class Navbar2Comu extends HTMLElement {
         logo.addEventListener('touchstart', iniciarPress, { passive: false });
         logo.addEventListener('touchend',   aturarPress);
         logo.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
     }
 }
+
 
 customElements.define('navbar-comu', NavbarComu);
 customElements.define('navbar2-comu', Navbar2Comu);
