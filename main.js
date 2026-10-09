@@ -7,7 +7,7 @@
 
     const inicialitzar = async () => {
 
-        /* ── 1. NAVBAR ─────────────────────────────────────── */
+        /* ── 1. NAVBAR ─────────────────────────────────────── 
         const navbar = document.getElementById('navbar');
         if (navbar) {
             navbar.innerHTML = `
@@ -26,9 +26,9 @@
                     </ul>
                 </nav>
             `;
-        }
+        }*/
 
-                /* ── 1. NAVBAR 2.0─────────────────────────────────────── */
+                /* ── 1. NAVBAR 2.0─────────────────────────────────────── 
         const navbar2 = document.getElementById('navbar2');
         if (navbar2) {
             navbar2.innerHTML = `
@@ -43,11 +43,11 @@
                     </ul>
                 </nav>
             `;
-        }
+        }*/
 
 
 
-
+/*
         const btnHamburguesa = document.querySelector('.navbar-hamburguesa');
         const menu = document.querySelector('.navbar-menu');
 
@@ -59,7 +59,7 @@
             a.addEventListener('click', () => menu.classList.remove('obert'));
         });
 
-        // Long press logo → login (per si un dia hi ha admin)
+        / ────Long press logo → login (per si un dia hi ha admin)────────────────────────/
         const logo = document.querySelector('.navbar-logo img');
         let timerLogo;
         const iniciarPress = (e) => {
@@ -74,7 +74,7 @@
         logo.addEventListener('mouseleave', aturarPress);
         logo.addEventListener('touchstart', iniciarPress, { passive: false });
         logo.addEventListener('touchend',   aturarPress);
-        logo.addEventListener('contextmenu', (e) => e.preventDefault());
+        logo.addEventListener('contextmenu', (e) => e.preventDefault());*/
 
                         /*<span class="hero-eyebrow">Taller de Motocicletes</span>
                         <h1 class="hero-titol">${CONFIG.NOM}</h1>
