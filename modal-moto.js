@@ -31,15 +31,15 @@ function carregarDadesModal() {
     const blocSpecs = elPreu ? (elPreu.closest('.modal-specs') || elPreu.parentElement.parentElement) : null;
 
     // --- GESTIÓ DEL BANNER "VENUDA" ---
-    // Busquem el contenidor de la imatge gran
+    /*/ Busquem el contenidor de la imatge gran
     const imgContainer = document.getElementById('modal-img-gran').parentElement;
     
     // Netejem qualsevol banner anterior
     const bannerAnterior = imgContainer.querySelector('.modal-banner');
-    if (bannerAnterior) bannerAnterior.remove();
+    if (bannerAnterior) bannerAnterior.remove();*/
 
-    // Si la moto està venuda i NO és la targeta de contacte general, posem el banner
-    if (moto.venuda && !moto.titol) {
+    //Si la moto està venuda i NO és la targeta de contacte general, posem el banner
+    /*if (moto.venuda && !moto.titol) {
         const bannerHTML = `
             <div class="modal-banner">
                 <span class="banner-linia1">VENDIDA</span>
@@ -47,6 +47,34 @@ function carregarDadesModal() {
         `;
         // Inserim el banner al contenidor de la imatge
         imgContainer.insertAdjacentHTML('beforeend', bannerHTML);
+    }*/
+    // ----------------------------------
+
+    // --- GESTIÓ DELS BANNERS (VENUDA / RESERVADA) ---
+    // Busquem el contenidor de la imatge gran
+    const imgContainer = document.getElementById('modal-img-gran').parentElement;
+    
+    // Netejem qualsevol banner anterior
+    const bannerAnterior = imgContainer.querySelector('.modal-banner');
+    if (bannerAnterior) bannerAnterior.remove();
+
+    // Si la moto està venuda o reservada i NO és la targeta de contacte general, posem el banner
+    if (!moto.titol) {
+        if (moto.venuda) {
+            const bannerHTML = `
+                <div class="modal-banner" style="background-color: #e74c3c;">
+                    <span class="banner-linia1">VENDIDA</span>
+                </div>
+            `;
+            imgContainer.insertAdjacentHTML('beforeend', bannerHTML);
+        } else if (moto.reservada) {
+            const bannerHTML = `
+                <div class="modal-banner" style="background-color: #e67e22;">
+                    <span class="banner-linia1">RESERVADA</span>
+                </div>
+            `;
+            imgContainer.insertAdjacentHTML('beforeend', bannerHTML);
+        }
     }
     // ----------------------------------
 

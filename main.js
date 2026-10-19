@@ -57,24 +57,24 @@
 
                                                                                 menu.querySelectorAll('a').forEach(a => {
                                                                                     a.addEventListener('click', () => menu.classList.remove('obert'));
-                                                                                });
+                                                                                });*/
 
-                                                                                / ────Long press logo → login (per si un dia hi ha admin)────────────────────────/
-                                                                                const logo = document.querySelector('.navbar-logo img');
-                                                                                let timerLogo;
-                                                                                const iniciarPress = (e) => {
-                                                                                    e.preventDefault();
-                                                                                    timerLogo = setTimeout(() => {
-                                                                                        if (typeof window.obrirModalLogin === 'function') window.obrirModalLogin();
-                                                                                    }, 1500);
-                                                                                };
-                                                                                const aturarPress = () => clearTimeout(timerLogo);
-                                                                                logo.addEventListener('mousedown',  iniciarPress);
-                                                                                logo.addEventListener('mouseup',    aturarPress);
-                                                                                logo.addEventListener('mouseleave', aturarPress);
-                                                                                logo.addEventListener('touchstart', iniciarPress, { passive: false });
-                                                                                logo.addEventListener('touchend',   aturarPress);
-                                                                                logo.addEventListener('contextmenu', (e) => e.preventDefault());*/
+        /* ────Long press logo → login (per si un dia hi ha admin)────────────────────────*/
+        const logo = document.querySelector('.navbar-logo img');
+        let timerLogo;
+        const iniciarPress = (e) => {
+            e.preventDefault();
+            timerLogo = setTimeout(() => {
+                if (typeof window.obrirModalLogin === 'function') window.obrirModalLogin();
+            }, 1500);
+        };
+        const aturarPress = () => clearTimeout(timerLogo);
+        logo.addEventListener('mousedown',  iniciarPress);
+        logo.addEventListener('mouseup',    aturarPress);
+        logo.addEventListener('mouseleave', aturarPress);
+        logo.addEventListener('touchstart', iniciarPress, { passive: false });
+        logo.addEventListener('touchend',   aturarPress);
+        logo.addEventListener('contextmenu', (e) => e.preventDefault());
 
                                                                                                 /*<span class="hero-eyebrow">Taller de Motocicletes</span>
                                                                                                 <h1 class="hero-titol">${CONFIG.NOM}</h1>
@@ -178,7 +178,53 @@
                                                                                         </div>
                                                                                     `).join('');*/
 
+            
+            
+            
+            
+            
+            
+            
             const targetesOcasion = CONFIG.OCASION.map((s, idx) => {
+                if (s.titol) {
+                    return `
+                        <div class="servei-card servei-card--oca" data-id="${s.id}" onclick="obrirModalMoto(${idx})">
+                            <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.titol}"></div>
+                            <div class="servei-titol">${s.titol}</div>
+                            <div class="servei-titol servei-titol--plus">${s.subtitol}</div>
+                            <div class="servei-desc">${s.textAccio1}</div>
+                            <div class="servei-desc"><strong>${s.textAccio2}</strong></div>
+                        </div>
+                    `;
+                }
+                
+                // Determinem el banner segons l'estat
+                let bannerHTML = '';
+                if (s.venuda) {
+                    bannerHTML = '<div class="servei-card-banner"><span class="banner-linia1">VENDIDA</span></div>';
+                } else if (s.reservada) {
+                    bannerHTML = '<div class="servei-card-banner" style="background-color: #e67e22;"><span class="banner-linia1">RESERVADA</span></div>';
+                }
+
+                return `
+                    <div class="servei-card servei-card--oca" data-id="${s.id}" onclick="obrirModalMoto(${idx})">
+                        ${bannerHTML}
+                        <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
+                        <div class="servei-titol">${s.marca} ${s.model}</div>
+                        <div class="servei-titol servei-titol--plus">${s.preu} </div>
+                        <div class="servei-desc">Matriculación: <strong>${s.any}</strong></div>
+                        <div class="servei-desc">Kilometros: <strong>${s.km}</strong></div>
+                    </div>
+                `;
+            }).join('');
+            
+            
+            
+            
+            
+            
+            
+                                                                                    /*const targetesOcasion = CONFIG.OCASION.map((s, idx) => {
                 if (s.titol) {
                     return `
                         <div class="servei-card servei-card--oca" data-id="${s.id}" onclick="obrirModalMoto(${idx})">
@@ -200,7 +246,7 @@
                         <div class="servei-desc">Kilometros: <strong>${s.km}</strong></div>
                     </div>
                 `;
-            }).join('');
+            }).join('');*/
 
             seccions.innerHTML = `
 

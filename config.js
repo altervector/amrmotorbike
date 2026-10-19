@@ -110,52 +110,52 @@ OCASION: [
         // MOTOS ACTIVES (Exemples)
         { id: "id0001", marca: "Honda", model: "Forza 750", preu: "9100 €", cc: 750, kw: 0,  any: "2022", km: "6751",
               descripcio: "Maletas originales incluidas en el precio.",
-              fotos: ["id0001/1.webp", "id0001/2.webp", "id0001/3.webp", "id0001/4.webp", "id0001/5.webp"], venuda: false },
+              fotos: ["id0001/1.webp", "id0001/2.webp", "id0001/3.webp", "id0001/4.webp", "id0001/5.webp"], venuda: false ,reservada: false},
 
 
         { id: "id0002", marca: "Honda", model: "cb 650 r",  preu: "5100 €",       cc: 649, kw: 92, any: "2022", km: "58583",
               descripcio: "",
-              fotos: ["id0002/1.webp", "id0002/2.webp", "id0002/3.webp", "id0002/4.webp", "id0002/5.webp"], venuda: false },
+              fotos: ["id0002/1.webp", "id0002/2.webp", "id0002/3.webp", "id0002/4.webp", "id0002/5.webp"], venuda: false ,reservada: true },
 
         
         { id: "id0003", marca: "Honda", model: "Forza 125", preu: "", cc: "125", kw: "0",  any: "2022", km: "34508",
         descripcio: "",
-        fotos: ["id0003/1.webp", "id0003/2.webp", "id0003/3.webp", "id9999/4.webp", "id9999/5.webp"], venuda: true },
+        fotos: ["id0003/1.webp", "id0003/2.webp", "id0003/3.webp", "id9999/4.webp", "id9999/5.webp"], venuda: true ,reservada: false },
 
 
         /*{ id: "id0004", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
         descripcio: "",
-        fotos: ["id0004/1.webp", "id0004/2.webp", "id0004/3.webp", "id0004/4.webp", "id0004/5.webp"], venuda: false },*/
+        fotos: ["id0004/1.webp", "id0004/2.webp", "id0004/3.webp", "id0004/4.webp", "id0004/5.webp"], venuda: false ,reservada: false },*/
 
 
         /*{ id: "id0005", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
         descripcio: "",
-        fotos: ["id0005/1.webp", "id0005/2.webp", "id0005/3.webp", "id0005/4.webp", "id0005/5.webp"], venuda: false },*/
+        fotos: ["id0005/1.webp", "id0005/2.webp", "id0005/3.webp", "id0005/4.webp", "id0005/5.webp"], venuda: false ,reservada: false },*/
 
 
         /*{ id: "id0006", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
         descripcio: "",
-        fotos: ["id0006/1.webp", "id0006/2.webp", "id0006/3.webp", "id0006/4.webp", "id0006/5.webp"], venuda: false },*/
+        fotos: ["id0006/1.webp", "id0006/2.webp", "id0006/3.webp", "id0006/4.webp", "id0006/5.webp"], venuda: false  ,reservada: false},*/
 
 
         /*{ id: "id0007", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
         descripcio: "",
-        fotos: ["id0007/1.webp", "id0007/2.webp", "id0007/3.webp", "id0007/4.webp", "id0007/5.webp"], venuda: false },*/
+        fotos: ["id0007/1.webp", "id0007/2.webp", "id0007/3.webp", "id0007/4.webp", "id0007/5.webp"], venuda: false  ,reservada: false},*/
 
 
         /*{ id: "id0008", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
         descripcio: "",
-        fotos: ["id0008/1.webp", "id0008/2.webp", "id0008/3.webp", "id0008/4.webp", "id0008/5.webp"], venuda: false },*/
+        fotos: ["id0008/1.webp", "id0008/2.webp", "id0008/3.webp", "id0008/4.webp", "id0008/5.webp"], venuda: false ,reservada: false },*/
 
 
         /*{ id: "id0009", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
         descripcio: "",
-        fotos: ["id0009/1.webp", "id0009/2.webp", "id0009/3.webp", "id0009/4.webp", "id0009/5.webp"], venuda: false },*/
+        fotos: ["id0009/1.webp", "id0009/2.webp", "id0009/3.webp", "id0009/4.webp", "id0009/5.webp"], venuda: false ,reservada: false },*/
 
 
         /*{ id: "id0010", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
         descripcio: "",
-        fotos: ["id0010/1.webp", "id0010/2.webp", "id0010/3.webp", "id0010/4.webp", "id0010/5.webp"], venuda: false },*/
+        fotos: ["id0010/1.webp", "id0010/2.webp", "id0010/3.webp", "id0010/4.webp", "id0010/5.webp"], venuda: false  ,reservada: false},*/
 
 
         // CARD FIXA AL FINAL
