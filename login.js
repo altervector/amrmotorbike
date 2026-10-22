@@ -93,8 +93,8 @@
         }
     };
 
-    // Esdeveniments
-    document.addEventListener('DOMContentLoaded', () => {
+    // Esdeveniments: enllaça el botó Entrar i la tecla Enter amb fer_login
+    const enllacarEsdeveniments = () => {
         const boto = document.getElementById('login-boto');
         const input = document.getElementById('login-input');
         if (boto) boto.addEventListener('click', fer_login);
@@ -103,6 +103,14 @@
                 if (e.key === 'Enter') fer_login();
             });
         }
-    });
+    };
+
+    // loader.js carrega aquest fitxer quan la pàgina ja està llegida (DOMContentLoaded ja ha passat),
+    // així que si ja no estem "loading" cal enllaçar-ho ara mateix en lloc d'esperar l'esdeveniment
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', enllacarEsdeveniments);
+    } else {
+        enllacarEsdeveniments();
+    }
 
 })();

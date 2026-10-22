@@ -115,7 +115,7 @@ function carregarDadesModal() {
     
     // Imatge principal
     const imgGran = document.getElementById('modal-img-gran');
-    imgGran.src = `${CONFIG.ASSETS_OCA}${moto.fotos[0]}`;
+    imgGran.src = rutaFotoOcasio(moto.fotos[0]);
 
     // Renderitzar miniatures... (Resta del codi sense canvis)
     if (containerMiniatures) {
@@ -124,7 +124,7 @@ function carregarDadesModal() {
             const fotosValides = moto.fotos.filter(f => f !== '');
             fotosValides.forEach((fotoPath, idx) => {
                 const img = document.createElement('img');
-                const rutaCompleta = `${CONFIG.ASSETS_OCA}${fotoPath}`;
+                const rutaCompleta = rutaFotoOcasio(fotoPath);
                 img.src = rutaCompleta;
                 img.alt = `Foto ${idx + 1}`;
                 if (idx === 0) img.classList.add('activa');

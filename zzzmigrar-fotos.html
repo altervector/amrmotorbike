@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migrar fotos velles | AMR MotorBike</title>
+    <!-- Pàgina temporal d'un sol ús: que no surti als cercadors -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <style>
+        /* Estils mínims (pàgina temporal) */
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background: #0f0f0f; color: #fff; padding: 24px; max-width: 640px; margin: 0 auto; }
+        h1 { font-size: 1.3rem; margin-bottom: 8px; }
+        p  { color: #a0a0a0; line-height: 1.5; margin-bottom: 16px; }
+        button { width: 100%; padding: 14px; margin-bottom: 12px; border: none; border-radius: 8px; background: #f97316; color: #fff; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        button:disabled { opacity: 0.35; cursor: not-allowed; }
+        ul { list-style: none; padding: 0; margin: 16px 0; font-size: 0.9rem; }
+        li { padding: 4px 0; }
+        .ok  { color: #25D366; }
+        .err { color: #e53012; }
+        #estat { margin-top: 12px; font-weight: bold; }
+    </style>
+</head>
+
+<body>
+
+    <h1>Migrar les fotos velles a Cloudinary</h1>
+    <p>Pàgina d'un sol ús. Pas 1: Cloudinary descarrega les fotos de l'antic lloc i les guarda a la carpeta Ocasion. Pas 2: es canvien els noms de les fotos a l'array del KV. Quan acabi, es pot reanomenar aquest fitxer amb el prefix zzz.</p>
+
+    <button id="btn-fotos">Pas 1 · Pujar les fotos a Cloudinary</button>
+    <button id="btn-kv" disabled>Pas 2 · Actualitzar els noms al KV</button>
+
+    <ul id="llista"></ul>
+    <p id="estat"></p>
+
+    <script src="config.js"></script>
+    <script>
+        /* ============================================================
+           MIGRAR-FOTOS — un sol ús
+           Fotos velles (avsets) → Cloudinary, i noms nous a l'array del KV
+           ============================================================ */
+
+        // Lloc antic de les fotos (ja no és a config.js)
+        const ORIGEN_ANTIC = 'https://avsets.pages.dev/images/amrmotorbike/ocasion/';
+
+        // Clau d'admin que ha desat el login
+        const clauAdmin = sessionStorage.getItem('admin_clau');
+
+        // Cada foto: camí antic → moto i número (el nom nou serà p. ex. 0001_1.webp)
+        // La "moto" id0000 és la imatge buida (placeholder) i id9999 la de la targeta fixa
+        const FOTOS = [
+            ['id0001/1.webp', 'id0001', 1], ['id0001/2.webp', 'id0001', 2], ['id0001/3.webp', 'id0001', 3],
+            ['id0001/4.webp', 'id0001', 4], ['id0001/5.webp', 'id0001', 5],
+            ['id0002/1.webp', 'id0002', 1], ['id0002/2.webp', 'id0002', 2], ['id0002/3.webp', 'id0002', 3],
+            ['id0002/4.webp', 'id0002', 4], ['id0002/5.webp', 'id0002', 5],
+            ['id0003/1.webp', 'id0003', 1], ['id0003/2.webp', 'id0003', 2], ['id0003/3.webp', 'id0003', 3],
+            ['id9999/1.webp',       'id9999', 1],
+            ['id9999/Default.png',  'id0000', 1]
+        ];
+
+        const llista = document.getElementById('llista');
+        const estat  = document.getElementById('estat');
+
+        function afegirLinia(text, classe) {
+            const li = document.createElement('li');
+            li.textContent = text;
+            li.className = classe || '';
+            llista.appendChild(li);
+        }
+
+        // Puja una foto: el Worker signa i Cloudinary la descarrega de l'URL antiga
+        async function migrarFoto(camiAntic, id, num) {
+            const resFirma = await fetch(`${CONFIG.BASE_WORKER}/sign-foto`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-Admin-Key': clauAdmin },
+                body: JSON.stringify({ moto: id, num: num })
+            });
+            if (!resFirma.ok) throw new Error('firma rebutjada (' + resFirma.status + ')');
+            const { signature, timestamp, public_id, asset_folder } = await resFirma.json();
+
+            const formulari = new FormData();
+            formulari.append('file', ORIGEN_ANTIC + camiAntic); // Cloudinary el descarrega ell mateix
+            formulari.append('api_key', CONFIG.CLOUDINARY_KEY);
+            formulari.append('timestamp', timestamp);
+            formulari.append('signature', signature);
+            formulari.append('public_id', public_id);
+            formulari.append('asset_folder', asset_folder);
+
+            const res = await fetch(`https://api.cloudinary.com/v1_1/${CONFIG.CLOUDINARY_CLOUD}/image/upload`, {
+                method: 'POST',
+                body: formulari
+            });
+            if (!res.ok) {
+                let detall = 'error ' + res.status;
+                try { detall = (await res.json()).error.message; } catch (e) { /* sense detall */ }
+                throw new Error(detall);
+            }
+        }
+
+        // PAS 1: totes les fotos, una per una
+        document.getElementById('btn-fotos').addEventListener('click', async () => {
+            if (!clauAdmin) { estat.textContent = 'Primer cal entrar pel login (pulsació llarga al logo de la web).'; return; }
+            if (!CONFIG.CLOUDINARY_KEY) { estat.textContent = 'Falta CLOUDINARY_KEY a config.js.'; return; }
+
+            document.getElementById('btn-fotos').disabled = true;
+            llista.innerHTML = '';
+            let errors = 0;
+            for (const [camiAntic, id, num] of FOTOS) {
+                const nomNou = `${id.slice(2)}_${num}.webp`;
+                try {
+                    await migrarFoto(camiAntic, id, num);
+                    afegirLinia(`✔ ${camiAntic}  →  ${nomNou}`, 'ok');
+                } catch (e) {
+                    errors++;
+                    afegirLinia(`✖ ${camiAntic}  →  ${nomNou}: ${e.message}`, 'err');
+                }
+            }
+            if (errors === 0) {
+                estat.textContent = 'Fotos pujades. Ara pots fer el pas 2.';
+                document.getElementById('btn-kv').disabled = false;
+            } else {
+                estat.textContent = `${errors} foto(s) han fallat. No facis el pas 2 fins que estiguin totes.`;
+                document.getElementById('btn-fotos').disabled = false;
+            }
+        });
+
+        // Nom nou d'una foto antiga: id0001/3.webp → 0001_3.webp
+        function nomNou(foto, esTargetaFixa) {
+            const m = /^id(\d{4})\/(\d)\.webp$/.exec(foto);
+            if (m && m[1] !== '9999') return `${m[1]}_${m[2]}.webp`;
+            if (/^\d{4}_\d\.webp$/.test(foto)) return foto;      // ja migrada
+            return esTargetaFixa ? '9999_1.webp' : '0000_1.webp'; // targeta fixa o imatge buida
+        }
+
+        // PAS 2: canvia els noms de les fotos a l'array del KV (el Worker fa còpia a DADES_BAK)
+        document.getElementById('btn-kv').addEventListener('click', async () => {
+            document.getElementById('btn-kv').disabled = true;
+            try {
+                const res = await fetch(`${CONFIG.BASE_WORKER}/`, { cache: 'no-store' });
+                const dades = await res.json();
+                if (!Array.isArray(dades)) throw new Error('format incorrecte');
+
+                dades.forEach(moto => { moto.fotos = moto.fotos.map(f => nomNou(f, !!moto.titol)); });
+
+                const resPost = await fetch(`${CONFIG.BASE_WORKER}/`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'X-Admin-Key': clauAdmin },
+                    body: JSON.stringify(dades)
+                });
+                if (!resPost.ok) throw new Error('el Worker ha respost ' + resPost.status);
+                estat.textContent = '✔ KV actualitzat. Ja pots tancar aquesta pàgina.';
+            } catch (e) {
+                estat.textContent = 'Error: ' + e.message;
+                document.getElementById('btn-kv').disabled = false;
+            }
+        });
+    </script>
+
+</body>
+</html>

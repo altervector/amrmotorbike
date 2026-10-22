@@ -140,6 +140,20 @@
                                                                                 }*/
 
 
+        /* ── 3b. MOTOS D'OCASIÓ DES DEL WORKER (KV) ───────────
+           Les motos viuen al KV: si el Worker respon amb un array, aquest és CONFIG.OCASION.
+           Si falla o triga més de 3 s, CONFIG.OCASION queda buit (array buit de config.js). */
+        try {
+            const controlador = new AbortController();
+            const tempsMax = setTimeout(() => controlador.abort(), 3000);
+            const resMotos = await fetch(`${CONFIG.BASE_WORKER}/`, { signal: controlador.signal, cache: 'no-store' });
+            clearTimeout(tempsMax);
+            if (resMotos.ok) {
+                const motosKV = await resMotos.json();
+                if (Array.isArray(motosKV)) CONFIG.OCASION = motosKV;
+            }
+        } catch (e) { /* sense connexió amb el Worker: CONFIG.OCASION queda buit */ }
+
         /* ── 4. SECCIONS ───────────────────────────────────── */
         const seccions = document.getElementById('seccions');
         if (seccions) {
@@ -161,7 +175,7 @@
                 if (s.titol) {
                     return `
                         <div class="servei-card servei-card--oca" data-id="${s.id}" onclick="obrirModalMoto(${idx})">
-                            <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.titol}"></div>
+                            <div class="servei-ico"><img src="${rutaFotoOcasio(s.fotos[0])}" alt="${s.titol}"></div>
                             <div class="servei-titol">${s.titol}</div>
                             <div class="servei-titol servei-titol--plus">${s.subtitol}</div>
                             <div class="servei-desc">${s.textAccio1}</div>
@@ -181,7 +195,7 @@
                 return `
                     <div class="servei-card servei-card--oca" data-id="${s.id}" onclick="obrirModalMoto(${idx})">
                         ${bannerHTML}
-                        <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
+                        <div class="servei-ico"><img src="${rutaFotoOcasio(s.fotos[0])}" alt="${s.marca} ${s.model}"></div>
                         <div class="servei-titol">${s.marca} ${s.model}</div>
                         <div class="servei-titol servei-titol--plus">${s.preu} </div>
                         <div class="servei-desc">Matriculación: <strong>${s.any}</strong></div>

@@ -89,6 +89,11 @@
         .admin-estat {
             font-size: 0.95rem;
             color: var(--gris);
+            /* Hi ha canvis sense guardar */
+            &.admin-estat--pendent {
+                color: var(--vermell);
+                font-weight: bold;
+            }
         }
 
         /* ─── GRAELLA I TARGETES ───────────────────────────────── */
@@ -515,7 +520,10 @@
         </div>
     </div>
 
-    <!-- Configuració (BASE_WORKER, ASSETS_OCA...) -->
+    <!-- Selector de fotos per a la moto nova (s'obre amb el botó Nueva moto) -->
+    <input id="input-fotos" type="file" accept="image/*" multiple hidden>
+
+    <!-- Configuració (BASE_WORKER, CLOUDINARY_...) -->
     <script src="config.js"></script>
     <!-- Modal de login: surt si s'arriba aquí sense haver entrat -->
     <script src="login.js"></script>
@@ -524,7 +532,8 @@
         /* ============================================================
            ADMIN — lògica de la pàgina (graella, modal, canvis)
            Les motos es llegeixen del Worker (KV) i Guardar les hi envia
-           amb la clau d'admin. PENDENT: contador d'ID i fotos.
+           amb la clau d'admin. Les motos noves reben la ID del Worker (comptador
+           del KV) i les fotos es pugen a Cloudinary.
            ============================================================ */
 
         // Clau d'admin que ha desat login.js en entrar (buida si no s'ha passat pel login)
@@ -540,8 +549,6 @@
         let motosGuardades = new Set();
         // IDs de motos guardades que s'han eliminat i encara no s'ha desat el canvi
         let eliminades = [];
-        // Últim número d'ID usat: només puja, mai baixa (les IDs eliminades no es reutilitzen)
-        let contadorId = 0;
         // Índex de la moto oberta al modal
         let motoActualIndex = 0;
 
@@ -559,8 +566,6 @@
             motos.forEach(m => { originals[m.id] = JSON.parse(JSON.stringify(m)); });
             motosGuardades = new Set(motos.map(m => m.id));
             eliminades = [];
-            // El contador parteix de l'ID més alta existent (PENDENT: llegir-lo del KV)
-            contadorId = motos.reduce((m, moto) => Math.max(m, parseInt(moto.id.replace('id', ''), 10) || 0), 0);
         }
 
         /* ─── GRAELLA DE TARGETES ──────────────────────────────── */
@@ -575,7 +580,7 @@
             document.getElementById('admin-graella').innerHTML = motos.map((s, idx) => `
                 <div class="servei-card" data-id="${s.id}" onclick="obrirModalMoto(${idx})">
                     ${bannerTargeta(s)}
-                    <div class="servei-ico"><img src="${CONFIG.ASSETS_OCA}${s.fotos[0]}" alt="${s.marca} ${s.model}"></div>
+                    <div class="servei-ico"><img src="${rutaFotoOcasio(s.fotos[0])}" alt="${s.marca} ${s.model}"></div>
                     <div class="servei-titol">${s.marca} ${s.model}</div>
                     <div class="servei-titol servei-titol--plus">${s.preu} </div>
                     <div class="servei-desc">Matriculación: <strong>${s.any}</strong></div>
@@ -594,6 +599,7 @@
         function tancarModalMoto() {
             document.getElementById('modal-moto').style.display = 'none';
             pintarGraella(); // la graella reflecteix els canvis fets al modal
+            actualitzarAvisPagina(); // si queden canvis pendents, la pàgina ho recorda
         }
 
         function canviarMoto(direccio) {
@@ -647,13 +653,13 @@
 
             // Foto principal i les 5 miniatures
             const imgGran = document.getElementById('modal-img-gran');
-            imgGran.src = `${CONFIG.ASSETS_OCA}${moto.fotos[0]}`;
+            imgGran.src = rutaFotoOcasio(moto.fotos[0]);
 
             const contMiniatures = document.getElementById('modal-miniatures');
             contMiniatures.innerHTML = '';
             moto.fotos.forEach((foto, idx) => {
                 const img = document.createElement('img');
-                const ruta = `${CONFIG.ASSETS_OCA}${foto}`;
+                const ruta = rutaFotoOcasio(foto);
                 img.src = ruta;
                 img.alt = `Foto ${idx + 1}`;
                 if (idx === 0) img.classList.add('activa');
@@ -671,11 +677,12 @@
 
         /* ─── CANVIS PENDENTS: DETECTAR I MARCAR ───────────────── */
         // Camps editables d'una moto: els de text + l'estat
-        const PROPIETATS_EDITABLES = [...Object.values(CAMPS), 'estat'];
+        const PROPIETATS_EDITABLES = [...Object.values(CAMPS), 'estat', 'fotos'];
 
         // Valor d'un camp en forma de text (l'estat es calcula a partir de venuda/reservada)
         function valorCamp(moto, propietat) {
             if (propietat === 'estat') return moto.venuda ? 'venuda' : (moto.reservada ? 'reservada' : 'venda');
+            if (propietat === 'fotos') return JSON.stringify(moto.fotos);
             return String(moto[propietat] ?? '');
         }
 
@@ -732,36 +739,135 @@
         });
 
         /* ─── BOTONS: NOVA MOTO I GUARDAR ──────────────────────── */
-        // Següent ID, p. ex. id0004: puja el contador, així una ID eliminada no es torna a usar
-        function nouIdMoto() {
-            contadorId += 1;
-            return 'id' + String(contadorId).padStart(4, '0');
+        // Foto que omple els buits quan se'n trien menys de 5
+        const FOTO_BUIDA = '0000_1.webp';
+
+        // Bloqueja o desbloqueja el modal mentre es pugen les fotos
+        function blocarModal(bloquejat) {
+            document.querySelectorAll('#modal-moto .camp, #modal-moto input[name="estat"], #modal-moto .modal-fletxa, #btn-nova, #btn-eliminar')
+                .forEach(el => { el.disabled = bloquejat; });
+            if (bloquejat) {
+                document.getElementById('btn-guardar').disabled = true;
+            } else {
+                actualitzarPendents(); // Guardar torna a l'estat que li toca
+            }
+            // L'ID sempre és de només lectura
+            document.getElementById('camp-id').disabled = false;
         }
 
+        // Demana al Worker la propera ID (id0004...). El Worker fa pujar el comptador del KV
+        async function demanarNouId() {
+            const res = await fetch(`${CONFIG.BASE_WORKER}/nou-id`, {
+                method: 'POST',
+                headers: { 'X-Admin-Key': clauAdmin }
+            });
+            if (res.status === 401) throw new Error('clave no válida');
+            if (!res.ok) throw new Error('el Worker no ha podido dar una ID');
+            return (await res.json()).id;
+        }
+
+        // Puja una foto a Cloudinary: el Worker la signa i el navegador l'envia directe
+        // Retorna el nom guardat a l'array, p. ex. "0004_1.webp"
+        async function pujarFoto(id, num, fitxer) {
+            if (!CONFIG.CLOUDINARY_KEY) throw new Error('falta CLOUDINARY_KEY en config.js');
+
+            // 1. Signatura del Worker
+            const resFirma = await fetch(`${CONFIG.BASE_WORKER}/sign-foto`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-Admin-Key': clauAdmin },
+                body: JSON.stringify({ moto: id, num: num })
+            });
+            if (!resFirma.ok) throw new Error('el Worker ha rechazado la firma');
+            const { signature, timestamp, public_id, asset_folder } = await resFirma.json();
+
+            // 2. Pujada directa a Cloudinary
+            const formulari = new FormData();
+            formulari.append('file', fitxer);
+            formulari.append('api_key', CONFIG.CLOUDINARY_KEY);
+            formulari.append('timestamp', timestamp);
+            formulari.append('signature', signature);
+            formulari.append('public_id', public_id);
+            formulari.append('asset_folder', asset_folder); // perquè la foto surti dins la carpeta Ocasion de la biblioteca
+
+            const res = await fetch(`https://api.cloudinary.com/v1_1/${CONFIG.CLOUDINARY_CLOUD}/image/upload`, {
+                method: 'POST',
+                body: formulari
+            });
+            if (!res.ok) {
+                let detall = 'error ' + res.status;
+                try { detall = (await res.json()).error.message; } catch (e) { /* sense detall */ }
+                throw new Error(detall);
+            }
+
+            // El nom acaba en .webp: Cloudinary serveix la foto en WebP per aquesta extensió
+            return `${id.slice(2)}_${num}.webp`;
+        }
+
+        // Moto nova, fase 1: es pugen les fotos; la moto no existeix fins que s'han pujat totes
+        async function crearMotoAmbFotos(fitxers) {
+            blocarModal(true);
+            try {
+                mostrarMissatge('Reservando ID...');
+                const id = await demanarNouId();
+
+                const noms = [];
+                for (let i = 0; i < fitxers.length; i++) {
+                    mostrarMissatge(`Subiendo foto ${i + 1} de ${fitxers.length}...`);
+                    noms.push(await pujarFoto(id, i + 1, fitxers[i]));
+                }
+                while (noms.length < 5) noms.push(FOTO_BUIDA);
+
+                const motoNova = {
+                    id: id, marca: '', model: '', preu: '', cc: '', kw: '', any: '', km: '',
+                    descripcio: '',
+                    fotos: noms,
+                    venuda: false, reservada: false
+                };
+                motos.push(motoNova);
+                // L'original és la moto sense fotos ni dades: les fotos i els camps omplerts queden com a pendents
+                originals[id] = { ...motoNova, fotos: [1, 2, 3, 4, 5].map(() => FOTO_BUIDA) };
+
+                obrirModalMoto(motos.length - 1);
+                mostrarMissatge('Fotos subidas. Rellena los campos y pulsa Guardar.');
+            } catch (e) {
+                mostrarMissatge('No se han podido subir las fotos: ' + e.message);
+            } finally {
+                blocarModal(false);
+            }
+        }
+
+        // Moto nova, fase 0: el botó obre el selector de fotos (fins a 5)
         document.getElementById('btn-nova').addEventListener('click', () => {
-            const id = nouIdMoto();
-            const motoNova = {
-                id: id, marca: '', model: '', preu: '', cc: '', kw: '', any: '', km: '',
-                descripcio: '',
-                // Fotos buides: s'omplen amb el placeholder fins que es pugin pujar
-                fotos: [1, 2, 3, 4, 5].map(n => 'id9999/Default.png'),
-                venuda: false, reservada: false
-            };
-            motos.push(motoNova);
-            // L'original d'una moto nova és ella mateixa en blanc: només compten els camps que s'omplin
-            originals[id] = JSON.parse(JSON.stringify(motoNova));
-            obrirModalMoto(motos.length - 1);
-            mostrarMissatge('Moto nueva creada. Rellena los campos y pulsa Guardar.');
+            document.getElementById('input-fotos').click();
+        });
+
+        document.getElementById('input-fotos').addEventListener('change', (e) => {
+            const fitxers = Array.from(e.target.files).slice(0, 5);
+            const n = e.target.files.length;
+            e.target.value = ''; // així es poden tornar a triar les mateixes fotos
+            if (fitxers.length === 0) return;
+            if (n > 5) mostrarMissatge('Solo se usan las 5 primeras fotos.');
+            crearMotoAmbFotos(fitxers);
         });
 
         // Envia l'array complet al Worker amb la clau d'admin
         async function desarMotos() {
+            // Una moto nova encara en blanc (sense cap camp omplert) no es guarda
+            const aGuardar = motos.filter(m => motosGuardades.has(m.id) || campsCanviats(m).length > 0);
+
+            // Camps obligatoris: no es guarda res fins que totes les motos els tinguin
+            const incompleta = primeraMotoIncompleta(aGuardar);
+            if (incompleta) {
+                obrirModalMoto(motos.indexOf(incompleta.moto));
+                document.getElementById(incompleta.idCamp).focus();
+                mostrarMissatge(`Falta ${incompleta.nom}: la moto no se puede guardar sin ese dato.`);
+                return;
+            }
+
             const boto = document.getElementById('btn-guardar');
             boto.disabled = true;
             boto.textContent = 'Guardando...';
 
-            // Una moto nova encara en blanc (sense cap camp omplert) no es guarda
-            const aGuardar = motos.filter(m => motosGuardades.has(m.id) || campsCanviats(m).length > 0);
             const dades = targetaFixa ? [...aGuardar, targetaFixa] : [...aGuardar];
 
             try {
@@ -794,6 +900,23 @@
             // Si hi havia una moto oberta que s'ha descartat per estar en blanc, es tanca el modal
             if (motoActualIndex >= motos.length) tancarModalMoto();
             actualitzarPendents();
+            actualitzarAvisPagina();
+        }
+
+        // Camps sense els quals una moto no es pot guardar (el preu no, perquè una moto venuda pot no tenir-lo)
+        const CAMPS_OBLIGATORIS = [
+            { idCamp: 'camp-marca', propietat: 'marca', nom: 'la Marca' },
+            { idCamp: 'camp-model', propietat: 'model', nom: 'el Modelo' }
+        ];
+
+        // Primera moto de la llista a la qual li falta un camp obligatori (o null si totes estan bé)
+        function primeraMotoIncompleta(llista) {
+            for (const moto of llista) {
+                for (const camp of CAMPS_OBLIGATORIS) {
+                    if (!String(moto[camp.propietat] ?? '').trim()) return { moto, ...camp };
+                }
+            }
+            return null;
         }
 
         document.getElementById('btn-guardar').addEventListener('click', desarMotos);
@@ -854,6 +977,26 @@
         function mostrarEstatPagina(text) {
             document.getElementById('admin-estat').textContent = text;
         }
+
+        // Sota el títol recorda els canvis sense guardar (si n'hi ha); si no, res o "no hay motos"
+        function actualitzarAvisPagina() {
+            const n = totalPendents();
+            const avis = document.getElementById('admin-estat');
+            avis.classList.toggle('admin-estat--pendent', n > 0);
+            if (n > 0) {
+                mostrarEstatPagina(`Tienes ${n} cambio${n === 1 ? '' : 's'} sin guardar. Abre una moto y pulsa «Pendientes» para guardarlos.`);
+            } else {
+                mostrarEstatPagina(motos.length === 0 ? 'Todavía no hay motos.' : '');
+            }
+        }
+
+        // El navegador pregunta abans de tancar o recarregar la pàgina si hi ha canvis sense guardar
+        window.addEventListener('beforeunload', (e) => {
+            if (totalPendents() > 0) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
 
         iniciar();
     </script>

@@ -35,7 +35,10 @@ BASE_URL:       "./",
 BASE_WORKER:    "https://amrmotorbike.altervector.workers.dev",
 URL_OFICIAL:    "https://www.amrmotorbike.com",
 ASSETS:         "https://avsets.pages.dev/",
-ASSETS_OCA:     "https://avsets.pages.dev/images/amrmotorbike/ocasion/",
+// Cloudinary: fotos de les motos d'ocasió noves (el panell admin les puja aquí)
+CLOUDINARY_CLOUD: "deopqx65a",
+CLOUDINARY_KEY:   "786648346725765",   // ← API Key (la pública, NO el secret) del compte Cloudinary
+CLOUDINARY_OCA:   "https://res.cloudinary.com/deopqx65a/image/upload/Ocasion/",
                                
 URL_MAPS:       "https://www.google.com/maps/search/?api=1&query=AMR+MotorBike&query_place_id=ChIJD7yoLgCVpBIRwGk2PRTlhQA",
 URL_RESSENYES:  "https://g.page/r/CcBpNj0U5YUAEBM/review",
@@ -107,20 +110,8 @@ SERVEIS: [
 
 // ── 7.2 Motos d'ocasió ──
 OCASION: [
+        // Les motos viuen ara al KV (el Worker les serveix a main.js). Aquest array queda buit; sota, només les plantilles comentades.
         // MOTOS ACTIVES (Exemples)
-        { id: "id0001", marca: "Honda", model: "Forza 750", preu: "9100 €", cc: 750, kw: 0,  any: "2022", km: "6751",
-              descripcio: "Maletas originales incluidas en el precio.",
-              fotos: ["id0001/1.webp", "id0001/2.webp", "id0001/3.webp", "id0001/4.webp", "id0001/5.webp"], venuda: false ,reservada: false},
-
-
-        { id: "id0002", marca: "Honda", model: "cb 650 r",  preu: "5100 €",       cc: 649, kw: 92, any: "2022", km: "58583",
-              descripcio: "",
-              fotos: ["id0002/1.webp", "id0002/2.webp", "id0002/3.webp", "id0002/4.webp", "id0002/5.webp"], venuda: false ,reservada: true },
-
-        
-        { id: "id0003", marca: "Honda", model: "Forza 125", preu: "", cc: "125", kw: "0",  any: "2022", km: "34508",
-        descripcio: "",
-        fotos: ["id0003/1.webp", "id0003/2.webp", "id0003/3.webp", "id9999/4.webp", "id9999/5.webp"], venuda: true ,reservada: false },
 
 
         /*{ id: "id0004", marca: "",      model: "",          preu: "",       cc: 0,   kw: 0,  any: "",     km: "",
@@ -159,9 +150,6 @@ OCASION: [
 
 
         // CARD FIXA AL FINAL
-        { id: "id9999", titol: "¿Quieres vender tu moto...?", subtitol: "Contáctanos..",
-             textAccio1: "Todas nuestras motos se entregan con el mantenimiento al día y garantizadas.",
-              textAccio2: " Llámanos o contacta por whatsapp..", fotos: ["id9999/1.webp"] }
     ],
  //-------------------------------------------------------------------------------------------------------------------------
 
@@ -195,3 +183,8 @@ SITIOS_SEGUROS: ["alterwebstudio.com", "pages.dev", "altervector.github.io", "am
 // ═══ 10. ALTRES ══════════════════════════════════════════════════════════
 // (res en aquest projecte)
 };
+
+// Ruta completa d'una foto d'ocasió: tots els noms ("0004_1.webp") són a la carpeta Ocasion de Cloudinary
+function rutaFotoOcasio(foto) {
+    return CONFIG.CLOUDINARY_OCA + foto;
+}
