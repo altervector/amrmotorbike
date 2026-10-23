@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurar dades | AMR MotorBike</title>
+    <!-- Pàgina d'ús intern (només per a l'administrador): que no surti als cercadors -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <style>
+        /* Estils mínims (pàgina interna) */
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background: #0f0f0f; color: #fff; padding: 24px; max-width: 640px; margin: 0 auto; }
+        h1 { font-size: 1.3rem; margin-bottom: 8px; }
+        h2 { font-size: 1rem; margin: 24px 0 6px; color: #f97316; }
+        p  { color: #a0a0a0; line-height: 1.5; margin-bottom: 12px; }
+        button { width: 100%; padding: 14px; margin-bottom: 12px; border: none; border-radius: 8px; background: #f97316; color: #fff; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        button.perill { background: #e53012; }
+        button:disabled { opacity: 0.35; cursor: not-allowed; }
+        input[type=file] { width: 100%; margin-bottom: 12px; color: #a0a0a0; }
+        #estat { margin-top: 16px; font-weight: bold; line-height: 1.5; }
+        .ok  { color: #25D366; }
+        .err { color: #e53012; }
+    </style>
+</head>
+
+<body>
+
+    <h1>Còpia i restauració de les dades</h1>
+    <p>Pàgina interna. Cal haver entrat pel login (pulsació llarga al logo) <b>a la mateixa pestanya</b>. L'ID de moto (<code>ULTIM_ID</code>) no es toca: es canvia a mà al KV.</p>
+
+    <h2>1 · Guardar còpia (KV → fitxer)</h2>
+    <p>Llegeix les motos que hi ha ara al KV i descarrega un fitxer .json per guardar-lo a la repo.</p>
+    <button id="btn-copia">Descarregar còpia de les dades</button>
+
+    <h2>2 · Restaurar (fitxer → KV)</h2>
+    <p>Tria el fitxer .json (p. ex. <code>dades-inicial.json</code>). Substitueix totes les motos del KV; el Worker en fa abans una còpia a <code>DADES_BAK</code>.</p>
+    <input type="file" id="fitxer-restaurar" accept=".json,application/json">
+    <button id="btn-restaurar" class="perill" disabled>Restaurar les dades del fitxer</button>
+
+    <p id="estat"></p>
+
+    <script src="config.js"></script>
+    <script>
+        /* ============================================================
+           RESTAURAR-DADES — còpia i restauració de l'array de motos
+           Només fa servir les rutes que ja té el Worker: GET i POST a "/"
+           ============================================================ */
+
+        // Clau d'admin que ha desat el login (la mateixa que fa servir admin.html)
+        const clauAdmin = sessionStorage.getItem('admin_clau');
+
+        const estat         = document.getElementById('estat');
+        const btnCopia      = document.getElementById('btn-copia');
+        const btnRestaurar  = document.getElementById('btn-restaurar');
+        const inputFitxer   = document.getElementById('fitxer-restaurar');
+
+        let dadesFitxer = null;      // array llegit del fitxer triat
+        let temporitzador = null;    // per desfer la confirmació de 2 clics
+
+        function mostrar(text, classe) {
+            estat.textContent = text;
+            estat.className = classe || '';
+        }
+
+        // BOTÓ 1: llegeix el KV i descarrega el .json
+        btnCopia.addEventListener('click', async () => {
+            try {
+                const res = await fetch(`${CONFIG.BASE_WORKER}/`, { cache: 'no-store' });
+                const dades = await res.json();
+                if (!Array.isArray(dades)) throw new Error('format incorrecte');
+
+                const blob = new Blob([JSON.stringify(dades, null, 2)], { type: 'application/json' });
+                const enllac = document.createElement('a');
+                enllac.href = URL.createObjectURL(blob);
+                enllac.download = 'dades-copia.json';
+                enllac.click();
+                URL.revokeObjectURL(enllac.href);
+                mostrar(`✔ Còpia descarregada (${dades.length} elements).`, 'ok');
+            } catch (e) {
+                mostrar('Error: ' + e.message, 'err');
+            }
+        });
+
+        // Llegeix i valida el fitxer triat (ha de ser un array on cada element tingui id)
+        inputFitxer.addEventListener('change', async () => {
+            dadesFitxer = null;
+            btnRestaurar.disabled = true;
+            const fitxer = inputFitxer.files[0];
+            if (!fitxer) return;
+            try {
+                const dades = JSON.parse(await fitxer.text());
+                if (!Array.isArray(dades)) throw new Error('el fitxer no és un array');
+                if (dades.some(m => !m || !m.id)) throw new Error('hi ha elements sense id');
+                dadesFitxer = dades;
+                btnRestaurar.disabled = false;
+                mostrar(`Fitxer correcte: ${dades.length} elements. Prem el botó per restaurar.`);
+            } catch (e) {
+                mostrar('Fitxer no vàlid: ' + e.message, 'err');
+            }
+        });
+
+        // BOTÓ 2: restaura (confirmació amb un segon clic, com a l'eliminar de l'admin)
+        btnRestaurar.addEventListener('click', async () => {
+            if (!clauAdmin) { mostrar('Primer cal entrar pel login (pulsació llarga al logo de la web).', 'err'); return; }
+            if (!dadesFitxer) return;
+
+            if (!temporitzador) {
+                btnRestaurar.textContent = 'Segur? Torna a prémer per restaurar';
+                temporitzador = setTimeout(() => {
+                    temporitzador = null;
+                    btnRestaurar.textContent = 'Restaurar les dades del fitxer';
+                }, 4000);
+                return;
+            }
+            clearTimeout(temporitzador);
+            temporitzador = null;
+            btnRestaurar.textContent = 'Restaurar les dades del fitxer';
+            btnRestaurar.disabled = true;
+
+            try {
+                const res = await fetch(`${CONFIG.BASE_WORKER}/`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'X-Admin-Key': clauAdmin },
+                    body: JSON.stringify(dadesFitxer)
+                });
+                if (res.status === 401) throw new Error('clau no vàlida: torna a fer login');
+                if (!res.ok) throw new Error('el Worker ha respost ' + res.status);
+                mostrar(`✔ Dades restaurades (${dadesFitxer.length} elements). Recorda: ULTIM_ID a mà i fotos de prova a Cloudinary.`, 'ok');
+            } catch (e) {
+                mostrar('Error: ' + e.message, 'err');
+            }
+            btnRestaurar.disabled = false;
+        });
+    </script>
+
+</body>
+</html>
