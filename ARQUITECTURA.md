@@ -1,7 +1,7 @@
 # ARQUITECTURA — AMR Motorbike
 
 Mapa de context de la web. No conté codi: explica **qui fa què** i **com es connecta**.
-Esborrany v5 (24/10/2026): el panell admin de motos d'ocasió, la còpia/restauració (`reset.html`), l'historial de còpies (`AMRBAK/`) i el mode manteniment ja estan implementats i provats; la secció 8 descriu com funciona.
+Esborrany v6 (24/10/2026): el panell admin de motos d'ocasió, la còpia/restauració (`reset.html`), l'historial de còpies (`AMRBAK/`) i el mode manteniment ja estan implementats i provats; la secció 8 descriu com funciona. El botó "Llámanos" del hero té ara una llum elèctrica (secció 5).
 
 ---
 
@@ -54,8 +54,11 @@ Esborrany v5 (24/10/2026): el panell admin de motos d'ocasió, la còpia/restaur
 ### Estils, SEO i PWA
 `estils.css`, `robots.txt`, `sitemap.xml`, `manifest.json`.
 
+`estils.css` guarda les variables de color (`--taronja`, `--negre`...) i tots els estils; el CSS és mobile-first, amb CSS niat natiu i un sol breakpoint (`min-width: 768px`).
+
 ### Es poden ignorar
-- `modal.md`: còpia de seguretat.
+- `modal.md`: còpia antiga del HTML del modal de la fitxa de moto; ja el genera `modal-moto.js`. No el fa servir cap fitxer.
+- Les maquetes `prova-*.html` (`prova-blanc`, `prova-boto`, `prova-boto-capes`) són proves visuals independents i no formen part de la web.
 - `qr/`: redirecció perquè el codi QR segueixi sent vàlid.
 - Tot el codi **comentat** o molt tabulat dins els fitxers JS: restes que no s'han esborrat de moment.
 
@@ -103,7 +106,10 @@ Esborrany v5 (24/10/2026): el panell admin de motos d'ocasió, la còpia/restaur
 Omple els contenidors que ja existeixen a `index.html` amb `innerHTML`. No crea contenidors nous.
 
 1. **Pulsació llarga al logo (1,5 s)** → crida `obrirModalLogin()` si existeix.
-2. **Hero** (`#hero`): imatge, logo i botons (trucar i enllaços a seccions).
+2. **Hero** (`#hero`): imatge, logo (dins una `.card` inclinada en 3D) i, a sota, `.hero-botons` amb tres botons: el de trucar (`.boto-llum`) i dos d'enllaç a seccions (`.hero-boto-secundari`).
+   - **Botó de trucar, `.boto-llum`:** píndola (radi 50) amb una llum elèctrica que corre per la vora. Són tres capes: `::before` = un quadrat amb degradat cònic que gira (cap taronja, cua llarga clara), `overflow: hidden` = el retalla a la forma del botó, `::after` = farciment fosc 2 px més petit que deixa veure només la vora. Té una resplendor que "respira" i s'atura amb `prefers-reduced-motion`. Només s'aplica a aquest botó: la classe antiga `.hero-boto-principal` (+ `.btn-balla`) continua al botó de "Qui som" i a "Enviar mensaje" del formulari, i al `main.js` el botó antic del hero queda comentat per poder tornar enrere.
+   - **Botons secundaris:** vora fina transparent, radi 50, `width: 230px; min-width: max-content; margin-inline: auto`, de manera que queden centrats sota la card i el text no salta de línia.
+   - **Ample de `.hero-botons`:** si no té `width: fit-content` i `margin: 0 auto`, s'estira fins a l'amplada del logo i el padding dels botons no es nota. L'ample final de cada botó es controla al mateix botó.
 3. **Motos d'ocasió des del Worker:** abans de construir les seccions, demana les motos a `CONFIG.BASE_WORKER` (GET `/`, màxim 3 s). Si respon amb un array, aquest passa a ser `CONFIG.OCASION`. Si falla o triga massa, `CONFIG.OCASION` queda buit i la secció d'ocasió surt sense targetes (la resta de la web es construeix igual).
 4. **Seccions** (`#seccions`), en aquest ordre:
    - Qui som (`#qui-som`)
@@ -233,6 +239,7 @@ Cada desat amb canvis (des de l'admin o `reset.html`) escriu el nou array a `AMR
 
 ## 9. Pendent de completar
 
+- **Disseny "tot blanc" (neumorfisme)** per al login i la fitxa de l'admin: només hi ha una maqueta (`prova-blanc.html`, amb fons gris blavós suau o blanc 255). Pendent que el client ho vegi abans de decidir si s'aplica.
 - Detall de `navbar.js`, `footer.js`, `contacte-flotant.js`, `cookies-banner.js`.
 - `form-contacte.html` / `form-contacte.js`: si fan servir el loader o carreguen els seus propis scripts.
 - Llista real de claus de `CONFIG` (noms de variables).

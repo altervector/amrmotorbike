@@ -94,7 +94,7 @@
                         </div>
                     
                         <div class="hero-botons">
-                            <a href="tel:+34${CONFIG.MOBIL}" class="hero-boto-principal btn-balla">
+                            <a href="tel:+34${CONFIG.MOBIL}" class="boto-llum"><!--class="hero-boto-principal btn-balla"-->
                                 ${CONFIG.HERO_BOTO_PRI}
                             </a>
                             <a href="#serveis" class="hero-boto-secundari">
@@ -103,7 +103,7 @@
                             <a href="#ocasion" class="hero-boto-secundari">
                                 ${CONFIG.HERO_BOTO_3}
                             </a>
-                            </div>
+                        </div>
                     </div>
                     
                 </section>

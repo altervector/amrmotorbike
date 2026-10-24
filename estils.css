@@ -355,6 +355,82 @@ a:hover { text-decoration: underline; }
     text-decoration: none;
 }
 
+/* ─── BOTÓ "LLÁMANOS" AMB LLUM ELÈCTRICA (només al hero; prova) ───────────────────────────────────────────────────
+   Tres capes: ::before = quadrat amb degradat cònic que gira · overflow:hidden = el retalla a la forma del botó ·
+   ::after = farciment fosc que només deixa veure la vora. El cap de la llum és taronja i la cua llarga és la que brilla. */
+.boto-llum {
+    --gruix-vora: 2px;                        /* gruix de la franja per on corre la llum */
+    --llum: #fff3d6;                          /* blanc càlid de la cua */
+    --resplendor: rgba(249, 115, 22, 0.55);   /* brillantor al voltant */
+
+    position: relative;
+    isolation: isolate;                       /* les capes de darrere queden DINS del botó */
+    overflow: hidden;                         /* retalla el quadrat que gira */
+    display: inline-block;
+    align-self: center;                   /* dins .hero-botons (columna) no s'estira a tota l'amplada */
+    color: var(--blanc);
+    padding: 13px 38px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 0 14px var(--resplendor), 0 0 32px rgba(249, 115, 22, 0.25);
+    animation: boto-llum-respira 2.4s ease-in-out infinite;
+
+    /* El quadrat que gira: degradat cònic amb la cua llarga brillant i el cap taronja */
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 150%;
+        aspect-ratio: 1;
+        background: conic-gradient(
+            transparent 0 40%,
+            rgba(255, 243, 214, 0.12) 55%,
+            rgba(255, 243, 214, 0.65) 82%,
+            #ffffff 92%,
+            var(--taronja) 97%,
+            transparent 100%
+        );
+        transform: translate(-50%, -50%);
+        animation: boto-llum-gira 2.6s linear infinite;
+        z-index: -2;
+    }
+
+    /* El farciment: tapa el centre i només deixa veure la vora */
+    &::after {
+        content: "";
+        position: absolute;
+        inset: var(--gruix-vora);
+        border-radius: inherit;
+        background: #141414;
+        z-index: -1;
+        transition: background 0.2s;
+    }
+
+    &:hover::after { background: #222; }
+
+    /* Qui té activat "reduir moviment" al sistema no veu cap animació */
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+        &::before { animation: none; }
+    }
+}
+
+@keyframes boto-llum-gira { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes boto-llum-respira {
+    0%, 100% { box-shadow: 0 0 10px rgba(249, 115, 22, 0.45), 0 0 24px rgba(249, 115, 22, 0.2); }
+    50%      { box-shadow: 0 0 20px rgba(249, 115, 22, 0.8),  0 0 42px rgba(249, 115, 22, 0.35); }
+}
+/* ───FI   BOTÓ "LLÁMANOS" AMB LLUM ELÈCTRICA (només al hero; prova) ─────────────────────────────────*/
+
+
+
 .hero-boto-secundari {
     display: inline-block;
     color: var(--gris-clar);
@@ -364,9 +440,12 @@ a:hover { text-decoration: underline; }
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    border-radius: var(--radi);
+    border-radius: 50px;
     transition: border-color 0.2s, color 0.2s;
     text-align: center;
+        width: 222px;          /* l'amplada que vulguis; ha de cabre el text "NUESTROS SERVICIOS" */
+        min-width: max-content;   /* si el text no hi cap, el botó creix en lloc de saltar de línia */
+    margin-inline: auto;   /* es centra dins del bloc de botons */
 }
 
 .hero-boto-secundari:hover {
