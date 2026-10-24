@@ -19,9 +19,27 @@
     setTimeout(mostrarPagina, 2000);
 
 
+    // ─── MODE MANTENIMENT ────────────────────────────────
+    // Pregunta al Worker si el manteniment està actiu (l'interruptor es canvia des del login).
+    // Si el Worker no respon en 2 s o falla, es considera NO actiu: millor web visible que caiguda per un error.
+    const comprovarManteniment = async () => {
+        if (!CONFIG.BASE_WORKER) return false;
+        try {
+            const control = new AbortController();
+            const temps = setTimeout(() => control.abort(), 2000);
+            const res = await fetch(`${CONFIG.BASE_WORKER}/manteniment`, { signal: control.signal, cache: 'no-store' });
+            clearTimeout(temps);
+            const dades = await res.json();
+            return dades.actiu === true;
+        } catch (e) {
+            return false;
+        }
+    };
+
+
     // ─── 2. TOT EL QUE DEPÈN DEL CONFIG ──────────────────
     // Dins una funció, per cridar-la quan CONFIG ja existeixi
-    const iniciar = () => {
+    const iniciar = async () => {
 
         // SEGURETAT
         if (CONFIG.SITIOS_SEGUROS && CONFIG.SITIOS_SEGUROS.length > 0) {
@@ -32,6 +50,12 @@
                 if (CONFIG.URL_OFICIAL) window.location.href = CONFIG.URL_OFICIAL;
                 return;
             }
+        }
+
+        // MANTENIMENT: si està actiu, no es carrega res més i es mostra la pàgina de manteniment
+        if (await comprovarManteniment()) {
+            window.location.replace('manteniment.html');
+            return;
         }
 
         const base = CONFIG.BASE_URL;

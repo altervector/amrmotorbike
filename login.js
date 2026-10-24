@@ -79,10 +79,14 @@
 
         try {
             const res = await fetch(`${CONFIG.BASE_WORKER}/login?p=${encodeURIComponent(clau)}`);
-            if (res.ok && (await res.text()) === 'OK') {
+            const resposta = res.ok ? await res.text() : '';
+            if (resposta === 'OK') {
                 sessionStorage.setItem('admin_clau', clau);
                 tancarModalLogin();
                 window.location.href = 'admin.html';
+            } else if (resposta === 'HIDE' || resposta === 'SHOW') {
+                // Contrasenyes de manteniment: el Worker ja ha canviat l'interruptor. Només es tanca el modal, sense missatge ni canvi de pàgina
+                tancarModalLogin();
             } else {
                 error.textContent = '❌ Clau incorrecta';
                 input.value = '';
