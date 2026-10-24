@@ -18,7 +18,7 @@
         button.perill { background: #e53012; }
         button:disabled { opacity: 0.35; cursor: not-allowed; }
         input[type=file] { width: 100%; margin-bottom: 12px; color: #a0a0a0; }
-        #estat { margin-top: 16px; font-weight: bold; line-height: 1.5; }
+        #estat { margin-top: 16px; font-weight: bold; line-height: 1.5; white-space: pre-line; }
         .ok  { color: #25D366; }
         .err { color: #e53012; }
     </style>
@@ -27,14 +27,14 @@
 <body>
 
     <h1>Còpia i restauració de les dades</h1>
-    <p>Pàgina interna. Cal haver entrat pel login (pulsació llarga al logo) <b>a la mateixa pestanya</b>. L'ID de moto (<code>ULTIM_ID</code>) no es toca: es canvia a mà al KV.</p>
+    <p>Pàgina interna. Cal haver entrat pel login (pulsació llarga al logo) <b>a la mateixa pestanya</b>. La còpia inclou les motos i el número d'<code>ULTIM_ID</code>.</p>
 
     <h2>1 · Guardar còpia (KV → fitxer)</h2>
-    <p>Llegeix les motos que hi ha ara al KV i descarrega un fitxer .json per guardar-lo a la repo.</p>
+    <p>Llegeix les motos i l'ID que hi ha ara al KV i descarrega un fitxer .json per guardar-lo a la repo.</p>
     <button id="btn-copia">Descarregar còpia de les dades</button>
 
     <h2>2 · Restaurar (fitxer → KV)</h2>
-    <p>Tria el fitxer .json (p. ex. <code>dades-inicial.json</code>). Substitueix totes les motos del KV; el Worker en fa abans una còpia a <code>DADES_BAK</code>.</p>
+    <p>Tria el fitxer .json (una còpia d'aquesta pàgina, o <code>dades-inicial.json</code> que només porta motos). Substitueix totes les motos del KV (el Worker en guarda una còpia amb data a <code>BAK/…</code>) i, si el fitxer porta l'ID, també el fixa.</p>
     <input type="file" id="fitxer-restaurar" accept=".json,application/json">
     <button id="btn-restaurar" class="perill" disabled>Restaurar les dades del fitxer</button>
 
@@ -43,8 +43,10 @@
     <script src="config.js"></script>
     <script>
         /* ============================================================
-           RESTAURAR-DADES — còpia i restauració de l'array de motos
-           Només fa servir les rutes que ja té el Worker: GET i POST a "/"
+           RESTAURAR-DADES — còpia i restauració de les motos i de l'ULTIM_ID
+           Rutes del Worker: GET i POST a "/" (motos) i GET i POST a "/ultim-id"
+           Format del fitxer de còpia: { "ultimId": 3, "motos": [ ... ] }
+           També s'accepta un fitxer antic que sigui només l'array de motos.
            ============================================================ */
 
         // Clau d'admin que ha desat el login (la mateixa que fa servir admin.html)
@@ -55,7 +57,8 @@
         const btnRestaurar  = document.getElementById('btn-restaurar');
         const inputFitxer   = document.getElementById('fitxer-restaurar');
 
-        let dadesFitxer = null;      // array llegit del fitxer triat
+        let motosFitxer = null;      // array de motos llegit del fitxer triat
+        let ultimIdFitxer = null;    // número d'ID del fitxer (null si el fitxer no en porta)
         let temporitzador = null;    // per desfer la confirmació de 2 clics
 
         function mostrar(text, classe) {
@@ -63,38 +66,62 @@
             estat.className = classe || '';
         }
 
-        // BOTÓ 1: llegeix el KV i descarrega el .json
+        // BOTÓ 1: llegeix motos i ID del KV i descarrega el .json
         btnCopia.addEventListener('click', async () => {
+            if (!clauAdmin) { mostrar('Primer cal entrar pel login (pulsació llarga al logo de la web).', 'err'); return; }
             try {
-                const res = await fetch(`${CONFIG.BASE_WORKER}/`, { cache: 'no-store' });
-                const dades = await res.json();
-                if (!Array.isArray(dades)) throw new Error('format incorrecte');
+                const resMotos = await fetch(`${CONFIG.BASE_WORKER}/`, { cache: 'no-store' });
+                const motos = await resMotos.json();
+                if (!Array.isArray(motos)) throw new Error('les motos tenen un format incorrecte');
 
-                const blob = new Blob([JSON.stringify(dades, null, 2)], { type: 'application/json' });
+                // L'ID només el serveix el Worker amb la clau d'admin
+                const resId = await fetch(`${CONFIG.BASE_WORKER}/ultim-id`, {
+                    cache: 'no-store',
+                    headers: { 'X-Admin-Key': clauAdmin }
+                });
+                if (resId.status === 401) throw new Error('clau no vàlida: torna a fer login');
+                if (!resId.ok) throw new Error('no s\'ha pogut llegir l\'ID (el Worker ha respost ' + resId.status + ')');
+                const { ultimId } = await resId.json();
+
+                const blob = new Blob([JSON.stringify({ ultimId: ultimId, motos: motos }, null, 2)], { type: 'application/json' });
                 const enllac = document.createElement('a');
                 enllac.href = URL.createObjectURL(blob);
                 enllac.download = 'dades-copia.json';
                 enllac.click();
                 URL.revokeObjectURL(enllac.href);
-                mostrar(`✔ Còpia descarregada (${dades.length} elements).`, 'ok');
+                mostrar(`✔ Còpia descarregada: ${motos.length} elements i ULTIM_ID = ${ultimId}.`, 'ok');
             } catch (e) {
                 mostrar('Error: ' + e.message, 'err');
             }
         });
 
-        // Llegeix i valida el fitxer triat (ha de ser un array on cada element tingui id)
+        // Llegeix i valida el fitxer triat
         inputFitxer.addEventListener('change', async () => {
-            dadesFitxer = null;
+            motosFitxer = null;
+            ultimIdFitxer = null;
             btnRestaurar.disabled = true;
             const fitxer = inputFitxer.files[0];
             if (!fitxer) return;
             try {
-                const dades = JSON.parse(await fitxer.text());
-                if (!Array.isArray(dades)) throw new Error('el fitxer no és un array');
-                if (dades.some(m => !m || !m.id)) throw new Error('hi ha elements sense id');
-                dadesFitxer = dades;
+                const contingut = JSON.parse(await fitxer.text());
+
+                // Dos formats: array sol (antic) o objecte { ultimId, motos }
+                const motos = Array.isArray(contingut) ? contingut : contingut && contingut.motos;
+                if (!Array.isArray(motos)) throw new Error('no hi trobo cap array de motos');
+                if (motos.some(m => !m || !m.id)) throw new Error('hi ha elements sense id');
+
+                let ultimId = null;
+                if (!Array.isArray(contingut) && contingut.ultimId !== undefined) {
+                    ultimId = contingut.ultimId;
+                    if (!Number.isInteger(ultimId) || ultimId < 0 || ultimId > 9998) throw new Error('l\'ultimId no és vàlid');
+                }
+
+                motosFitxer = motos;
+                ultimIdFitxer = ultimId;
                 btnRestaurar.disabled = false;
-                mostrar(`Fitxer correcte: ${dades.length} elements. Prem el botó per restaurar.`);
+                mostrar(`Fitxer correcte: ${motos.length} elements` +
+                    (ultimId !== null ? ` i ULTIM_ID = ${ultimId}.` : ' (sense ID: l\'ULTIM_ID no es tocarà).') +
+                    '\nPrem el botó per restaurar.');
             } catch (e) {
                 mostrar('Fitxer no vàlid: ' + e.message, 'err');
             }
@@ -103,7 +130,7 @@
         // BOTÓ 2: restaura (confirmació amb un segon clic, com a l'eliminar de l'admin)
         btnRestaurar.addEventListener('click', async () => {
             if (!clauAdmin) { mostrar('Primer cal entrar pel login (pulsació llarga al logo de la web).', 'err'); return; }
-            if (!dadesFitxer) return;
+            if (!motosFitxer) return;
 
             if (!temporitzador) {
                 btnRestaurar.textContent = 'Segur? Torna a prémer per restaurar';
@@ -118,17 +145,33 @@
             btnRestaurar.textContent = 'Restaurar les dades del fitxer';
             btnRestaurar.disabled = true;
 
+            const capcaleres = { 'Content-Type': 'application/json', 'X-Admin-Key': clauAdmin };
+            let missatge = '';
             try {
-                const res = await fetch(`${CONFIG.BASE_WORKER}/`, {
+                // 1. Motos
+                const resMotos = await fetch(`${CONFIG.BASE_WORKER}/`, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'X-Admin-Key': clauAdmin },
-                    body: JSON.stringify(dadesFitxer)
+                    headers: capcaleres,
+                    body: JSON.stringify(motosFitxer)
                 });
-                if (res.status === 401) throw new Error('clau no vàlida: torna a fer login');
-                if (!res.ok) throw new Error('el Worker ha respost ' + res.status);
-                mostrar(`✔ Dades restaurades (${dadesFitxer.length} elements). Recorda: ULTIM_ID a mà i fotos de prova a Cloudinary.`, 'ok');
+                if (resMotos.status === 401) throw new Error('clau no vàlida: torna a fer login');
+                if (!resMotos.ok) throw new Error('les motos no s\'han restaurat (el Worker ha respost ' + resMotos.status + ')');
+                missatge = `✔ Motos restaurades (${motosFitxer.length} elements).`;
+
+                // 2. ULTIM_ID (només si el fitxer en porta)
+                if (ultimIdFitxer !== null) {
+                    const resId = await fetch(`${CONFIG.BASE_WORKER}/ultim-id`, {
+                        method: 'POST',
+                        headers: capcaleres,
+                        body: JSON.stringify({ ultimId: ultimIdFitxer })
+                    });
+                    if (!resId.ok) throw new Error('l\'ID no s\'ha restaurat (el Worker ha respost ' + resId.status + ')');
+                    missatge += `\n✔ ULTIM_ID = ${ultimIdFitxer}.`;
+                }
+                mostrar(missatge + '\nRecorda: les fotos de prova de Cloudinary s\'han d\'esborrar a mà.', 'ok');
             } catch (e) {
-                mostrar('Error: ' + e.message, 'err');
+                // Si ja s'havien restaurat les motos, es deixa dit
+                mostrar((missatge ? missatge + '\n' : '') + 'Error: ' + e.message, 'err');
             }
             btnRestaurar.disabled = false;
         });
